@@ -99,7 +99,7 @@ class Classifier:
     def load_emotion_vectors(self):
         """
         Loads the emotion vectors from the numpy file into the class attribute.
-        If the file doesn't exist, then it calculates the emotion vectors.'
+        If the file doesn't exist, then it calculates the emotion vectors.
         """
         if not Path(EMOTION_VECTORS_FILENAME).is_file():
             self.calculate_average_emotion_vectors()
@@ -107,7 +107,7 @@ class Classifier:
 
     def calculate_average_emotion_vectors(self):
         """
-        Calculates the vectors representing the emotions by taking the average of the embeddings from the training data.
+        Calculates the emotion vectors by taking the average of the embeddings of the training data.
         """
         embeddings = self.model.encode(self.training_data)
 
