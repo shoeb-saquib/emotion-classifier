@@ -1,24 +1,24 @@
 from ecfdataset import ECFDataset
 from emotion_model import EmotionModel
-from evaluate import get_accuracy
+from evaluate import *
+
+METHODS = {
+    0 : "embed emotion words directly",
+    1 : "average utterance embeddings for each emotion"
+}
+METHOD_ID = 0
 
 dataset = ECFDataset()
-
 train_texts, train_labels = dataset.load_split("train")
-test_texts, test_labels = dataset.load_split("test", 1000)
+test_texts, test_labels = dataset.load_split("test")
+
+print_majority_baseline(test_labels)
 
 model = EmotionModel()
-model.fit_average(train_texts, train_labels)
+model.set_method(METHOD_ID)
+model.fit(test_texts, test_labels)
+predicted_labels = model.predict(test_texts)
+print_report(test_labels, predicted_labels, METHODS[METHOD_ID])
 
-accuracy, successes = get_accuracy(model, test_texts, test_labels)
-print("Method: taking the average of the utterance embeddings")
-print(f"Tests Passed: {successes} / {len(test_texts)}")
-print(f"Accuracy: {accuracy * 100:.2f}%")
 
-model.fit_words(train_labels)
-
-accuracy, successes = get_accuracy(model, test_texts, test_labels)
-print("\nMethod: embing the emotions")
-print(f"Tests Passed: {successes} / {len(test_texts)}")
-print(f"Accuracy: {accuracy * 100:.2f}%")
 

@@ -3,9 +3,9 @@ from pathlib import Path
 from datasets import load_dataset
 
 DATA_FILENAMES = {
-    "train": "training_data.pkl",
-    "validation": "validation_data.pkl",
-    "test": "test_data.pkl"
+    "train": "saved_data/training_data.pkl",
+    "validation": "saved_data/validation_data.pkl",
+    "test": "saved_data/test_data.pkl"
 }
 
 class ECFDataset:
