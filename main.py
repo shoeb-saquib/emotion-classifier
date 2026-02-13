@@ -17,7 +17,7 @@ if Path(TEST_EMBEDDINGS_FILENAME).is_file():
     test_set["embedding"] = pickle.load(open(TEST_EMBEDDINGS_FILENAME, "rb"))
 else:
     test_set["embedding"] = model.encode(list(test_set.text)).tolist()
-    pickle.dump(test_set.embedding, open(TEST_EMBEDDINGS_FILENAME, "wb"))
+    pickle.dump(test_set.embedding.tolist(), open(TEST_EMBEDDINGS_FILENAME, "wb"))
 
 test_conversations = test_set.groupby(by="conversation_ID")
 for emotion_method_id in SELECTED_EMOTION_REPRESENTATIONS:
@@ -29,11 +29,13 @@ for emotion_method_id in SELECTED_EMOTION_REPRESENTATIONS:
         for context_window in CONTEXT_WINDOWS:
             if context_window == 0 and one_context_method_has_finished: continue
             model.set_context_window(context_window)
-            predictions = []
-            for _,conversation in test_conversations:
-                for id in conversation.utterance_ID:
-                    utterances = conversation[conversation.utterance_ID <= id].sort_values("utterance_ID")
-                    predictions.append(model.predict(embeddings=list(utterances.embedding)))
+            predictions = {}
+            for _, conversation in test_conversations:
+                conversation = conversation.sort_values("utterance_ID")
+                for idx, row in conversation.iterrows():
+                    utterances = conversation.loc[conversation.utterance_ID <= row.utterance_ID]
+                    predictions[idx] = model.predict(embeddings=list(utterances.embedding))
+            predictions = [predictions[i] for i in test_set.index]
             descriptors = {
                 DESCRIPTORS[1] : EMOTION_REPRESENTATIONS[emotion_method_id],
                 DESCRIPTORS[2] : context_window

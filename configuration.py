@@ -9,15 +9,15 @@ EMOTION_REPRESENTATIONS = {
     1 : "averaged emotion utterance embeddings"
 }
 
-SELECTED_EMOTION_REPRESENTATIONS = [0, 1]
-
-CONTEXT_WINDOWS = [0, 1, 2, 3]
-
 CONTEXT_METHODS = {
     0 : "average with previous utterance embeddings",
     1 : "exponentially weight previous utterance embeddings"
 }
 
+SELECTED_EMOTION_REPRESENTATIONS = [0, 1]
+
 SELECTED_CONTEXT_METHODS = [0, 1]
+
+CONTEXT_WINDOWS = [0, 1, 2, 3]
 
 
