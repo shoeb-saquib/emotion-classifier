@@ -1,29 +1,64 @@
+from datetime import datetime
+import random
 from collections import Counter
-from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.metrics import confusion_matrix, classification_report, accuracy_score, f1_score
 import pandas as pd
+from pathlib import Path
 
-def print_confusion_matrix(true_labels, predicted_labels):
+def format_confusion_matrix(true_labels, predicted_labels):
     emotions = sorted(set(true_labels))
     cm = confusion_matrix(true_labels, predicted_labels, labels=emotions)
     df = pd.DataFrame(cm, index=emotions, columns=emotions)
-    print(df)
 
-def print_report(true_labels, predicted_labels, method):
-    print(f"\n----------------------------BEGIN EVALUATION----------------------------\n")
-    print(f"Method: '{method}'\n")
-    print("Confusion Matrix:")
-    print_confusion_matrix(true_labels, predicted_labels)
-    print("\nSummary:")
-    print(classification_report(true_labels, predicted_labels, digits=3))
-    print("-----------------------------END EVALUATION----------------------------\n")
+    # Add axis labels for clarity
+    df.index.name = "True"
+    df.columns.name = "Predicted"
+
+    return df.to_string()
 
 
-def print_majority_baseline(labels):
+def generate_evaluation_report(true_labels, predicted_labels, descriptors, output_file):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    confusion_matrix_str = format_confusion_matrix(true_labels, predicted_labels)
+    summary_str = classification_report(true_labels, predicted_labels, digits=3)
+    accuracy = round(accuracy_score(true_labels, predicted_labels) * 100, 2)
+    macro_f1 = round(f1_score(true_labels, predicted_labels, average="macro"), 4)
+
+    path = Path(output_file)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w") as f:
+        f.write("=" * 80 + "\n")
+        f.write("EMOTION CLASSIFICATION EVALUATION REPORT\n")
+        f.write("=" * 80 + "\n\n")
+
+        colon_pos = len(max(descriptors.keys(), key=len)) + 1
+        f.write("Timestamp" + (colon_pos - 9) * ' ' + ': ' + timestamp + '\n')
+        for k, v in descriptors.items():
+            f.write(k + (colon_pos - len(k)) * ' ' + ': ' + str(v) + '\n')
+        f.write('\n')
+
+        f.write("Accuracy" + (colon_pos - 8) * ' ' + ': ' + str(accuracy) + "%\n")
+        f.write("Macro F1" + (colon_pos - 8) * ' ' + ': ' + str(macro_f1) + "\n\n")
+
+        f.write("-" * 80 + "\n")
+        f.write("CONFUSION MATRIX\n")
+        f.write("-" * 80 + "\n\n")
+        f.write(confusion_matrix_str + "\n\n")
+
+        f.write("-" * 80 + "\n")
+        f.write("CLASSIFICATION SUMMARY\n")
+        f.write("-" * 80 + "\n\n")
+        f.write(summary_str + "\n")
+
+        f.write("=" * 80 + "\n")
+
+
+def get_majority_baseline(labels, num_predictions):
     counts = Counter(labels)
-    for emotion in counts:
-        counts[emotion] = counts[emotion] / len(labels)
-    print("\nMethod: always predicting the majority emotion")
-    print(counts)
-    accuracy = max(counts.values())
-    print(f"Accuracy: {accuracy * 100:.2f}%")
+    return [counts.most_common(1)[0][0]] * num_predictions
+
+def get_random_baseline(emotions, num_predictions):
+    return random.choices(emotions, k=num_predictions)
+
 

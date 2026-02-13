@@ -1,11 +1,11 @@
-import pickle
 from pathlib import Path
 from datasets import load_dataset
+import pandas as pd
 
 DATA_FILENAMES = {
-    "train": "saved_data/training_data.pkl",
-    "validation": "saved_data/validation_data.pkl",
-    "test": "saved_data/test_data.pkl"
+    "train": "saved_data/training_data.csv",
+    "validation": "saved_data/validation_data.csv",
+    "test": "saved_data/test_data.csv"
 }
 
 class ECFDataset:
@@ -19,20 +19,22 @@ class ECFDataset:
     @staticmethod
     def retrieve_and_save():
         dataset = load_dataset("NUSTM/ECF", streaming=True)
-
         for split, filename in DATA_FILENAMES.items():
-            texts, emotions = [], []
+            data = pd.DataFrame()
+            seen_conversation_ids = set()
             for item in dataset[split]:
-                for utterance in item["conversation"]:
-                    texts.append(utterance["text"])
-                    emotions.append(utterance["emotion"])
-            with open(filename, "wb") as f:
-                pickle.dump((texts, emotions), f)
+                cid = item["conversation_ID"]
+                if cid in seen_conversation_ids:
+                    continue
+                seen_conversation_ids.add(cid)
+                conversation = pd.DataFrame(item["conversation"])
+                conversation["conversation_ID"] = cid
+                conversation = conversation[["conversation_ID", "utterance_ID", "speaker", "text", "emotion"]]
+                data = pd.concat([data, conversation], ignore_index=True)
+            data.to_csv(filename, index=False)
 
     @staticmethod
     def load_split(split, num_utterances = None):
-        with open(DATA_FILENAMES[split], "rb") as f:
-            if not num_utterances: return pickle.load(f)
-            texts, labels = pickle.load(f)
-            if num_utterances > len(texts): num_utterances = len(texts)
-            return texts[:num_utterances], labels[:num_utterances]
+        if num_utterances is None:
+            return pd.read_csv(DATA_FILENAMES[split])
+        return pd.read_csv(DATA_FILENAMES[split]).head(num_utterances)

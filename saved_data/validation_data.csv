@@ -1,0 +1,1088 @@
+conversation_ID,utterance_ID,speaker,text,emotion
+18,1,Monica,Alright . Phoebe ?,neutral
+18,2,Phoebe,"Okay , okay .",neutral
+18,3,Phoebe,"If I were omnipotent for a day , I would want , um , world peace , no more hunger , good things for the rain ... forest ... And bigger boobs !",joy
+18,4,Ross,"Yeah , see ... you took mine . Chandler , what about you ?",neutral
+18,5,Chandler,"Uh , if I were omnipotent for a day , I would ... make myself omnipotent forever .",neutral
+18,6,Rachel,"See , there is always one guy . "" If I had a wish , I would wish for three more wishes . """,disgust
+18,7,All,"Hey Joey . Hi . Hey , buddy .",neutral
+18,8,Monica,"Hey , Joey , what would you do if you were omnipotent ?",neutral
+18,9,Joey,Probably kill myself !,sadness
+18,10,Monica,... Excuse me ?,surprise
+18,11,Joey,"Hey , if Little Joey dead , then I got no reason to live !",sadness
+18,12,Ross,"Joey , uh ... OMnipotent .",surprise
+18,13,Joey,You are ?,neutral
+23,1,Ross,"Get him ! GET HIM ! Get him ! Get ... YESSS ! Not laughing now , are you pal !",anger
+23,2,Chandler,"See buddy , that is all you need , a bunch of toothless guys hitting each other with sticks .",neutral
+23,3,Ross,Pass it ! Pass it !,joy
+23,4,Chandler,He is open !,joy
+23,5,All,Shoot ! Shoot ! Shoot !,joy
+23,6,Chandler,"Hey , look , we are on that TV thing !",surprise
+28,1,Chandler,"Well , what ? What ? What is it ? That she left you ? That she likes women ? That she left you for another woman that likes women ?",anger
+28,2,Ross,"Little louder , okay , I think there is a man on the twelfth floor in a coma that did not quite hear you ...",anger
+28,3,Chandler,Then what ?,neutral
+28,4,Ross,My first time with Carol was ...,neutral
+28,5,Joey,What ?,neutral
+28,6,Ross,It was my first time .,neutral
+28,7,Joey,With Carol ? Oh .,surprise
+28,8,Chandler,"So in your whole life , you have only been with one ... oh .",surprise
+28,9,Joey,"Whoah , boy , hockey was a big mistake ! There was a whole bunch of stuff we could have done tonight !",surprise
+65,1,Ross,"How we doing , you guys ready ?",neutral
+65,2,Monica,Mom already called this morning to remind me not to wear my hair up . Did you know my ears are not my best feature ?,neutral
+65,3,Ross,Some days it is all I can think about .,neutral
+65,4,Phoebe,"Hi , sorry I am late , I could not find my bearings .",sadness
+71,1,Carol,Anytime you are ready .,neutral
+71,2,Ross,"Ok , ok , here we go .",neutral
+71,3,Ross,"Ok , where am I talking to , here ?",neutral
+71,4,Ross,"I mean , uh , well , there is one way that seems to offer a certain acoustical advantage , but ...",neutral
+71,5,Carol,Just aim for the bump .,neutral
+71,6,Ross,"Ok , ok , ok , ok , here goes .",neutral
+71,7,Ross,"You know , I , you know , can not do this .",sadness
+71,8,Ross,"Uh , this is too weird .",disgust
+71,9,Ross,I feel stupid .,sadness
+71,10,Carol,"So do not do it , it is fine . You do not have to do it just because Susan does it .",neutral
+71,11,Ross,"Hello , baby . Hello , hello .",joy
+74,1,Phoebe,"Oh , hi Max ! Hey , do you know everybody ?",neutral
+74,2,Max,No . Have you seen David ?,neutral
+74,3,Phoebe,"No , no , he has not been around .",neutral
+74,4,Max,"Well , if you see him , tell him to pack his bags . We are going to Minsk .",neutral
+74,5,Phoebe,Minsk ?,surprise
+74,6,Max,Minsk . It is in Russia .,neutral
+74,7,Phoebe,I know where Minsk is .,neutral
+74,8,Max,"We got the grant . Three years , all expenses paid .",joy
+74,9,Phoebe,"So when , when do you leave ?",neutral
+74,10,Max,January first,neutral
+116,1,Monica,"Wendy , we had a deal ! Yeah , you promised ! Wendy ! Wendy ! Wendy !",anger
+116,2,Rachel,Who was that ?,neutral
+116,3,Monica,Wendy bailed . I have no waitress .,sadness
+116,4,Rachel,Oh ... that is too bad . Bye bye .,sadness
+116,5,Monica,Ten dollars an hour .,neutral
+116,6,Rachel,No .,neutral
+116,7,Monica,Twelve dollars an hour .,neutral
+116,8,Rachel,"Mon . I wish I could , but I have made plans to walk around .",neutral
+116,9,Monica,"You know , Rachel , when you ran out of your wedding , I was there for you . I put a roof over your head , and if that means nothing to you ...",anger
+116,10,Monica,Twenty dollars an hour .,neutral
+116,11,Rachel,Done .,neutral
+132,1,Joey,"All right , I will give you this , Mr . Peanut is a better dresser .",neutral
+132,2,Joey,"I mean he is got the monocle , he is got the top hat ...",neutral
+132,3,Phoebe,You know he is gay ?,neutral
+132,4,Ross,I just wanna clarify this : are you outing Mr . Peanut ?,neutral
+132,5,Danielle,Chandler ?,neutral
+132,6,Chandler,"Danielle ! Hi ! Uh ... everybody , this is Danielle , Danielle , everybody .",joy
+132,7,All,Hi .,neutral
+132,8,Chandler,What are you doing here ?,surprise
+151,1,Ross,"Oh , please . This is so your fault .",anger
+151,2,Susan,"How , how is this my fault ?",surprise
+151,3,Ross,"Look , Carol never threw me out of a room before you came along .",anger
+151,4,Susan,"Yeah ? Well , there is a lot of things Carol never did before I came along .",anger
+151,5,Ross,You trying to be clever ? A funny lady ?,anger
+151,6,Susan,You know what your problem is ? You are so threatened by me .,disgust
+151,7,Ross,"Oh , I am threatened by you ?",surprise
+151,8,Phoebe,"Hey , hey , ok , all right , that is it ! Get in here . Come on .",anger
+151,9,Phoebe,"My god , you guys , I do not believe you .",surprise
+151,10,Phoebe,There are children coming into the world in this very building and your negative fighting noises are not the first thing they should be hearing .,anger
+151,11,Phoebe,"So just stop all the yelling , just stop it !",anger
+151,12,Ross,"Yeah , Susan .",neutral
+151,13,Phoebe,"Do not make me do this again , I do not like my voice like this .",anger
+151,14,Phoebe,"Ok , who wants to hear something ironic ?",neutral
+156,1,Ross,"Come on , come on .",sadness
+156,2,Ross,"Damnit , damnit , damnit , damnit . This is all your fault .",anger
+156,3,Ross,"This is supposed to be , like , the greatest day of my life , you know ? My son is being born , and I should be in there , you know , instead of stuck in a closet with you .",anger
+156,4,Susan,The woman I love is having a baby today . I have been waiting for this just as much as you have .,anger
+156,5,Ross,"No no no , believe me . No one has been waiting for this as much as I have , ok ?",anger
+156,6,Ross,"And you know what the funny thing is ? When this day is over , you get to go home with the baby , ok ? Where does that leave me ?",anger
+156,7,Susan,"You get to be the baby father . Everyone knows who you are . Who am I ? There is Mother Day , there is Father Day , there is no ... Lesbian Lover Day .",anger
+156,8,Ross,Every day is Lesbian Lover Day .,neutral
+156,9,Phoebe,This is so great .,joy
+156,10,Ross,You wanna explain that ?,neutral
+156,11,Phoebe,"I mean , well , cause when I was growing up , you know my dad left , and my mother died , and my stepfather went to jail , so I barely had enough pieces of parents to make one whole one .",sadness
+156,12,Phoebe,"And here is this little baby who has like three whole parents who care about it so much that they are fighting over who gets to love it the most . And it is not even born yet . It is just , it is just the luckiest baby in the whole world .",sadness
+156,13,Phoebe,"I am sorry , you were fighting .",sadness
+173,1,Rachel,"Ok , Paulo , why do not you just go get dressed , and then you be on your way , ok , bye ... bye .",joy
+173,2,Monica,"Rachel , how did this happen ?",surprise
+173,3,Rachel,"I do not know , I just kinda ran into him last night .",fear
+173,4,Phoebe,Where ?,neutral
+173,5,Rachel,At his apartment . Is this juice ?,neutral
+173,6,Joey,"Whoa , whoa . And the fact that you dumped him because he hit on Phoebe ?",anger
+173,7,Rachel,"Oh God , I know I am a pathetic loser .",sadness
+174,1,Phoebe,"All right , that is it , I quit .",anger
+174,2,Monica,What ? I did not say anything .,surprise
+174,3,Phoebe,"Yeah , but this is not the face of a person who trusts a person .",anger
+174,4,Phoebe,"Ok , this is the face of a person who , you know , does not trust a person .",anger
+174,5,Monica,"I am sorry . I am sorry , Phoebe . It is just a little shorter than what we had discussed .",sadness
+174,6,Phoebe,Would you relax ? I know what I am doing . This is how he wears it .,anger
+175,1,Rachel,How is she ?,sadness
+175,2,Phoebe,"It is too soon to tell . She is resting , which is a good sign .",neutral
+175,3,Ross,How the hair ?,sadness
+175,4,Phoebe,"I am not gonna lie to you , Ross , it does not look good .",sadness
+175,5,Phoebe,"I put a clip on one side , which seems to have stopped the curling .",neutral
+175,6,Joey,Can we see her ?,neutral
+175,7,Phoebe,"Your hair looks too good , I think it would upset her . Ross , why do not you come on in .",sadness
+175,8,Joey,How are you doing ?,sadness
+181,1,Phoebe,Ok .,neutral
+181,2,Chandler,What did you just do ?,disgust
+181,3,Phoebe,"I licked my arm , what ?",surprise
+181,4,Ross,It is breast milk .,surprise
+181,5,Phoebe,So ?,surprise
+181,6,Rachel,"Phoebe , that is juice , squeezed from a person .",neutral
+181,7,Joey,What is the big deal ?,anger
+181,8,Chandler,What did you just do ?,disgust
+181,9,Ross,"Ok , would people stop drinking the breast milk ?",disgust
+181,10,Phoebe,You will not even taste it ?,surprise
+181,11,Ross,No !,disgust
+181,12,Phoebe,Not even if you just pretend that it is milk ?,neutral
+181,13,Ross,Not even if Carol breast had a picture of a missing child on it .,disgust
+182,1,Monica,Julie .,neutral
+182,2,Rachel,What ? !,surprise
+182,3,Monica,Jody !,fear
+182,4,Rachel,You were with Julie ?,surprise
+182,5,Monica,"Look , when it started I was just trying to be nice to her because she was my brother girlfriend .",sadness
+182,6,Monica,"And then , one thing led to another and , before I knew it , we were ... shopping .",sadness
+182,7,Rachel,Oh my God .,surprise
+182,8,Monica,"Honey , wait . We only did it once . It did not mean anything to me .",sadness
+182,9,Rachel,"Yeah , right . Sure !",anger
+182,10,Monica,"Really , Rachel , I was thinking of you the whole time .",sadness
+182,11,Monica,"Look , I am sorry , all right . I never meant for you to find out !",sadness
+182,12,Rachel,"Oh , please , you wanted to get caught .",anger
+182,13,Monica,That is not true !,anger
+182,14,Rachel,"Oh , so you just sort of happened to leave it in here ?",anger
+182,15,Monica,Did it ever occur to you that I might just be that stupid ?,anger
+182,16,Rachel,"Ok , Monica . I just have to know one thing . Did you go with her to Bloomingdales ?",sadness
+183,1,Chandler,Of course the packaging does appeal to grown ... ups and kids alike .,neutral
+183,2,Carol,"Ross , you are being silly . I have tried it , it is no big deal . Just taste it .",joy
+183,3,Ross,That would be no .,disgust
+183,4,Phoebe,Come on . It does not taste bad .,neutral
+183,5,Joey,"Yeah , it is kinda sweet , sorta like , uh ...",neutral
+183,6,Susan,Cantaloupe juice .,joy
+183,7,Joey,Exactly .,neutral
+183,8,Ross,You have tasted it ? You have tasted it .,surprise
+183,9,Susan,Uh huh .,neutral
+183,10,Ross,"Oh , you have tasted it .",anger
+183,11,Susan,"You can keep saying it , but it will not stop being true .",neutral
+183,12,Ross,Gimme the bottle . Gimme the towel .,anger
+211,1,Joey,Ben !,fear
+211,2,Chandler,"Oh , that is good . Maybe he will hear you and pull the cord .",anger
+211,3,Joey,Stop the bus ! Wait ! Wait ! Wait !,fear
+212,1,Monica,Are you sure he did not break it because it really hurts ?,sadness
+212,2,Doctor,"No , it is just a good bone bruise . And , right here is the puncture wound from your ring .",neutral
+212,3,Ross,"Oh , I am sorry , I am really sorry .",sadness
+212,4,Ross,Sorry . Sorry ! Hey ! Hey ! I got my s back !,joy
+212,5,Ross,Which we can celebrate later .,neutral
+212,6,Ross,Celebrate . Celebrate ...,neutral
+215,1,Ross,You had no right to tell me you ever had feelings for me .,anger
+215,2,Rachel,What ?,surprise
+215,3,Ross,I was doing great with Julie before I found out about you .,anger
+215,4,Rachel,"Hey , I was doing great before I found out about you . You think it is easy for me to see you with Julie ?",anger
+216,1,Ross,"The point is I ... I do not need this right now , Okay . It , it is too late , I am with somebody else , I am happy . This ship has sailed .",anger
+216,2,Rachel,"Yeah , what are you saying , you just sort of put away feelings or whatever the hell it was you felt for me ?",anger
+216,3,Ross,"Hey , I have been doing it since the ninth grade , I have gotten pretty damn good at it .",anger
+216,4,Rachel,"Alright , fine , you go ahead and you do that , alright Ross .",anger
+216,5,Ross,Fine .,anger
+216,6,Rachel,Cause I do not need your stupid ship .,anger
+216,7,Ross,Good .,anger
+216,8,Rachel,Good .,anger
+224,1,Rachel,Nooo Way ! The most romantic song ever is The Way We Were .,neutral
+224,2,Phoebe,"See , I ... I think that one that Elton John wrote for , um , that guy on Who The Boss .",neutral
+224,3,Rachel,"What song was that , Pheebs ?",neutral
+224,4,Phoebe,Hi Monica !,joy
+224,5,Ross,Hey Mon !,joy
+224,6,Rachel,Hey Mon !,joy
+224,7,Phoebe,"Oh my God , has she slept at all ?",surprise
+224,8,Ross,Nope .,neutral
+224,9,Rachel,"No , it is been three nights in a row .",neutral
+224,10,Ross,"Yeah , she finally stopped crying yesterday , but then she found one of Richard cigar butts out on the terrace , so .",neutral
+224,11,Phoebe,"Oh , okay that explains it .",neutral
+224,12,Phoebe,"I got a call at two in the morning , but all I could hear was , like , this high squeaky sound , so I thought okay its like a mouse or a opossum .",neutral
+224,13,Phoebe,But then I realized where would a mouse or a opossum get the money to make the phone call .,neutral
+229,1,Chandler,I know !,joy
+229,2,Ross,"Yes ! Wow , well , that ... that was easy . Okay , you ... you go .",surprise
+229,3,Chandler,Okay .,neutral
+229,4,Ross,Okay .,neutral
+229,5,Chandler,"Okay , you know , you know when your in bed , with a woman .",neutral
+229,6,Ross,Hmph .,neutral
+229,7,Chandler,"And , ah , you know , your fooling around with her .",neutral
+229,8,Chandler,"And you get all these like , mental images in your brain , you know , like Elle MacPherson , or that girl at the Xerox place ...",neutral
+229,9,Ross,"With the belly ... button ring ? Oh , muhawa !",joy
+229,10,Chandler,"I know , And then all of the sudden your Mom pops into your head .",anger
+229,11,Chandler,"And your like Mom , get outta here !",anger
+229,12,Chandler,"You know , but of course , like , after that you can not possibly think of anything else , and you can not , you know , stop what your doing . So it is kinda like , you are ...",disgust
+229,13,Chandler,You know ... You know ... You do not know !,surprise
+229,14,Ross,"Your Mom ? You are telling me , you are telling me about your Mom ? What is the matter with you ?",disgust
+229,15,Chandler,You said ...,anger
+229,16,Ross,I said share not scare !,anger
+270,1,Ross,Hi . Where is everybody ?,sadness
+270,2,Phoebe,"Oh , it is already closed , Chris gave me the keys to lock up ... what is wrong ?",sadness
+270,3,Ross,"My marriage , I think my marriage is um , is kinda over .",sadness
+270,4,Phoebe,Oh no ! Why ?,surprise
+270,5,Ross,"Cause Carol a lesbian . And , and I am not one . And apparently it is not a mix and match situation .",sadness
+270,6,Phoebe,"Oh my God ! I do not believe it ! Oh , you poor bunny .",surprise
+270,7,Ross,I am an idiot .,sadness
+270,8,Ross,"I mean shoulda seen it , I mean Carol and I would be out and she would , she would see some beautiful woman , and , and she would be Ross you know look at her , and I would think , God , my wife is cool !",sadness
+270,9,Phoebe,"Aw ! Hey , do you think that Susan person is her lover ?",surprise
+270,10,Ross,"Well , now I do ! !",surprise
+270,11,Phoebe,I am sorry .,sadness
+270,12,Ross,Seven years .,sadness
+270,13,Ross,"I mean we have been together seven years , she is the only woman who ever loved me , and the only woman I have ... I have ever ...",sadness
+270,14,Phoebe,"Aw , God Ross . Oh .",sadness
+285,1,Rachel,I promise .,neutral
+285,2,Phoebe,"Although , do not feel like you can not visit .",neutral
+285,3,Joey,"Hey , is , is , is Chandler here ?",neutral
+285,4,Ross,"No , no he is not .",neutral
+285,5,Monica,"You guys , Joey just saw Janice kissing her ex ... husband .",surprise
+285,6,Ross,"What ? So what are you going to do ? I mean how , how are you going to tell Chandler ?",surprise
+285,7,Joey,"Well , I was thinking about that and I , I think the best way would be , to not .",neutral
+285,8,Rachel,"Joey , you can not keep this to yourself , if you know about this , you have to tell him .",sadness
+285,9,Joey,"It will kill him . I mean it will , it will just kill him .",fear
+285,10,Phoebe,"Well , you could wait til I go to the dentist , maybe",neutral
+286,1,Monica,Where are we gonna find a tiny little hat ?,neutral
+286,2,Rachel,"Oh , oh , oh , I will get Rainy Day Bear ! !",joy
+286,3,Monica,"Because he will know what to do ? Oh my God , you are a genius !",joy
+286,4,Rachel,"Oh God , oh God , it is sowed on though .",fear
+286,5,Monica,Give it . Give it .,neutral
+286,6,Rachel,Okay .,neutral
+286,7,Monica and Rachel,Oh ! !,surprise
+286,8,Rachel,"Oh , it is just like a bloodbath in here today .",sadness
+295,1,Rachel,We should defiantly play football more often . Maybe there is a like league we could join or something .,neutral
+317,1,Cookie,I will do it .,neutral
+317,2,Joey,"No , you will not !",surprise
+317,3,Joey,"Look he knows he did a terrible thing and I believe him , he is sorry .",sadness
+317,4,Joey,"But , you have got one more apology to make , all right , you have got to apologize to Mary ... Angela .",neutral
+317,5,Chandler,"Okay , absolutely !",joy
+317,6,Joey,All right .,neutral
+317,7,Chandler,You have got it .,neutral
+317,8,Joey,"Cookie , now you can punch him !",anger
+317,9,Chandler,What ? !,surprise
+321,1,Mark,"Oh , hi . It is Mark .",neutral
+322,1,Jeannine,"All right , I just got changed in thirty seconds so you can be alone with him . You would better go for it .",neutral
+322,2,Monica,"Please , I am not going for anything .",disgust
+322,3,Jeannine,"Well , if you do not , I will .",anger
+322,4,Monica,Would you please go ?,joy
+375,1,Chandler,"Here we go . Okay , brace yourselves .",neutral
+375,2,Monica,What ?,neutral
+375,3,Monica,Okay .,neutral
+375,4,Monica,Ow !,surprise
+375,5,Phoebe,Are not you gonna go ?,neutral
+375,6,Rachel,No . Thank you .,neutral
+375,7,Monica,"No , Rachel never pees in public restrooms .",neutral
+375,8,Rachel,"Well , they never have any paper in there you know . So my rule is no tissue , no tuschy . Well , if everybody going .",neutral
+375,9,Phoebe,"No , you know what do not close it cause the ... keys ... are in there .",neutral
+375,10,Chandler,"Oh , no ... no ... no ... no ... no ... no ! !",fear
+375,11,Joey,What going on ?,neutral
+375,12,Chandler,My lighter in there !,anger
+376,1,Carol,"Hey , what are you doing here ?",neutral
+376,2,Ross,"Well , oh just ah , I was just wondering , when you and I split up , did you get the tape that was half the last episode of",neutral
+376,3,Carol,"Ah yeah , but now it is Susan and me in Mexico and the hostages coming home .",neutral
+376,4,Ross,Where is Ben ?,neutral
+376,5,Carol,He is sleeping .,neutral
+376,6,Ross,"Ahh . Ooh , is this a ah , is this a bad time ?",surprise
+376,7,Carol,"Umm , yeah , actually , Susan gonna be home any minute , it is kinda an anniversary .",joy
+376,8,Ross,"Oh ! I thought you guys got married in uh , January ?",surprise
+376,9,Carol,It is not that kind of anniversary .,neutral
+376,10,Ross,Ah ! Oh .,surprise
+376,11,Carol,Sooo ! ! Anyway ...,neutral
+398,1,Monica,"Look at it ! Ohhh ! Wallpaper a little faded , that is okay . Carpet a little loose . Hardwood floors ! !",joy
+398,2,Phoebe,Hey !,joy
+398,3,Chandler,Hello .,neutral
+398,4,Phoebe,Oh ! Ooh ! Oh Monica ! It is so beautiful .,joy
+398,5,Monica,I know ! ! !,joy
+398,6,Phoebe,"So , I am here , ready to play .",joy
+398,7,Monica,Okay .,neutral
+398,8,Phoebe,"I brought a bunch of stuff for the house , so check it out . Ha ... ha .",joy
+398,9,Monica,What this ?,surprise
+398,10,Phoebe,"That is a dog , every house should have a dog .",joy
+398,11,Monica,Not one that can pee on the roof .,neutral
+398,12,Phoebe,"Well , maybe it is so big because the house was built on radioactive waste .",neutral
+398,13,Chandler,And is this in case the house sneezes ?,surprise
+398,14,Phoebe,"No , no , that is the ghost for the attic .",neutral
+398,15,Monica,I do not want a ghost .,fear
+398,16,Phoebe,"Well , nobody wants a ghost . But you have got one , because the house is sitting on an ancient Indian burial ground .",neutral
+398,17,Ross,"Wait a minute , the house was built on radioactive waste , and an ancient Indian burial ground ? That would never happen .",surprise
+398,18,Phoebe,"Okay , obviously you do not know much about the U . S . government .",neutral
+398,19,Rachel,Hey !,surprise
+398,20,All,Hello .,neutral
+398,21,Rachel,I need to talk to you !,joy
+398,22,Ross,"Sure , what up ?",neutral
+399,1,Monica,"Hey , guys , guys , did you see my new , china cabinet ? !",joy
+399,2,Ross and Rachel,Uh ... huh .,neutral
+399,3,Phoebe,"Watch , watch .",joy
+399,4,Ross and Rachel,Ooohhhh ! !,surprise
+399,5,Phoebe,"And , and !",joy
+399,6,Ross and Rachel,Ahhhh ! !,surprise
+399,7,Chandler,"Hey , my Father house does that !",surprise
+399,8,Rachel,"O ... o ... o ... okay , how did it go ? Tell me everything .",joy
+399,9,Chandler,"Well , the movie was great , dinner was great , and there is nothing like a cool , crisp New York evening .",neutral
+411,1,Monica,Hey !,joy
+411,2,Phoebe,Hey !,joy
+411,3,Monica,"Hey , guess what I am doing tonight .",joy
+411,4,Phoebe,What ?,surprise
+411,5,Monica,I am checking out the restaurant with Pete .,joy
+411,6,Phoebe,"Ohh , Monica , I am so excited for you .",joy
+413,1,Ross,Easy . Easy . You have to go to the hospital . Okay ?,fear
+413,2,Rachel,"Okay , I do .",neutral
+413,3,Ross,Okay .,neutral
+413,4,Rachel,I really do .,neutral
+413,5,Ross,"Okay , I am gonna get your coat and then I will ... I will put you in a cab .",neutral
+413,6,Rachel,"Okay . Oh wait , wait ... wait , you are not gonna come with me ?",sadness
+413,7,Ross,Of course I am . I just have to make a call .,neutral
+413,8,Rachel,Okay .,neutral
+413,9,Ross,Okay ?,neutral
+413,10,Rachel,Thank you . Oww ! ! ! ! God !,surprise
+413,11,Ross,"What ? ! I wh ... , what wrong ?",fear
+413,12,Rachel,"I am sorry , I just can not go to the hospital lookin like this .",disgust
+422,1,Stage Manager,"Joey , onstage !",anger
+422,2,Joey,Well can you at least stay to the end of the play ?,sadness
+422,3,Joey,"I mean , I will go to the airport with you , I ... I wanna say good bye .",sadness
+422,4,Lauren,Where are you Vic ?,neutral
+422,5,Kate,Flight in an hour . I ... I gotta go .,sadness
+422,6,Lauren,Vic ! Vic !,anger
+422,7,Joey,In a minute ! !,anger
+422,8,Lauren,So this is it ? Victor ?,sadness
+422,9,Joey,"Yeah , I guess it is .",sadness
+422,10,Joey,"Listen , I ah , I gotta say good bye , and ... and I gotta say it quick cause this is killing me .",sadness
+422,11,Joey,"One thing you gotta know , is that I will never forget you .",sadness
+422,12,Joey,"But , you have got things you have to do now , and so do I .",sadness
+422,13,Joey,"And so ... I am gonna get on this spaceship , and I am gonna go to Blargon 7 in search of alternative fuels .",neutral
+422,14,Joey,"But when I return , 200 years from now , you will be long gone .",sadness
+422,15,Joey,But I will not have aged at all .,sadness
+422,16,Joey,"So you tell your great ... great ... granddaughter to look me up , because Adrienne , baby , I am gonna want to meet her .",sadness
+422,17,Lauren,"So long , Vic !",sadness
+441,1,TV Announcer,"Pete Becker is circling the ring now . It looks like , he is just trying to feel him out . Oh , Bruiser is charging !",neutral
+441,2,Chandler,"Run ! Run you crazy , rich freak !",fear
+441,3,Rachel,"Oh , I can not watch this .",fear
+441,4,Joey,"Check it out , he is winning ! Pete winning !",surprise
+441,5,Monica,Really ? !,surprise
+441,6,Joey,No ... o ... o ! !,joy
+441,7,TV Announcer,"Uh ... oh , Bruiser has Becker on the canvas and is going for his favourite area .",fear
+441,8,All,Oh ! Oh !,disgust
+441,9,Phoebe,"Wait , if that is his favourite area , why is he being so mean to it ?",sadness
+441,10,Ross,"Well , this is ironic .",sadness
+441,11,Ross,"Of your last two boyfriends , Richard did not want to have kids , and from the looks of it , now Pete can not .",neutral
+447,1,Chandler,"So , you still do not think I am boyfriend material ?",surprise
+447,2,Monica,Huh ?,neutral
+447,3,Chandler,I saw you checking me out during the game last night .,neutral
+462,1,Phoebe,"I , umm , shut up !",anger
+462,2,Phoebe,""" Good ... bye Phoebe and Ursula . I will miss you . P . S . Your Mom lives in Montauk . "" You just wrote this !",surprise
+462,3,Ursula,"Well , it is pretty much the gist . Well , except for the poem . You read the poem , right ?",neutral
+462,4,Phoebe,Noooo ! !,surprise
+462,5,Ursula,"All right , hang on !",neutral
+477,1,Joey,"Dude , you do not have to brag ! We got nothing here ! !",anger
+483,1,Ross,"Or ! Or , we could go to the bank , close our accounts and cut them off at the source .",joy
+483,2,Chandler,You are a genius !,joy
+483,3,Joey,"Aww , man , now we will not be bank buddies !",sadness
+483,4,Chandler,"Now , there is two reasons .",neutral
+483,5,Phoebe,Hey .,neutral
+483,6,All,Hey !,joy
+483,7,Phoebe,"Ohh , you guys , remember that cute client I told you about ? I bit him .",neutral
+483,8,Rachel,Where ? !,surprise
+483,9,Phoebe,On the touchy .,neutral
+483,10,Ross,And that’s not against your oath ? !,disgust
+483,11,Phoebe,"No , I know !",anger
+483,12,Phoebe,"I ... I am sorry , but the moment I touch him , I just wanna throw out my old oath and take a new , dirty one .",anger
+483,13,Monica,"Well , next time your massaging him , you should try and distract yourself .",neutral
+483,14,Joey,Yeah ! Yeah ! Yeah ! Like ... like when I am doing something exciting and I do not wanna get too excited,joy
+483,15,Chandler,"Thank you , Joey .",neutral
+483,16,Joey,"No ... no , thank you .",neutral
+494,1,Phoebe,"Oh my God , he is lost it . He is totally lost it .",sadness
+494,2,Monica,What ?,surprise
+501,1,Rachel,And that is I am so glad ... there is no problem .,joy
+501,2,Joanna,"That is fine , actually I am on the hiring committee , so there will be at least one friendly face .",neutral
+501,3,Rachel,Ohh ! That is great !,joy
+501,4,Joanna,"You know , Junior Miss is where I started . Oh , I had to sleep with the ugliest guy to get that job .",disgust
+501,5,Rachel,Really ? !,surprise
+501,6,Joanna,No ... ho ... ho !,joy
+501,7,Joanna,Yeah .,disgust
+501,8,Joanna,"I mean , no ... no ... no ... no ... no , do not you worry , I am sure with your qualifications you will not need to sleep with some guy to get that job .",joy
+501,9,Joanna,"Although , I might need some convincing .",neutral
+501,10,Rachel,"Well , I , umm",fear
+501,11,Joanna,"Kidding ! God , I feel wild today !",joy
+530,1,Chandler,"So uh , man , are you gonna go see the play with me tonight ?",neutral
+530,2,Ross,"You know what , I do not know how comfortable I am going to see how hot the sex is between some guy and your girlfriend .",disgust
+530,3,Chandler,"Yeah , I know but",neutral
+530,4,Ross,"Oh no ... no ... no , I am there .",neutral
+530,5,Monica,Hey !,joy
+530,6,Joey,Hey Mon ! Want some pancakes ?,joy
+530,7,Monica,You made pancakes ?,surprise
+530,8,Joey,Yep ! Grab a plate .,joy
+530,9,Joey,"No ... no , stay right there . Getting closer .",joy
+530,10,Chandler,"Okay , okay , but do not worry , because we also have cereals , muffins , waffles ,",neutral
+530,11,Joey,"Listen also we are uh , we are watching the game here Saturday night , if people want to come over .",neutral
+530,12,Ross,Oh yeah !,joy
+557,1,Rachel,"Ohh , here you are . I was looking for you before . Joshua gone so you and Emily are free to go .",neutral
+557,2,Ross,That is okay .,sadness
+557,3,Ross,"She is still in there enjoying her fake party and uh , it is too late to do any of the things I had planned , so",sadness
+616,1,Ross,Ah ! Ah ! I forgot my jacket !,surprise
+616,2,Ross,You tell them to wait !,fear
+616,3,Rachel,Okay . Wait ! Wait !,neutral
+616,4,Ross,Emily .,neutral
+616,5,Ross,Oh no ... no ... no ! Oh ... no ! No ! No ! Emily !,anger
+622,1,Joey,Ross ! Get a shot of this .,neutral
+622,2,Phoebe,"Oh , okay , I am having another one !",surprise
+622,3,Phoebe,"This one does not hurt either ... Ooh , yes it does !",surprise
+622,4,Phoebe,Ow !,surprise
+622,5,Phoebe,Ow !,surprise
+622,6,Phoebe,Ow !,surprise
+622,7,Phoebe,Ow !,surprise
+622,8,Phoebe,Ooh !,surprise
+622,9,Phoebe,"Oh , I was kinda hoping that was it .",sadness
+622,10,Ross,"Hey , where are Monica and Rachel anyway ?",neutral
+622,11,Frank,"Yeah , I love you . Okay , bye ! Hi !",joy
+622,12,Rachel,Hi !,joy
+622,13,Frank,"That was Alice mom , she said she left five hours ago . She should be here by now !",fear
+622,14,Rachel,"Oh , honey , do not worry . She is gonna make it on time .",neutral
+622,15,Frank,Yeah .,neutral
+626,1,Dr. Harad,Okay . You ready to push again ?,neutral
+626,2,Phoebe,I already had a baby . Leave me alone .,anger
+626,3,Frank,"Okay , okay , come on , you can do it . You can do it !",joy
+626,4,Frank,Yeah ! !,joy
+626,5,Frank,Little Leslie is here !,joy
+626,6,Frank,We got another one !,joy
+626,7,Frank,"Oh my God , I can not believe I have two ... two children .",surprise
+626,8,Frank,How scary is that ?,surprise
+626,9,Frank,"Come on little Chandler , it is time to be born . Come on little Chandler ! Come on !",joy
+626,10,Dr. Harad,"All right , he is coming . He is coming !",joy
+626,11,Frank,"Hey , where is his thing ?",surprise
+626,12,Frank,Chandler a girl !,surprise
+626,13,Chandler,"Oh God , kindergarten flashback .",surprise
+626,14,Frank,They musta read the sonogram wrong .,surprise
+626,15,Frank,"Cause they , cause they thought it was a boy , but Chandler a girl !",surprise
+626,16,Frank,Chandler a girl !,surprise
+626,17,Chandler,"Okay , keep saying it !",joy
+626,18,Alice,Am I too late ? !,sadness
+626,19,Frank,"No ... no ah , everything okay . Everybody healthy there is 30 fingers and 30 toes .",joy
+626,20,Alice,We have our babies ?,surprise
+626,21,Frank,Yeah .,joy
+626,22,Alice,"Oh , we have our babies .",joy
+658,1,Ross,"In this life , Phoebe .",neutral
+658,2,Phoebe,"Oh , this life ! Oh okay no , Chandler is worse .",sadness
+658,3,Joey,"Man , it must be so cool remembering stuff like that ! I do not have any past life memories .",sadness
+658,4,Phoebe,Of course you do not sweetie . You are brand new .,neutral
+658,5,Rachel,I know Monica worst Thanksgiving .,neutral
+658,6,Monica,"Oh , let not tell this story .",sadness
+658,7,All,"Oh , come on !",sadness
+658,8,Phoebe,"Oh no , I know ! I know ! It is the one where Joey got Monica turkey stuck on his head !",joy
+658,9,Rachel,What ? ! Joey got a turkey stuck on his head ? !,surprise
+658,10,Joey,"Hey , it is not like it sounds .",neutral
+658,11,Chandler,It is exactly like it sounds .,neutral
+660,1,Chandler,"Oh ... oh , I am a duck ! I go , "" Quack , quack ! "" I am happy all the time !",disgust
+660,2,Chandler,Nice try .,neutral
+660,3,Monica,"Wait , wait , wait !",joy
+660,4,Chandler,"Look , Monica ...",neutral
+660,5,Monica,Look !,surprise
+660,6,Chandler,This is not going to work .,anger
+660,7,Monica,I bet this will work !,joy
+660,8,Chandler,You are so great ! I love you !,joy
+660,9,Monica,What ?,surprise
+660,10,Chandler,"Nothing ! I said , I said "" You are so great "" and then I just , I just stopped talking !",fear
+660,11,Monica,You said you loved me ! I can not believe this !,surprise
+660,12,Chandler,No I did not !,fear
+660,13,Monica,"Yes , you did !",joy
+660,14,Chandler,No I did not !,fear
+660,15,Monica,You love me !,joy
+660,16,Chandler,No I do not ! Stop it ! Stop it ! Stop it ! Stop it !,anger
+664,1,Monica,I guess I set up the video camera to try and entice Joey .,neutral
+664,2,Joey,But sadly I could not be enticed .,neutral
+664,3,Ross,Unbelievable ! I mean you really kept Joey underwear ? ! Why ? Why would you do that ? !,disgust
+664,4,Monica,I am Monica . I am disgusting . I stalk guys and keep their underpants .,sadness
+664,5,Joey,"Well , I think we have all learned something about who disgusting and who not .",anger
+664,6,Joey,Eh ?,neutral
+664,7,Joey,"All right , now , I am going to get back to my bucket .",anger
+664,8,Joey,"I am only eating the skin , so the chicken up for grabs .",neutral
+672,1,Ross,"And shame on you ! You should know better , Joey needs to work . Now come on !",anger
+672,2,Joey,Hey !,joy
+672,3,Ross,No ! Ah ... ah ... ah ... ah ... ah ! You can have this back when the five pages are done ! Ahh !,anger
+681,1,Joey,"Okay , it is a typical New York City apartment . Two girls are just hanging out .",neutral
+681,2,Monica,"Hi , how are you doing Kelly ?",joy
+681,3,Rachel,"I am doing just fine ! God , Tiffany , you smell so great !",joy
+681,4,Monica,It is my new perfume . Why do not you come closer where you can really appreciate it ?,neutral
+681,5,Rachel,"Oh , you know Joey , you are sick !",disgust
+681,6,Monica,This is disgusting !,disgust
+681,7,Rachel,I am not reading this !,disgust
+681,8,Joey,What ? ! Wait ... wait ... wait ! The handsome man was about to enter ! !,surprise
+684,1,Phoebe,"Tiger ! Dragon ! Iceberg ! ! Joseph , did you even study at all last night ?",anger
+684,2,Joey,"Yes ! Yes , I did .",anger
+684,3,Phoebe,Then do Iceberg !,anger
+684,4,Joey,G ... sharp .,neutral
+684,5,Phoebe,G ... sharp ? Have you been studying the real names of the chords ?,surprise
+684,6,Joey,What ? ! I did not touch a guitar !,surprise
+684,7,Phoebe,"No , but you are questioning my method !",anger
+684,8,Joey,"No , I am not questioning it , I am saying it is stupid ! What ? !",anger
+684,9,Monica,Thank you .,neutral
+684,10,Phoebe,You know none of my other student thought I was stupid .,anger
+684,11,Joey,"Your other student , was you !",anger
+684,12,Phoebe,"Yeah , well , you know maybe you just need to try a little harder !",anger
+684,13,Joey,"Look , maybe I need to try a real teacher !",anger
+684,14,Joey,Right here !,anger
+684,15,Joey,Here !,anger
+684,16,Joey,"Andy Cooper , he teaches guitar and look ooh , there is a nice picture of him with a little kid and the kid got a guitar ! ! ! ! ! !",anger
+684,17,Phoebe,"Fine ! You go learn from your qualified instructor ! But do not come crying to me when everyone sick and tired of hearing you play Bad , Bad Leroy Brown ! !",anger
+684,18,Rachel,""" Baddest man in the whole damn town . """,neutral
+684,19,Phoebe,"Oh , fine ! Take his side !",anger
+704,1,Monica,"Oh , did you catch him ? !",surprise
+704,2,Ross,Wh ... what did he say ? !,surprise
+704,3,Phoebe,"He said , "" Nice to meet you Glenda . "" Well , obviously I could not give him my real name ?",neutral
+704,4,Rachel,Why ? ! Why not ? !,surprise
+704,5,Phoebe,"Come on , you saw the way he ran out of here !",anger
+704,6,Phoebe,What do you think ? He is gonna stick around and talk to the daughter he abandoned !,surprise
+704,7,Joey,What did you say to him ?,neutral
+704,8,Phoebe,"Well , I said , I told him you know , that I was the executor person of Francis will and that I needed to talk to him so I am gonna meet him at the coffee house later .",neutral
+728,1,The Hot Girl,I know . You are the guy who would not chip in for the handyman .,neutral
+728,2,Ross,Nevermind !,sadness
+728,3,The Hot Girl,"No , I ... I actually thought it was unfair the way everyone reacted . I mean you had just moved in .",sadness
+728,4,The Hot Girl,Jen .,neutral
+728,5,Ross,"Jen , I know this may sound a little ... But uh , would you maybe wanna grab a cup of coffee sometime , or",neutral
+728,6,Jen,Sure ! That would be nice .,joy
+728,7,Ross,Umm ?,neutral
+728,8,Jen,Oh ! My number is on there . Give me a call .,joy
+728,9,Ross,I will give you a call .,joy
+728,10,Jen,I will see you later .,joy
+728,11,Ross,Okay !,joy
+728,12,Jen,I forgot my paper .,neutral
+739,1,Phoebe,I guess so .,neutral
+739,2,Rachel,Here you go . Thank you !,neutral
+739,3,Phoebe,"Wait , Rach ! Where is the other one ?",neutral
+739,4,Rachel,"Oh what , you ... you want both of them ?",surprise
+739,5,Phoebe,"Rachel Karen Green , where is the other earring ? !",anger
+739,6,Rachel,"Okay , okay , okay , look , just do not freak out , but I kinda lost it .",fear
+739,7,Rachel,"I know it is in the apartment , but I definitely lost it .",neutral
+739,8,Phoebe,"Well , what am I going to tell Monica ? She wants to wear them tonight !",anger
+739,9,Rachel,Tell her to wear her own earrings .,anger
+739,10,Phoebe,These are her earrings .,neutral
+739,11,Rachel,Nooo ! Nooooo ! You lent me Monica earrings ? ! I am not allowed to borrow her stuff !,fear
+739,12,Phoebe,Why not ?,surprise
+739,13,Rachel,Because I lose her stuff !,anger
+742,1,Gary,"Okay , you guys free tonight ?",neutral
+742,2,Ross,Yeah ! !,joy
+742,3,Chandler,Tonight ? You ... you did not say it was going to be at nighttime .,fear
+743,1,Ross,So where are we going next ?,neutral
+743,2,Gary,This witness will not return my calls so we are gonna see if we can surprise him coming home .,neutral
+743,3,Chandler,"Sur ... surprise him ? We are not , we are not gonna make anybody mad are we ?",fear
+743,4,Joey,"Come on man ! Listen so uh , are you gonna squeeze the perps shoes a little bit before he lawyers up ?",joy
+743,5,Gary,It is a witness not a perp . And no one talks like that !,disgust
+743,6,Ross,"Yeah , no one talks like that !",disgust
+743,7,Joey,Oh what ? Like your Mr . Cop !,anger
+743,8,Ross,"Hey , I am more cop than you two !",anger
+743,9,Chandler,How do you figure that ?,neutral
+743,10,Ross,"Hello ! I am in the front seat , okay ? I am Gary partner !",joy
+746,1,Chandler,"Yes , if the foxhole was lined with sandwiches .",neutral
+746,2,Joey,"Yeah , hero sandwiches .",neutral
+746,3,Phoebe,Well you all know that I am a pacifist so I am not interested in war in any way .,neutral
+746,4,Phoebe,"When the revolution comes , I will have to destroy you all .",neutral
+746,5,Phoebe,Not you Joey .,neutral
+792,1,Monica,"Rachel , it is going to happen . Chandler is gonna move in here .",sadness
+792,2,Rachel,But I,neutral
+792,3,Monica,"No ... no , wait !",neutral
+792,4,Monica,"Just let me finish , okay ?",neutral
+792,5,Monica,"This is not something that we just , we just impulsively decided in ... in Vegas , this is something we both really want .",neutral
+792,6,Monica,And it is going to happen .,neutral
+792,7,Rachel,It is ? Really ?,surprise
+792,8,Monica,"Yeah , sweetie .",neutral
+792,9,Rachel,"I mean we are not , we are not gonna live together anymore ?",sadness
+792,10,Monica,No .,sadness
+792,11,Rachel,What ? Oh my God ! I am gonna miss you so much !,sadness
+792,12,Monica,I am gonna miss you !,sadness
+792,13,Rachel,I mean it is the end of an era !,sadness
+792,14,Monica,I know !,joy
+794,1,Joey,"Hey , what up ?",neutral
+794,2,Chandler,"Nothing , Monica and I had a stupid fight .",sadness
+794,3,Joey,"But you are still moving in together , right ? Because my ad came out today .",neutral
+794,4,Chandler,""" Wanted . Female roommate , non ... smoker , non ... ugly . "" Nice !",joy
+794,5,Joey,Yeah ?,neutral
+794,6,Joey,"I just figured you know , after living with you it would be an interesting change of pace to have a female roommate , you know ?",neutral
+794,7,Joey,"Someone I can learn from , someone ... someone who different than me .",neutral
+794,8,Joey,And what more different than me . A guy who not 19 than say a girl who is 19 ?,neutral
+804,1,Joey,"Hey Estelle , listen",neutral
+804,2,Estelle,Well ! Well ! Well ! Joey Tribbiani ! So you came back huh ? They,surprise
+804,3,Joey,What are you talkin about ? I never left you ! You have always been my agent !,surprise
+804,4,Estelle,Really ? !,surprise
+804,5,Joey,Yeah !,neutral
+804,6,Estelle,"Oh well , no harm , no foul .",neutral
+820,1,Joey,Why is not that valet back with my Porsche ?,surprise
+820,2,Passerby,Maybe because you have got the keys ?,disgust
+820,3,Rachel,This is totally your fault !,anger
+820,4,Ross,My fault ? ! You threatened the judge !,anger
+820,5,Rachel,"Well , you ripped the paper out of the court reporter machine ! !",anger
+831,1,Monica,Hey . Call me when you get there . Okay ?,neutral
+831,2,Rachel,Okay .,neutral
+841,1,Rachel,"You guys ! It was bananas , cream , and beef ! I ... I just cannot believe that you ate that so that I would not feel bad !",surprise
+841,2,Monica,"Well actually , I ... I did not eat mine . It is still in the bathroom .",joy
+841,3,Joey,"No it is not , I ate that .",neutral
+841,4,Mrs. Geller,Well we left ours in Monica bedroom .,neutral
+841,5,Joey,"Nope , got it and I got yours too .",joy
+848,1,Joey,"Really ? In the moment , I really wanted to kiss you too . In the moment .",joy
+848,2,Janine,"In the moment , yeah .",neutral
+848,3,Joey,But only in the moment . So do you wanna kiss again ?,joy
+848,4,Janine,"Sure , New Year Eve is only two weeks away . Can you wait ?",neutral
+848,5,Joey,No .,neutral
+848,6,Janine,Me neither .,neutral
+848,7,Joey,"3 , 2 ,",neutral
+848,8,Janine,"Joey , you do not have to count down every time we kiss .",neutral
+848,9,Joey,"Uh , yeah , okay . Except I sorta felt like I needed a couple of seconds to get ready .",joy
+850,1,Phoebe,"Ohh , okay , they gave you the old time pricing .",neutral
+850,2,Rachel,Yeah .,neutral
+850,3,Phoebe,"Well , what period is it from ?",neutral
+850,4,Rachel,"Uh , it is from yore . Like the days of yore . You know ?",neutral
+850,5,Phoebe,"Yes , yes I do .",neutral
+850,6,Phoebe,"God , oh it is just perfect !",joy
+850,7,Phoebe,I bet it has a great story behind it too .,joy
+850,8,Phoebe,Did they tell you anything ?,neutral
+850,9,Rachel,"Yes ! That I know , this is from White Plains .",joy
+850,10,Phoebe,"White Plains . Oh , it sounds like such a magical place .",joy
+852,1,All,Aww !,surprise
+852,2,Ross,"Hey Pheebs , could you please not put your feet up on my new ... old sheet ?",disgust
+852,3,Phoebe,Oh sure ! Noo !,surprise
+852,4,Rachel,Ohh ! !,surprise
+852,5,Ross,My apothecary table ! ! !,surprise
+852,6,Phoebe,What ? !,surprise
+852,7,Rachel,Noooooo ! !,fear
+852,8,Phoebe,"Ross , where did you get this ? !",surprise
+852,9,Rachel,"Oh my God , Phoebe , Pottery Barn has ripped off the design of our antique !",anger
+852,10,Phoebe,"Wow ! Oh my God , well if they have ripped off our table ours must be much more than one and fifty dollars !",surprise
+852,11,Phoebe,Well this does not even smell like opium .,anger
+852,12,Ross,"Of course not , it smells like wine , which you spilled ! And thanks for wrecking my sheet by the way .",anger
+882,1,Ross,"So honey this uh , this threesome thing umm , I mean how ... how are you gonna start to find",neutral
+882,2,Carol,"Ooh , actually I have been making a list of all the women I know who might be into doing this !",joy
+882,3,Ross,"Oh . Wow ! Huh . Boy ! Well , someone been doing their homework .",surprise
+882,4,Carol,"Yeah . Ooh , and I know Gail Rosten is in there twice , but she is so ...",neutral
+882,5,Ross,"Oh , I know . You know , just ... just talking about it is getting me kinda",joy
+882,6,Carol,"Oh , me too .",joy
+892,1,Joey,"Oh , did I not mention ? Carl is a guy I hired to be my identical twin for a medical research project .",neutral
+892,2,Chandler,"You know sometimes the good ideas are just right in front of you , are not they ?",joy
+892,3,Joey,"Okay , I know it sounds crazy , but I think it might work . You know ? The only problem is , Carl acting is ...",neutral
+892,4,Monica,The only problem ?,surprise
+892,5,Joey,"Yeah , he is the reason I did not get that big Minute Maid commercial a couple of years ago remember ?",disgust
+892,6,Carl,"Hey , uh can I get a little piece of that cake ?",neutral
+892,7,Joey,Pizza ! ! We like Pizza ! ! Get out ! ! !,anger
+895,1,Chandler,Oh my good God .,surprise
+895,2,Monica,"Hey ! Continuing the countdown of your favorite meals . Tonight , No . 3 , macaroni and cheese with cut up hot dogs .",joy
+895,3,Chandler,"Look , you have done enough ! Okay ? You have to stop this now .",joy
+895,4,Monica,"I will ! But not tonight . For dinner music , I thought we could listen to that tape you made me .",joy
+895,5,Chandler,"Oh , the mixed tape .",neutral
+895,6,Monica,""" The Way You Look Tonight "" is on here . Dance with me .",joy
+895,7,Monica,You are just the sweetest .,joy
+900,1,Joey,Hey Chandler ! You know that girl you went to college with who ... who became a movie director ?,neutral
+900,2,Chandler,"Oh yeah , Dana Keystone . She was in my Movement class .",neutral
+900,3,Phoebe,What a Movement class ?,neutral
+900,4,Monica,It is Chandler way of pretending he did not take mime .,neutral
+900,5,Joey,"Oh well listen , anyway , she is directing the new Al Pacino movie . You gotta get me an audition !",neutral
+900,6,Chandler,"Oh , I do not know man . I have not talked to her in like ten years .",sadness
+914,1,Rachel,Hey !,joy
+914,2,All,Hi ! Hey !,joy
+914,3,Rachel,Do you guys know any cute guys ?,neutral
+914,4,Chandler,"Well , of course I do ! My good friend Joey over here .",joy
+914,5,Joey,"Oh , I am sorry . Thank you Chandler .",joy
+914,6,Rachel,"Anyway , there is this big charity ball this weekend and Ralph Lauren bought a table , so I kinda have to go",neutral
+914,7,Monica,What the charity ?,neutral
+914,8,Rachel,"I do not know , something either trees or disease ... Ralph mumbles a lot .",neutral
+914,9,Monica,Does Ralph mumble when you are not paying attention ?,neutral
+914,10,Rachel,Yeah ! It is weird . But the thing is need to find a date .,surprise
+914,11,Phoebe,"Well , what kind of guy are you looking for ?",neutral
+915,1,Elizabeth,You wanted to see me Professor Geller ?,joy
+915,2,Ross,"Yes . Yes ! Please , come in .",neutral
+915,3,Ross,Oo ... oo !,joy
+918,1,Joey,"We have got 3 minutes till the reactor blows , we are never gonna make it !",fear
+918,2,Phoebe,You have got to get out of here ! Save yourself !,fear
+918,3,Joey,No ! I will not leave you !,fear
+918,4,Phoebe,"Do not worry about me , I am a robot ! I am just a machine ! !",anger
+918,5,Joey,No you are not ! Not to me !,anger
+918,6,Phoebe,Oh my God .,surprise
+918,7,Joey,What ?,neutral
+918,8,Phoebe,I am extremely talented !,joy
+918,9,Joey,"Yeah , you are great ! Okay , let take it from",joy
+918,10,Phoebe,"No , I mean I was really acting my ass off .",joy
+918,11,Joey,"Yeah , I thought I was pretty good too .",joy
+918,12,Phoebe,"Oh yeah , you are solid . Yeah , you are just no me .",neutral
+918,13,Joey,You know what ? I think that is enough for now . Yeah . I do not want to be over rehearsed .,neutral
+918,14,Phoebe,Fine !,anger
+918,15,Phoebe,I will do it without you !,anger
+918,16,Phoebe,I do not need you or anybody else !,anger
+918,17,Phoebe,I am gonna make it on my own !,anger
+918,18,Phoebe,You will see ! ! You will all see ! !,anger
+919,1,Joey,I do not know if I am good enough .,neutral
+919,2,Phoebe,I am .,neutral
+919,3,Rachel,"Joey , what are you talking about ? You are a terrific actor .",surprise
+919,4,Joey,You really think so ?,surprise
+919,5,Rachel,"Ugh , how can you even ask that question ? !",surprise
+925,1,Ross,Hey !,neutral
+925,2,Ross,What are you guys doing later ?,neutral
+925,3,Phoebe,"Oh , Rachel and I have appointments to get our hair cut .",neutral
+925,4,Rachel,We do ?,surprise
+925,5,Phoebe,I want to see what he wants first .,neutral
+925,6,Ross,I just found out that Elizabeth dad wants to meet me .,sadness
+925,7,Chandler,"Wait a minute , hold the phone ! You are not Elizabeth dad ? !",surprise
+925,8,Ross,"Come on guys , I ... I really want this guy to like me .",fear
+925,9,Ross,It ... it would really help me out if you guys were here to make me look good .,sadness
+925,10,All,Of course we will help ! Yeah ! We will be here !,surprise
+925,11,Ross,Thanks !,joy
+925,12,Monica,We know how tough those parent/teacher conferences can be .,neutral
+928,1,Joey,Pretty great ! Except I did get a little attitude from the robot .,joy
+928,2,Chandler,"Damn those robots , they are supposed to be our faithful servants !",anger
+928,3,Joey,"Anyway , it was not the robot , it was the guy who controls him .",neutral
+928,4,Joey,"Yeah , he does not like me .",anger
+928,5,Joey,He had C . H . E . E . S . E .,neutral
+928,6,Joey,knock over the sandwich right when I was reaching for one !,anger
+928,7,Joey,Ohh !,surprise
+928,8,Phoebe,"Well , why do not you just get him fired ?",neutral
+928,9,Joey,"I may have to , I hate to do it , but I am the star !",anger
+928,10,Joey,You know ?,neutral
+928,11,Joey,There is a limit to how many sandwiches I can eat off the floor .,neutral
+928,12,Joey,Excuse me .,neutral
+928,13,Joey,Joey Tribbiani .,neutral
+928,14,Estelle,"Joe ! I am glad I found you , I got an audition for you !",joy
+928,15,Joey,Wow !,surprise
+928,16,Estelle,The thing is it is kinda on the Q . T .,neutral
+928,17,Estelle,The actor who has the part does not know he might be fired .,neutral
+928,18,Estelle,"It is the lead in a series , Mac and C . H . E . E . S . E .",neutral
+928,19,Joey,I am the lead in Mac and C . H . E . E . S . E . ! !,anger
+941,1,Monica,Phoebe !,neutral
+941,2,Phoebe,Yeah ?,neutral
+941,3,Monica,Have you seen Chandler ? !,fear
+941,4,Phoebe,No ! Why ?,neutral
+941,5,Monica,The woman from the museum called and said that there was a cancellation and that we could move up our wedding and Chandler heard !,fear
+941,6,Monica,I know !,fear
+941,7,Monica,How bad is this ?,fear
+941,8,Phoebe,"Well for the regular guy , it is bad , but Chandler , Oh dear God !",fear
+941,9,Monica,I know ! I know ! And he totally freaked out and I can not find him anywhere !,fear
+941,10,Phoebe,What are you gonna do ?,surprise
+941,11,Monica,"Well , I am never gonna listen to you again , that is for sure !",anger
+941,12,Monica,""" You know , harm can it do if you go and put your name down ? """,disgust
+941,13,Phoebe,Rachel said that !,anger
+941,14,Monica,Well Rachel not here !,anger
+942,1,Phoebe,"Oh ! Here it is ! Ooh , Joey ! Why did you sign it , "" Son of a bitch ? """,surprise
+942,2,Joey,I did not do that ! Who would have done that ? !,surprise
+942,3,The Dry Cleaner,Son of a bitch !,anger
+942,4,Phoebe,"Okay , maybe ask this guy .",neutral
+962,1,Waitress,"Hey Monica , there is a customer who wants to complement the chef , should I let him in ?",neutral
+962,2,Monica,"Sure , I love this part !",joy
+962,3,Waitress,Come on in .,neutral
+1001,1,Whitney,"Well , I went over to Kyle last night to pick up a few things and we got to reminiscing",neutral
+1001,2,Kyle,we talked through most of the night and we realized that the reason we were so angry at each other was because there are still feelings there . So,sadness
+1001,3,Ross,Oh just say it Kyle !,surprise
+1001,4,Kyle,We are gonna give it another try .,neutral
+1001,5,Phoebe,What about her whining and her constant need for attention ? !,anger
+1001,6,Whitney,I am gonna work on that .,neutral
+1001,7,Phoebe,"Oh right , because you are so capable of change .",disgust
+1001,8,Ross,"You know , he hums when he pees !",anger
+1001,9,Whitney,I do know .,neutral
+1001,10,Ross,"It makes him miss the bowl , but whatever .",disgust
+1001,11,Whitney,We are so sorry .,sadness
+1001,12,Ross,"That is all right , we ... we do not need you . In fact , hey I am over it already .",anger
+1001,13,Phoebe,"Yeah , and you know what ? I do not give a tiny rat ass .",anger
+1001,14,Kyle,"Yeah , we are gonna go .",neutral
+1001,15,Ross,"I am sorry . Ugh , Pheebs , you were , you were right about her .",sadness
+1001,16,Phoebe,"Oh . You know , he hums while he does other stuff to .",neutral
+1001,17,Ross,"Yeah , we are better off without them .",neutral
+1001,18,Phoebe,"And you know , even if they break up again , you would better not let him in your sad men club !",anger
+1001,19,Ross,Divorced men club .,neutral
+1022,1,Ross,Yes ? Yes ? ! How can I help you ?,surprise
+1022,2,Guy,"Yeah , we were ... we were just looking around .",neutral
+1022,3,Ross,"Oh ... oh , you are ... you are fellow scholars .",surprise
+1022,4,Ross,"What exactly were you looking for , hmm ?",neutral
+1022,5,Ross,"Perhaps , perhaps Dr . Chester Stock musings on the Smiledon Californicus ?",neutral
+1022,6,Guy,Uhh ...,neutral
+1022,7,Ross,"Ah ... Ah ... Get out of here ! Uh , meeting someone ? Or ... or are you just here to brush up on Marion views on evolution ?",anger
+1022,8,Woman,"Uh , actually I find Marion views far too progressionist .",neutral
+1022,9,Ross,I find Marion views far too progressionist .,neutral
+1022,10,Woman,"I am sorry , who are you ?",surprise
+1022,11,Ross,"I am a professor here uh , Ross ... Geller .",neutral
+1022,12,Woman,"Ross Geller , why do I know that name ? It is uh ... Wait ! Did you write this ?",surprise
+1022,13,Ross,Yes ! You are the person who checked out my book ? !,surprise
+1022,14,Woman,"You know , you look nothing like I would have thought . You are ... you are so young .",surprise
+1022,15,Ross,"Well I uh , I skipped forth grade .",neutral
+1027,1,Rachel,"Oh , hi ! How are you doing ?",joy
+1027,2,Tag,I am okay . I gotta go down to the police station and look at mug shots .,sadness
+1027,3,Tag,"Thanks for having me over , you guys .",neutral
+1027,4,Ross,Tag ?,neutral
+1027,5,Ross,Y ... You are going ?,surprise
+1027,6,Ross,"Uh we did not , uh we did not get the chance to talk .",neutral
+1027,7,Ross,"Uh , so , where did you say you are from again ?",neutral
+1027,8,Tag,Colorado .,neutral
+1027,9,Ross,"Ah , what good are you .",neutral
+1027,10,Rachel,"Look , um , I think we should talk about what happened on the terrace .",neutral
+1027,11,Tag,Okay .,neutral
+1027,12,Rachel,"Ah , I ... I never should have said what I said .",sadness
+1027,13,Rachel,It ... you know what ?,neutral
+1027,14,Rachel,It just does not matter how I feel .,sadness
+1027,15,Rachel,"I mean we work together , so nothing could really ever happen between us , and what I would love is just to go to work on Monday , and ... and never talk about this again , okay ? Big day Monday lots to do . So , we are okay ?",sadness
+1027,16,Tag,"Um , I am not .",sadness
+1027,17,Rachel,"Oh , god , I knew it , that I freaked you out .",sadness
+1027,18,Tag,"No , you did not . The only thing that freaked me out was you saying that nothing could ever happen between us .",sadness
+1027,19,Rachel,Really ?,surprise
+1027,20,Tag,"Yeah , so , please do not fire me for doing this .",sadness
+1077,1,Rachel,I am so psyched I kept this chair for myself !,joy
+1077,2,Joey,"Yeah , me too .",neutral
+1077,3,Rachel,"Yeah ? Wow ! You know , that this thing has speakers in the headrest !",surprise
+1077,4,Joey,No . Really ?,surprise
+1077,5,Rachel,Yeah ! You can hook it up to your TV and you get radio !,joy
+1077,6,Joey,My chair heals itself .,neutral
+1115,1,Monica,Hey ! What did you decide to do about the movie ?,neutral
+1115,2,Joey,I do not know !,sadness
+1115,3,Joey,It is not like it is porn !,neutral
+1115,4,Joey,"This is a serious , legitimate movie .",neutral
+1115,5,Joey,And the nudity is really important to the story .,neutral
+1115,6,Monica,That is what you say about porn .,neutral
+1115,7,Joey,You are right . Maybe I should not even go on the call back .,sadness
+1115,8,Monica,"No ! No you should ! A lot of major actors do nude scenes ! I mean , the chance to star in a movie ? Come on !",surprise
+1115,9,Joey,Well that is true .,neutral
+1115,10,Joey,And I am only naked in one scene .,neutral
+1115,11,Joey,Plus it sounds really great .,neutral
+1115,12,Joey,My character catholic and he falls in love with this Jewish girl .,neutral
+1115,13,Joey,Who run away together and they get caught in this big rainstorm .,neutral
+1115,14,Joey,So we go into this barn and undress each other and hold each other .,neutral
+1115,15,Joey,It is really sweet and ... and tender .,joy
+1137,1,Rachel,God . I forgot how much I love driving . I have got to get my license renewed .,joy
+1137,2,Ross,You do not have a valid driver’s license ... Okay that is it ! Pull over right now !,anger
+1137,3,Rachel,"Oh Ross you are so tense ! You just gotta relax , okay ? Just need to relax all right ? Just need to relax",joy
+1137,4,Ross,What ... what are you doing ? ! Are you ... Okay that is not funny ! Just stop horsing around !,anger
+1137,5,Rachel,"I am not horsing around , okay ? I am Porsching around .",joy
+1137,6,Rachel,Uh ... oh .,fear
+1137,7,Ross,"Okay , stay calm . Nothing is going to happen to you , you are not in that much trouble .",neutral
+1137,8,Rachel,Really ? You think so ?,fear
+1137,9,Ross,I was talking to myself ! You are going down !,anger
+1145,1,Phoebe,Oh my God ! Chandler just left though !,surprise
+1145,2,Rachel,"Yeah but , maybe it is not what we think . Maybe it is tell Monica I am sorry I ... drank the last of the milk .",neutral
+1145,3,Phoebe,"Or maybe he ... he was writing to tell her that ... that he is changed his name , you know ? Tell Monica I am sorry .",neutral
+1145,4,Ross,I think it means he freaked out and left !,anger
+1145,5,Phoebe,Do not be so negative ! Good God ! Is not it possible that Sorry is sitting in there right now ? !,anger
+1145,6,Rachel,"Okay . Phoebe , I ... I think Ross is right . What are we gonna do ?",fear
+1145,7,Ross,"Look ... Okay , I am just gonna ... I am gonna have to go find him and bring him back !",neutral
+1145,8,Ross,Okay ?,neutral
+1145,9,Ross,"You ... you make sure Monica does not find out , okay ?",neutral
+1145,10,Ross,"I will , I will find him .",fear
+1152,1,Ross,"Uh Phoebe , can I see you for a second ?",neutral
+1152,2,Phoebe,Yeah !,neutral
+1152,3,Phoebe,What going on ?,neutral
+1152,4,Ross,Chandler gone again !,sadness
+1152,5,Phoebe,Oh my God ! Why would you play hide and seek with someone you know is a flight risk ? !,surprise
+1154,1,Monica,Yeah !,surprise
+1154,2,Phoebe,I can not say .,neutral
+1154,3,Monica,Why ? !,surprise
+1154,4,Chandler,Why not ?,surprise
+1154,5,Phoebe,I can not say because he is famous .,neutral
+1154,6,Rachel,"Oh my God , who is it ? !",surprise
+1154,7,Monica,"Phoebe , come on , you have to tell us .",anger
+1154,8,Phoebe,"Okay , okay . It is James Brolin . James Brolin is the father of my baby .",neutral
+1154,9,Chandler,As in Barbara Streisand husband James Brolin ?,surprise
+1154,10,Phoebe,What ? ! Well he never said that to me !,surprise
+1166,1,Phoebe,"Oh , it is so romantic to send people off on their honeymoon .",joy
+1166,2,Joey,"You know , Monica and Chandler are married . Ross and Rachel are having a baby . Maybe you and I should do something .",joy
+1166,3,Phoebe,All in good time my love .,neutral
+1166,4,Phoebe,All in good time .,neutral
+1166,5,Phoebe,Oh shoot !,surprise
+1166,6,Phoebe,I left my guitar in their apartment .,sadness
+1166,7,Phoebe,Well you can let me in later .,neutral
+1166,8,Joey,"I do not have a key , they took mine to give to you .",sadness
+1166,9,Phoebe,What ? ! They took mine to give to you !,surprise
+1166,10,Joey,Why would they take away our keys ?,surprise
+1169,1,Rachel,Hi !,joy
+1169,2,Ross,Hi .,neutral
+1169,3,Rachel,"Hi . Umm , I think there is something that we really need to talk about .",neutral
+1169,4,Ross,"I think we do . Why do not we go inside ? Look uh , I know why you are here .",neutral
+1169,5,Rachel,You do ?,surprise
+1169,6,Ross,"Yeah , and to save you from any embarrassment umm , I think maybe I should talk first .",neutral
+1169,7,Rachel,Okay .,neutral
+1169,8,Ross,"Okay . Uh , Ross and Rachel . Rachel and Ross . That is been one heck of a see ... saw , has not it ?",neutral
+1169,9,Rachel,What ?,surprise
+1169,10,Ross,"I mean look , that ... that one night we had was fun and ... and certainly passionate , but do not you think it is better if we just stayed friends ?",sadness
+1169,11,Rachel,Seriously . What ? !,surprise
+1169,12,Ross,Okay .,neutral
+1169,13,Ross,Okay .,neutral
+1169,14,Ross,You know what ?,neutral
+1169,15,Ross,"If you want to , we can do it one more time .",neutral
+1169,16,Ross,I mean I would ... I would be okay with that .,neutral
+1169,17,Ross,"In fact , I have some time right now .",neutral
+1169,18,Rachel,"Okay , you know what ? Can I , can I talk now ?",neutral
+1169,19,Ross,Oh sure .,neutral
+1169,20,Rachel,"I am pregnant . Ross ? Ross ? Okay , whenever you are ready . And you are the father by the way , but you got ...",neutral
+1176,1,Monica,I still do not get why Greg and Jenny would give us a fake number .,anger
+1176,2,Joey,"You know , if they knew what they were doing they probably did not give you real names either .",neutral
+1176,3,Monica,"Okay , maybe people give out fake numbers , but they do not give out fake names .",anger
+1176,4,Joey,"Oh yeah ? Hi , Ken Adams , nice to meet you .",joy
+1176,5,Phoebe,Regina Philange .,joy
+1176,6,Chandler,"I still do not get it , we did not do anything wrong .",sadness
+1176,7,Monica,"I know ! Although , you did tell an awful lot of jokes .",anger
+1176,8,Chandler,I thought you said those jokes were funny . Joke ! Joke ! Joke !,surprise
+1176,9,Monica,Joke . Joke . Blah ! Blah !,disgust
+1176,10,Chandler,Well maybe it was all of your questions .,neutral
+1176,11,Monica,What about my questions ?,neutral
+1177,1,Rachel,"Oh yeah , sure .",neutral
+1177,2,Rachel,"Okay , in about ten seconds you are gonna see him kiss me .",joy
+1177,3,Ross,And in about five seconds you are gonna see why .,neutral
+1177,4,Rachel,Ross did I ever tell you about the time that I went backpacking through Western Europe ?,neutral
+1177,5,Rachel,"Okay , get ready to see some beggin !",joy
+1177,6,Phoebe,"Oh , you came on to Ross !",surprise
+1177,7,Rachel,What ? !,surprise
+1177,8,Ross,Now I am so happy .,joy
+1177,9,Rachel,What are you talking about ? !,surprise
+1177,10,Monica,You used the Europe story !,joy
+1177,11,Chandler,That is the magic story you use when you wanna have sex !,anger
+1177,12,Rachel,How do you know about that story ? !,anger
+1177,13,Joey,How do you know about that story ? !,anger
+1177,14,Rachel,I heard it from my friend Irene who heard it from some guy !,anger
+1177,15,Joey,Some guy ! !,neutral
+1177,16,Rachel,"No . No , she told me his name was Ken Adams .",neutral
+1177,17,Joey,Ken Adams ! !,surprise
+1179,1,Monica,Hello Greg ?,neutral
+1179,2,Monica,"Hi , this is Monica from the plane ?",neutral
+1179,3,Monica,"Listen , the number that you gave me 853 ... 5 ... That is their old number !",joy
+1179,4,Monica,Jenny been giving it out since they moved !,joy
+1179,5,Chandler,Jenny ! That is so Jenny !,joy
+1179,6,Monica,"Hey listen umm , how would you like to get together ?",joy
+1179,7,Monica,Say next Saturday ?,neutral
+1179,8,Monica,"Okay , how about Sunday ?",neutral
+1179,9,Monica,"Okay umm , the week after that ?",neutral
+1179,10,Monica,The week after that ?,neutral
+1179,11,Monica,You know what Greg ?,anger
+1179,12,Monica,"We are good , interesting , funny people with good questions .",anger
+1182,1,Rachel,I thought I was a complete idiot .,surprise
+1182,2,Joey,"Hey , I am with you . He even asked me if I thought you would go out with him .",neutral
+1182,3,Rachel,"Oh ! Oh , I think I am gonna throw up a little bit . What did you say ?",surprise
+1182,4,Joey,I said no .,neutral
+1182,5,Rachel,What ? !,surprise
+1182,6,Joey,What ? I ... I just figured since you are pregnant you are not gonna be seeing people .,surprise
+1182,7,Rachel,"Okay Joey , first of all Kash Ford is not people . Second of all , what did he say when you told him I was pregnant ?",anger
+1182,8,Joey,I did not tell him . I did not know if you were telling people . This is back when I thought Kash was still people .,neutral
+1182,9,Rachel,"Good ... good , do not tell him . Do not tell him . Just have him call me okay ?",fear
+1182,10,Joey,"Rach look , I really do not think that is such a great",sadness
+1182,11,Rachel,"Okay , you go do it ! I will come back to that set ! I will meet more actors ! I will meet em all !",anger
+1186,1,Bob,Hey Toby !,neutral
+1186,2,Chandler,Hey Bobby .,neutral
+1186,3,Bob,"It is Bob actually . Hey , you work up here , can you tell me where this Chandler",neutral
+1186,4,Chandler,"Uhh yeah . Yeah , it is right , right down there . Right there , yeah . Can I ask you why ?",neutral
+1186,5,Bob,"I want to talk to that bastard , see what his problem is .",anger
+1186,6,Chandler,"Okay Bob listen uhh , I am the reason you did not get the job up here .",sadness
+1186,7,Bob,Toby do not .,sadness
+1186,8,Chandler,Bob !,sadness
+1186,9,Bob,Toby ! I am not gonna let you cover for him . Anything you say right now will just get me more upset with Chandler !,anger
+1200,1,Rachel,Thank you . Oh Joey and look at this crib ! It is so cute !,joy
+1200,2,Joey,I know ! I found it on the street .,joy
+1200,3,Rachel,Are you serious ... Really ? ! It is in such good condition .,surprise
+1200,4,Joey,Yeah .,joy
+1200,5,Rachel,Wow ! Whoa ... whoa what under the covers ?,surprise
+1200,6,Joey,I do not know .,neutral
+1200,7,Rachel,It is moving .,fear
+1200,8,Joey,Ew .,fear
+1200,9,Rachel,It is still ... It is got a tail ! Get it out of here ! Get it out of here ! !,fear
+1200,10,Joey,Ooh ! Ah ! Okay !,fear
+1240,1,Phoebe,I can not believe this ! How long as this been going on ?,surprise
+1240,2,Monica,"Well umm , Alexandra has been",neutral
+1240,3,Phoebe,"Oh , it has a name ?",surprise
+1240,4,Monica,"Phoebe , do not get upset !",sadness
+1240,5,Phoebe,Okay ... Oop ! Too late ! I am leaving ! Come on Chandler let go !,anger
+1240,6,Chandler,"Well , Phoebe I thought I would ... Yeah , what the hell .",neutral
+1260,1,Ross,"and then , we could have gone from the ceremony to the reception with you in the sidecar !",neutral
+1260,2,Rachel,"Ross , it just would not have been feasible .",sadness
+1260,3,Ross,But having a dove place the ring on your finger would have been no problem ?,anger
+1260,4,Rachel,It was really fun being married to you tonight .,joy
+1260,5,Ross,"Yeah ! And ! And , it was the easiest 400 bucks I have ever made .",joy
+1260,6,Rachel,"Okay Ross , can I uh , can I ask you something ?",neutral
+1260,7,Ross,Yeah .,neutral
+1260,8,Rachel,"That proposal , at the planetarium",neutral
+1260,9,Ross,"I know , I know it was stupid .",sadness
+1260,10,Rachel,Are you kidding ? !,surprise
+1260,11,Rachel,"With the , with the lilies , and ... and the song , and the stars !",joy
+1260,12,Rachel,It was ... really wonderful !,joy
+1260,13,Rachel,Did you just make that up ?,surprise
+1260,14,Ross,"No , actually I thought about it when , when we were going out .",neutral
+1260,15,Ross,"It is how I imagined I uh , I would ask you to marry me .",neutral
+1260,16,Rachel,"Well , that would have been very hard to say no too .",neutral
+1260,17,Ross,"It is a good thing I did not do it , because it sounds like it would have been a very expensive wedding . Okay , good night",neutral
+1260,18,Rachel,Goodnight,neutral
+1260,19,Ross,Even if the sidecar had a windscreen so your hair would not get messed up ?,neutral
+1260,20,Rachel,I will think about it .,anger
+1260,21,Ross,That is all I am askin,neutral
+1271,1,Ross,Wow ! It looks like we got a lot of good stuff .,surprise
+1271,2,Rachel,"Oh we did , but my mom got us the greatest gift of all .",joy
+1271,3,Ross,A Play ... Dough Barber Shop ?,surprise
+1271,4,Rachel,No . She is going to live with us for eight weeks .,joy
+1271,5,Ross,"Uh , what ?",surprise
+1271,6,Rachel,Yes ! She is gonna help us take care of the baby ! Woo ... hoo .,joy
+1271,7,Ross,What ... You are not serious .,sadness
+1271,8,Ross,"I mean she is a very nice woman , but there is no way we can take eight weeks of her .",disgust
+1271,9,Ross,She will drive us totally crazy .,disgust
+1271,10,Mrs. Green,Hi Ross !,joy
+1271,11,Ross,Hi roomie !,joy
+1281,1,Dr. Long,We will do a quick check .,neutral
+1281,2,Rachel,Okay .,neutral
+1281,3,Dr. Long,"So , eight days late huh ?",neutral
+1281,4,Rachel,Yeah .,neutral
+1281,5,Dr. Long,You must be a little uncomfortable .,neutral
+1281,6,Rachel,"Eh , just a tad .",neutral
+1281,7,Dr. Long,"You are about 80 percent effaced , so you are on your way .",neutral
+1281,8,Dr. Long,It still could last a little while longer .,neutral
+1281,9,Dr. Long,If you are anxious there are a few ways to help things along .,neutral
+1281,10,Ross,Do them ! !,anger
+1281,11,Dr. Long,"Actually , they are things you can do . Just some home remedies , but in my experience I have found that some of them are quite effective .",neutral
+1281,12,Rachel,"Well , we are ready to try anything .",neutral
+1281,13,Dr. Long,"Okay , there is an herbal tea you can drink .",neutral
+1281,14,Rachel,Okay .,neutral
+1292,1,Monica,Oh good God ! If you want a baby so bad just go steal it !,anger
+1292,2,Monica,What is going on with you ? Since when are you so crazy about babies ?,surprise
+1292,3,Chandler,I am not crazy about babies . I am crazy about us .,joy
+1292,4,Monica,What ?,surprise
+1292,5,Chandler,"Look , we have always talked about having babies someday .",neutral
+1292,6,Chandler,"I am not saying it has to be right now , but I am starting to think that we can handle it .",neutral
+1292,7,Chandler,We are good .,neutral
+1292,8,Chandler,We are really good .,joy
+1301,1,Chandler,Should we tell Rachel there is an empty private room right next door to hers ?,neutral
+1301,2,Monica,"We could , or we can have sex in it .",joy
+1301,3,Chandler,"Well let me think about that , while I remove my pants !",joy
+1304,1,Cliff,"No , I am sorry . It is just my foot itches like crazy .",sadness
+1304,2,Phoebe,"Oh , I will get it .",neutral
+1304,3,Cliff,Wow ! I usually get to know a girl a little better before I let her spoon me .,surprise
+1304,4,Phoebe,"Relax , it is not like we are forking .",joy
+1307,1,Monica,It is clearly an Emma .,neutral
+1307,2,Rachel,"Oh honey , but you love that name .",sadness
+1307,3,Monica,"Yeah , but I love you more .",neutral
+1307,4,Monica,"Besides you know , nothing goes with Bing .",sadness
+1307,5,Monica,So I am screwed .,sadness
+1310,1,Phoebe,Oh !,surprise
+1310,2,Ross,Look at Emma !,joy
+1310,3,Phoebe,"I just can not decide who she looks more alike , you or Rachel ?",neutral
+1310,4,Ross,"Oh what are you kidding ? She is gorgeous , it is all Rachel .",surprise
+1310,5,Phoebe,"I am sorry , for the last time , why are not you two together again ?",surprise
+1310,6,Phoebe,"No , I know .",neutral
+1310,7,Phoebe,"I know , because you are not in that place .",neutral
+1310,8,Phoebe,"Which would be fine , except you totally are .",neutral
+1310,9,Ross,It is ... it is complicated okay ?,sadness
+1310,10,Phoebe,"Yeah that is true . Yeah , you love her . You always have . You have a child together . There is no right answer .",neutral
+1310,11,Ross,"Look , we have been together .",neutral
+1310,12,Ross,Okay ?,neutral
+1310,13,Ross,"And then apart , and then together , and then apart , and now we have a baby .",neutral
+1310,14,Ross,It is just if ... if we got together again and it did not work out ... I could never do that to Emma .,sadness
+1310,15,Ross,I mean she ... she thinking everything ... Oh that is ... now me .,sadness
+1310,16,Ross,What do they put something in the water in this place ?,surprise
+1310,17,Ross,"Since Rachel and I we are doing really , we are doing really well right now .",sadness
+1310,18,Phoebe,"I know . I know . I know . I know , and if you try to make it more you might wreck it .",neutral
+1310,19,Ross,"Yeah , exactly .",neutral
+1310,20,Phoebe,Right . Or you might get everything you have wanted since you were fifteen .,neutral
+1323,1,Chandler,What is wrong with Emma ?,sadness
+1323,2,Monica,"Oh she misunderstood , she thought she was moving to Tulsa .",anger
+1335,1,Kori,I can not believe that Ross is gone . It is just so sad .,sadness
+1335,2,Chandler,I did not know Ross and you were so close .,surprise
+1335,3,Kori,We were not but we had one class together . He was such a great guy and he talked so passionately about science . I always remembered him .,sadness
+1335,4,Chandler,I am sure that would mean a lot to him .,neutral
+1335,5,Chandler,"And if heaven has a door , I am sure he is pressing his ear up against it and listening intently .",neutral
+1335,6,Kori,I thought so many times about calling him and asking him out . I guess I really missed my chance .,sadness
+1335,7,Ross,But you did not !,joy
+1335,8,Ross,I am still alive ! !,joy
+1335,9,Ross,"Kori , I know this is a big surprise for you .",neutral
+1335,10,Ross,It is a long story but the things you just said really made my day !,joy
+1335,11,Ross,"I mean , the fact that you are here means more to me than if this room were filled with people !",joy
+1335,12,Kori,"You sick freak , who does that ? I can not believe I had a crush on you !",anger
+1335,13,Ross,Did you hear that ? Kori Weston had a crush on me ! !,joy
+1345,1,Ross,"Oh ... ok , fine .",neutral
+1345,2,Ross,But ... ehm ...,neutral
+1345,3,Ross,"I just have one question for you , ehm ...",neutral
+1345,4,Ross,"When we exit should we walk , or run , or prance , or stroll ...",neutral
+1345,5,Charlie,"Stop it , stop it ! He talks slow but he might pee fast ! Ok , let go ! !",joy
+1349,1,Monica,Hey honey ! I missed you today !,joy
+1349,2,Chandler,"Oh , yeah ?",surprise
+1349,3,Monica,Yeah . What Do you wanna do tonight ?,neutral
+1349,4,Chandler,"Oh , well ... Maybe we could ...",neutral
+1349,5,Monica,"Ok , trying to turn me on by making a mess ?",joy
+1349,6,Monica,Know your audience !,joy
+1349,7,Monica,"Besides , tomorrow we are doing those fertility tests and until then you need to keep your tadpoles in the tank .",neutral
+1349,8,Chandler,We really need to take those tests ?,sadness
+1349,9,Monica,"Honey , we have been trying to have a baby for over a year .",neutral
+1349,10,Monica,I think it is a good idea to find out if everything ok . Just a few routine tests .,neutral
+1349,11,Chandler,But I do not wanna do it in a cup !,sadness
