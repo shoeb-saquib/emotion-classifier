@@ -32,9 +32,8 @@ REPORTS_DIR = Path(__file__).resolve().parent / "reports"
 PLOTS_DIR = Path(__file__).resolve().parent / "plots"
 
 
-def parse_report(path: Path) -> dict | None:
-    """Extract Accuracy, Macro F1, Context Window, and Context Method from a report file."""
-    text = path.read_text()
+def parse_report(text: str) -> dict | None:
+    """Extract Accuracy, Macro F1, Context Window, and Context Method from report text."""
     out = {}
 
     acc_match = re.search(r"Accuracy\s+:\s+([\d.]+)%", text)
@@ -53,35 +52,53 @@ def parse_report(path: Path) -> dict | None:
     return out
 
 
-def load_reports(er_id: int) -> pd.DataFrame:
-    """Load all reports for emotion representation id from directories named er{er_id}_*."""
+def _parse_combined_reports(path: Path) -> list[dict]:
+    """Read a combined reports file (multiple reports separated by \\n\\n + SEP + \\n) and return list of parsed dicts."""
+    if not path.exists():
+        return []
+    text = path.read_text()
+    sep = "=" * 80
+    # Same boundary as generate_reports: "\n\n" + SEP + "\n" between reports
+    blocks = text.split("\n\n" + sep + "\n")
     rows = []
+    for block in blocks:
+        block = block.strip()
+        if not block or "EMOTION CLASSIFICATION" not in block:
+            continue
+        parsed = parse_report(block)
+        if parsed:
+            rows.append(parsed)
+    return rows
 
-    # Single file for context window 0: er{er_id}_cw0_report.txt
-    cw0_path = REPORTS_DIR / f"er{er_id}_cw0_report.txt"
+
+def load_reports(er_id: int) -> pd.DataFrame:
+    """Load all reports for emotion representation id from reports/er{er_id}/."""
+    rows = []
+    er_dir = REPORTS_DIR / f"er{er_id}"
+
+    if not er_dir.is_dir():
+        raise FileNotFoundError(
+            f"No reports found for emotion representation id {er_id} in {REPORTS_DIR}. "
+            f"Expected directory {er_dir}."
+        )
+
+    # Context window 0: er{id}_cw0_reports.txt
+    cw0_path = er_dir / f"er{er_id}_cw0_reports.txt"
     if cw0_path.exists():
-        parsed = parse_report(cw0_path)
+        parsed = parse_report(cw0_path.read_text())
         if parsed:
             rows.append(parsed)
 
-    # Directories whose name starts with er{er_id}_ (e.g. er0_cm0, er0_cm1)
-    for subdir in REPORTS_DIR.iterdir():
-        if not subdir.is_dir():
-            continue
-        if not subdir.name.startswith(f"er{er_id}_"):
-            continue
-        for report_path in subdir.glob("*.txt"):
-            if "_report.txt" not in report_path.name:
-                continue
-            parsed = parse_report(report_path)
-            if parsed:
-                rows.append(parsed)
+    # Context method reports: er{id}_cm{cm}_reports.txt (combined by context window)
+    for report_path in er_dir.glob("er*_cm*_reports.txt"):
+        m = re.match(rf"er{er_id}_cm(\d+)_reports\.txt", report_path.name)
+        if m:
+            rows.extend(_parse_combined_reports(report_path))
 
     if not rows:
         raise FileNotFoundError(
-            f"No reports found for emotion representation id {er_id} in {REPORTS_DIR}. "
-            f"Expected directories named er{er_id}_* (e.g. er{er_id}_cm0, er{er_id}_cm1) "
-            f"and/or file er{er_id}_cw0_report.txt."
+            f"No reports found for emotion representation id {er_id} in {er_dir}. "
+            f"Expected er{er_id}_cw0_reports.txt and/or er{er_id}_cm*_reports.txt."
         )
 
     return pd.DataFrame(rows)
