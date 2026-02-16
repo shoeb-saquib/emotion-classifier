@@ -5,14 +5,7 @@ from pathlib import Path
 from ecfdataset import ECFDataset
 from emotion_model import EmotionModel
 from evaluate import get_evaluation_report_content, generate_evaluation_report
-from configuration import (
-    CONTEXT_METHODS,
-    CONTEXT_WINDOWS,
-    DESCRIPTORS,
-    EMOTION_REPRESENTATIONS,
-    SELECTED_CONTEXT_METHODS,
-    SELECTED_EMOTION_REPRESENTATIONS,
-)
+from configuration import *
 
 TEST_EMBEDDINGS_FILENAME = "saved_data/test_embeddings.pkl"
 REPORTS_DIR = Path("reports")
@@ -31,8 +24,7 @@ def _parse_reports_file(path: Path) -> dict[int, str]:
     if not path.exists():
         return out
     text = path.read_text()
-    # Split between reports only (each report has SEP inside after "EMOTION CLASSIFICATION...")
-    # Boundary between reports is "\n\n" + SEP + "\n" from our join.
+    # Split between reports: each report starts with SEP + "\n", so boundary is "\n\n" + SEP + "\n"
     blocks = text.split("\n\n" + SEP + "\n")
     for block in blocks:
         block = block.strip()
@@ -48,8 +40,8 @@ def _write_combined_reports(path: Path, reports_by_cw: dict[int, str]) -> None:
     """Write reports to path in ascending order of context window."""
     path.parent.mkdir(parents=True, exist_ok=True)
     ordered = [reports_by_cw[cw] for cw in sorted(reports_by_cw)]
-    # Use "\n\n" + SEP + "\n" so _parse_reports_file can split on the same boundary
-    path.write_text(("\n\n" + SEP + "\n").join(ordered))
+    # Join with "\n\n" only; strip each block so trailing newlines don't create extra gaps
+    path.write_text("\n\n".join(s.rstrip() for s in ordered))
 
 
 dataset = ECFDataset()

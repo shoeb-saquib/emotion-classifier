@@ -23,8 +23,8 @@ def _report_content(true_labels, predicted_labels, descriptors):
         f"Label/prediction length mismatch: {len(true_labels)} vs {len(predicted_labels)}"
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    confusion_matrix_str = format_confusion_matrix(true_labels, predicted_labels)
-    summary_str = classification_report(true_labels, predicted_labels, digits=3)
+    confusion_matrix_str = format_confusion_matrix(true_labels, predicted_labels).strip()
+    summary_str = classification_report(true_labels, predicted_labels, digits=3).strip()
     accuracy = round(accuracy_score(true_labels, predicted_labels) * 100, 2)
     macro_f1 = round(f1_score(true_labels, predicted_labels, average="macro") * 100, 2)
 
@@ -54,7 +54,6 @@ def _report_content(true_labels, predicted_labels, descriptors):
         "-" * 80,
         "",
         summary_str,
-        "",
         "=" * 80,
     ])
     return "\n".join(lines)

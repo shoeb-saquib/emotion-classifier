@@ -209,39 +209,45 @@ def _save_with_strip_colors(plot, path: Path, dpi: int = 150):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Plot accuracy and macro F1 from reports for an emotion representation id."
+        description="Plot accuracy and macro F1 from reports for one or more emotion representation id(s).",
     )
     parser.add_argument(
-        "er_id",
+        "er_ids",
         type=int,
-        help="Emotion representation id (reports are read from directories er{er_id}_*).",
+        nargs="+",
+        metavar="er_id",
+        help="Emotion representation id(s) (e.g. 0 1). Reports read from reports/er<id>/.",
     )
     parser.add_argument(
         "-o",
         "--output",
         type=Path,
         default=None,
-        help="Output path for the plot. Default: plots/er<id>_metrics_plot.png",
+        help="Output path for the plot (only used when a single er_id is given). Default: plots/er<id>_metrics_plot.png",
     )
     parser.add_argument(
         "--show",
         action="store_true",
-        help="Show the plot (requires display).",
+        help="Show the plot (requires display). With multiple ids, shows each in turn.",
     )
     args = parser.parse_args()
 
-    df = load_reports(args.er_id)
-    print(f"Loaded {len(df)} reports for emotion representation {args.er_id}.")
-    print(df.to_string(index=False))
+    for er_id in args.er_ids:
+        df = load_reports(er_id)
+        print(f"Loaded {len(df)} reports for emotion representation {er_id}.")
+        print(df.to_string(index=False))
 
-    output = args.output or PLOTS_DIR / f"er{args.er_id}_metrics_plot.png"
-    p = plot_metrics(df, args.er_id, output_path=output)
+        if len(args.er_ids) == 1 and args.output is not None:
+            output = args.output
+        else:
+            output = PLOTS_DIR / f"er{er_id}_metrics_plot.png"
+        p = plot_metrics(df, er_id, output_path=output)
 
-    if args.show:
-        fig = p.draw(show=False)
-        _apply_strip_colors(p)
-        import matplotlib.pyplot as plt
-        plt.show()
+        if args.show:
+            fig = p.draw(show=False)
+            _apply_strip_colors(p)
+            import matplotlib.pyplot as plt
+            plt.show()
 
 
 if __name__ == "__main__":

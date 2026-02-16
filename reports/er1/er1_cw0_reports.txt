@@ -2,7 +2,7 @@
 EMOTION CLASSIFICATION EVALUATION REPORT
 ================================================================================
 
-Timestamp              : 2026-02-15 21:54:37
+Timestamp              : 2026-02-15 22:21:03
 Emotion Representation : averaged emotion utterance embeddings
 Context Window         : 0
 
@@ -27,7 +27,7 @@ surprise      68       66    38   63       91       68       276
 CLASSIFICATION SUMMARY
 --------------------------------------------------------------------------------
 
-              precision    recall  f1-score   support
+precision    recall  f1-score   support
 
        anger      0.352     0.262     0.301       568
      disgust      0.094     0.361     0.150       202
@@ -40,6 +40,4 @@ CLASSIFICATION SUMMARY
     accuracy                          0.379      5667
    macro avg      0.329     0.352     0.317      5667
 weighted avg      0.476     0.379     0.409      5667
-
-
 ================================================================================
