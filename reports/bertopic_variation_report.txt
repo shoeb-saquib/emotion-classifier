@@ -1,0 +1,95 @@
+BERTopic Variation Comparisons
+================================================================================
+Generated: 2026-03-01T20:10:02.916772
+
+
+METRIC DEFINITIONS
+-------------------------------------------------
+
+1. PURITY (per-topic and weighted)
+   - Per-topic purity: For each cluster, the fraction of documents that have the
+     *dominant* emotion (the most frequent emotion in that cluster).
+     Formula: purity(topic k) = max_emotion count_in_topic_k(emotion) / size(topic k).
+   - Mean purity: Average of per-topic purities over all topics (each topic weighted equally).
+   - Weighted purity: Purity weighted by cluster size.
+     Formula: sum over topics of [ purity(topic k) * (size(topic k) / total docs) ].
+   - Interpretation: High purity = each cluster is dominated by one emotion. Does not
+     measure whether clusters separate different emotions well (e.g. all-positive vs
+     all-negative still gives moderate purity).
+
+2. NMI (Normalized Mutual Information)
+   - Measures how much knowing the cluster ID reduces uncertainty about the emotion label.
+   - Formula: NMI(emotion; cluster) = MI(emotion, cluster) / average(H(emotion), H(cluster)).
+     MI = mutual information, H = entropy. We use sklearn's normalized_mutual_info_score
+     with average_method="arithmetic".
+   - Range: 0 (cluster and emotion independent) to 1 (cluster perfectly predicts emotion).
+   - Interpretation: High NMI = clusters are informative for emotion (e.g. positive vs
+     negative, or finer separation). Good for "do clusters help classify emotion?"
+
+3. HOMOGENEITY
+   - Each cluster contains only one class (emotion)?
+   - Formula: 1 - H(emotion | cluster) / H(emotion). Homogeneity is 1 when every cluster
+     has documents of only one emotion.
+   - Range: 0 to 1. High = each cluster is "pure" in terms of emotion.
+
+4. COMPLETENESS
+   - Each emotion is assigned to only one cluster?
+   - Formula: 1 - H(cluster | emotion) / H(cluster). Completeness is 1 when all documents
+     of a given emotion fall in a single cluster.
+   - Range: 0 to 1. High = each emotion is concentrated in one cluster (no split across
+     many clusters).
+
+5. TOPICS AND OUTLIERS
+   - Topics: Number of distinct topic IDs excluding -1.
+   - Outliers: Number of documents assigned topic -1 (e.g. by HDBSCAN when not in any cluster).
+
+
+----------------------------------------------------------------------------------
+Variation                  Topics  Outliers      Purity      NMI    Homog    Compl
+----------------------------------------------------------------------------------
+UMAP(default) + KMeans(7)       7         0     0.4470*  0.0257*  0.0253*  0.0261*
+(* = best in column)
+
+
+================================================================================
+VARIATION: UMAP(default) + KMeans(7)
+================================================================================
+Topics: 7  |  Outliers: 0  |  Purity: 0.4470  |  NMI: 0.0257
+  Homogeneity: 0.0253  |  Completeness: 0.0261
+
+  --- Topic 0 (n=4044) ---
+      Dominant emotion: neutral (purity=0.4594)
+      Top words: Communication difficulties and limitations
+      Emotion distribution: {'neutral': 0.45944609297725025, 'joy': 0.17903066271018794, 'anger': 0.12561819980217606, 'sadness': 0.10014836795252226, 'surprise': 0.07987141444114738, 'fear': 0.032393669634025714, 'disgust': 0.023491592482690407}
+
+  --- Topic 1 (n=3559) ---
+      Dominant emotion: neutral (purity=0.4392)
+      Top words: Unclear communication and frustration
+      Emotion distribution: {'neutral': 0.4391683057038494, 'joy': 0.14442259061534138, 'surprise': 0.14329867940432706, 'anger': 0.12896881146389436, 'sadness': 0.07558302894071368, 'disgust': 0.04439449283506603, 'fear': 0.024164091036808093}
+
+  --- Topic 2 (n=3248) ---
+      Dominant emotion: neutral (purity=0.4221)
+      Top words: Relationship drama and social interactions
+      Emotion distribution: {'neutral': 0.42210591133004927, 'joy': 0.15055418719211822, 'anger': 0.1400862068965517, 'surprise': 0.12931034482758622, 'sadness': 0.1022167487684729, 'disgust': 0.029248768472906403, 'fear': 0.02647783251231527}
+
+  --- Topic 3 (n=2017) ---
+      Dominant emotion: neutral (purity=0.4204)
+      Top words: Conversational fillers and interjections
+      Emotion distribution: {'neutral': 0.42042637580565195, 'surprise': 0.19038175508180466, 'joy': 0.17798710956866634, 'anger': 0.0872583044124938, 'sadness': 0.06246901338621715, 'fear': 0.03173029251363411, 'disgust': 0.029747149231531978}
+
+  --- Topic 4 (n=372) ---
+      Dominant emotion: joy (purity=0.4651)
+      Top words: Informal greetings and chat filler
+      Emotion distribution: {'joy': 0.4650537634408602, 'neutral': 0.4274193548387097, 'surprise': 0.056451612903225805, 'anger': 0.02956989247311828, 'sadness': 0.01881720430107527, 'disgust': 0.002688172043010753}
+
+  --- Topic 5 (n=237) ---
+      Dominant emotion: surprise (purity=0.7468)
+      Top words: Confusion and disbelief
+      Emotion distribution: {'surprise': 0.7468354430379747, 'neutral': 0.1350210970464135, 'sadness': 0.03375527426160337, 'joy': 0.029535864978902954, 'fear': 0.02531645569620253, 'disgust': 0.016877637130801686, 'anger': 0.012658227848101266}
+
+  --- Topic 6 (n=142) ---
+      Dominant emotion: neutral (purity=0.6901)
+      Top words: Lack of substantive content
+      Emotion distribution: {'neutral': 0.6901408450704225, 'joy': 0.24647887323943662, 'surprise': 0.035211267605633804, 'anger': 0.02112676056338028, 'disgust': 0.007042253521126761}
+
+
