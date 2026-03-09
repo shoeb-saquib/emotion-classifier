@@ -7,7 +7,7 @@ Uses the same reports layout as generate_reports: reports/<cluster_subdir>/er0/,
 import re
 from pathlib import Path
 
-from src.utils.configuration import (
+from src.configuration import (
     CONTEXT_WINDOWS,
     KNN_NEIGHBORS,
     SELECTED_CLUSTER_VARIATIONS,

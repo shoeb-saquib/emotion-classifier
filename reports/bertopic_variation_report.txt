@@ -1,6 +1,6 @@
 BERTopic Variation Comparisons
 ================================================================================
-Generated: 2026-03-01T20:10:02.916772
+Generated: 2026-03-03T13:54:31.444902
 
 
 METRIC DEFINITIONS
@@ -44,10 +44,12 @@ METRIC DEFINITIONS
    - Outliers: Number of documents assigned topic -1 (e.g. by HDBSCAN when not in any cluster).
 
 
-----------------------------------------------------------------------------------
-Variation                  Topics  Outliers      Purity      NMI    Homog    Compl
-----------------------------------------------------------------------------------
-UMAP(default) + KMeans(7)       7         0     0.4470*  0.0257*  0.0253*  0.0261*
+-----------------------------------------------------------------------------------------------------
+Variation                                     Topics  Outliers      Purity      NMI    Homog    Compl
+-----------------------------------------------------------------------------------------------------
+UMAP(default) + KMeans(7)                          7         0     0.4470   0.0257   0.0253   0.0261 
+UMAP(default) + HDBSCAN(min_cluster_size=20)     131      5593     0.4773   0.0539   0.0840   0.0397 
+UMAP(default) + HDBSCAN(default)                 492      3951     0.4978*  0.0795*  0.1572*  0.0532*
 (* = best in column)
 
 
@@ -59,37 +61,3178 @@ Topics: 7  |  Outliers: 0  |  Purity: 0.4470  |  NMI: 0.0257
 
   --- Topic 0 (n=4044) ---
       Dominant emotion: neutral (purity=0.4594)
-      Top words: Communication difficulties and limitations
+      Topic label: Communication difficulties and limitations
       Emotion distribution: {'neutral': 0.45944609297725025, 'joy': 0.17903066271018794, 'anger': 0.12561819980217606, 'sadness': 0.10014836795252226, 'surprise': 0.07987141444114738, 'fear': 0.032393669634025714, 'disgust': 0.023491592482690407}
 
   --- Topic 1 (n=3559) ---
       Dominant emotion: neutral (purity=0.4392)
-      Top words: Unclear communication and frustration
+      Topic label: Unclear communication and frustration
       Emotion distribution: {'neutral': 0.4391683057038494, 'joy': 0.14442259061534138, 'surprise': 0.14329867940432706, 'anger': 0.12896881146389436, 'sadness': 0.07558302894071368, 'disgust': 0.04439449283506603, 'fear': 0.024164091036808093}
 
   --- Topic 2 (n=3248) ---
       Dominant emotion: neutral (purity=0.4221)
-      Top words: Relationship drama and social interactions
+      Topic label: Relationship drama and social interactions
       Emotion distribution: {'neutral': 0.42210591133004927, 'joy': 0.15055418719211822, 'anger': 0.1400862068965517, 'surprise': 0.12931034482758622, 'sadness': 0.1022167487684729, 'disgust': 0.029248768472906403, 'fear': 0.02647783251231527}
 
   --- Topic 3 (n=2017) ---
       Dominant emotion: neutral (purity=0.4204)
-      Top words: Conversational fillers and interjections
+      Topic label: Conversational fillers and interjections
       Emotion distribution: {'neutral': 0.42042637580565195, 'surprise': 0.19038175508180466, 'joy': 0.17798710956866634, 'anger': 0.0872583044124938, 'sadness': 0.06246901338621715, 'fear': 0.03173029251363411, 'disgust': 0.029747149231531978}
 
   --- Topic 4 (n=372) ---
       Dominant emotion: joy (purity=0.4651)
-      Top words: Informal greetings and chat filler
+      Topic label: Informal greetings and chat filler
       Emotion distribution: {'joy': 0.4650537634408602, 'neutral': 0.4274193548387097, 'surprise': 0.056451612903225805, 'anger': 0.02956989247311828, 'sadness': 0.01881720430107527, 'disgust': 0.002688172043010753}
 
   --- Topic 5 (n=237) ---
       Dominant emotion: surprise (purity=0.7468)
-      Top words: Confusion and disbelief
+      Topic label: Confusion and disbelief
       Emotion distribution: {'surprise': 0.7468354430379747, 'neutral': 0.1350210970464135, 'sadness': 0.03375527426160337, 'joy': 0.029535864978902954, 'fear': 0.02531645569620253, 'disgust': 0.016877637130801686, 'anger': 0.012658227848101266}
 
   --- Topic 6 (n=142) ---
       Dominant emotion: neutral (purity=0.6901)
-      Top words: Lack of substantive content
+      Topic label: Lack of substantive content
       Emotion distribution: {'neutral': 0.6901408450704225, 'joy': 0.24647887323943662, 'surprise': 0.035211267605633804, 'anger': 0.02112676056338028, 'disgust': 0.007042253521126761}
+
+
+
+================================================================================
+VARIATION: UMAP(default) + HDBSCAN(min_cluster_size=20)
+================================================================================
+Topics: 131  |  Outliers: 5593  |  Purity: 0.4773  |  NMI: 0.0539
+  Homogeneity: 0.0840  |  Completeness: 0.0397
+
+  --- Topic -1 (n=5593) ---
+      Dominant emotion: neutral (purity=0.4425)
+      Topic label: Frustration and uncertainty
+      Emotion distribution: {'neutral': 0.4425174325049169, 'joy': 0.17039156087967103, 'anger': 0.12676559985696406, 'surprise': 0.11800464866797783, 'sadness': 0.08153048453423922, 'disgust': 0.03414983014482389, 'fear': 0.026640443411407116}
+
+  --- Topic 0 (n=350) ---
+      Dominant emotion: neutral (purity=0.3743)
+      Topic label: Unclear communication and pronoun confusion
+      Emotion distribution: {'neutral': 0.3742857142857143, 'anger': 0.16857142857142857, 'joy': 0.13142857142857142, 'surprise': 0.12857142857142856, 'sadness': 0.11714285714285715, 'fear': 0.04, 'disgust': 0.04}
+
+  --- Topic 1 (n=267) ---
+      Dominant emotion: neutral (purity=0.4944)
+      Topic label: Social invitations and dining
+      Emotion distribution: {'neutral': 0.4943820224719101, 'joy': 0.19101123595505617, 'surprise': 0.11235955056179775, 'anger': 0.11235955056179775, 'disgust': 0.0449438202247191, 'sadness': 0.04119850187265917, 'fear': 0.003745318352059925}
+
+  --- Topic 2 (n=248) ---
+      Dominant emotion: neutral (purity=0.3629)
+      Topic label: Unintelligible utterances/gibberish
+      Emotion distribution: {'neutral': 0.3629032258064516, 'anger': 0.18951612903225806, 'joy': 0.14112903225806453, 'sadness': 0.13709677419354838, 'surprise': 0.11290322580645161, 'disgust': 0.03225806451612903, 'fear': 0.024193548387096774}
+
+  --- Topic 3 (n=247) ---
+      Dominant emotion: neutral (purity=0.3887)
+      Topic label: Unsubstantiated exclamation
+      Emotion distribution: {'neutral': 0.38866396761133604, 'joy': 0.19433198380566802, 'surprise': 0.15384615384615385, 'anger': 0.11740890688259109, 'sadness': 0.08502024291497975, 'fear': 0.032388663967611336, 'disgust': 0.02834008097165992}
+
+  --- Topic 4 (n=198) ---
+      Dominant emotion: neutral (purity=0.4394)
+      Topic label: Avoiding unwanted communication
+      Emotion distribution: {'neutral': 0.4393939393939394, 'anger': 0.12626262626262627, 'surprise': 0.12121212121212122, 'sadness': 0.10101010101010101, 'joy': 0.10101010101010101, 'fear': 0.07575757575757576, 'disgust': 0.03535353535353535}
+
+  --- Topic 5 (n=194) ---
+      Dominant emotion: neutral (purity=0.3866)
+      Topic label: Fan discussion about *Friends*
+      Emotion distribution: {'neutral': 0.3865979381443299, 'anger': 0.17010309278350516, 'surprise': 0.16494845360824742, 'joy': 0.15979381443298968, 'sadness': 0.08762886597938144, 'fear': 0.02577319587628866, 'disgust': 0.005154639175257732}
+
+  --- Topic 6 (n=192) ---
+      Dominant emotion: neutral (purity=0.3385)
+      Topic label: Wedding planning and relationships
+      Emotion distribution: {'neutral': 0.3385416666666667, 'anger': 0.21354166666666666, 'joy': 0.203125, 'sadness': 0.11979166666666667, 'surprise': 0.078125, 'disgust': 0.03125, 'fear': 0.015625}
+
+  --- Topic 7 (n=177) ---
+      Dominant emotion: neutral (purity=0.4633)
+      Topic label: The Friends TV Show
+      Emotion distribution: {'neutral': 0.4632768361581921, 'surprise': 0.15819209039548024, 'joy': 0.15254237288135594, 'anger': 0.10734463276836158, 'sadness': 0.07909604519774012, 'fear': 0.02824858757062147, 'disgust': 0.011299435028248588}
+
+  --- Topic 8 (n=168) ---
+      Dominant emotion: neutral (purity=0.4524)
+      Topic label: Emotional expression and memory
+      Emotion distribution: {'neutral': 0.4523809523809524, 'anger': 0.16071428571428573, 'surprise': 0.1130952380952381, 'joy': 0.10714285714285714, 'sadness': 0.08333333333333333, 'fear': 0.05357142857142857, 'disgust': 0.02976190476190476}
+
+  --- Topic 9 (n=164) ---
+      Dominant emotion: neutral (purity=0.4390)
+      Topic label: Unsubstantiated claims and repetition
+      Emotion distribution: {'neutral': 0.43902439024390244, 'joy': 0.14634146341463414, 'anger': 0.12804878048780488, 'surprise': 0.12195121951219512, 'sadness': 0.10975609756097561, 'disgust': 0.03048780487804878, 'fear': 0.024390243902439025}
+
+  --- Topic 10 (n=157) ---
+      Dominant emotion: neutral (purity=0.4522)
+      Topic label: Lack of intimacy and relationship difficulties
+      Emotion distribution: {'neutral': 0.45222929936305734, 'joy': 0.17197452229299362, 'sadness': 0.10828025477707007, 'surprise': 0.10191082802547771, 'anger': 0.09554140127388536, 'disgust': 0.044585987261146494, 'fear': 0.025477707006369428}
+
+  --- Topic 11 (n=147) ---
+      Dominant emotion: neutral (purity=0.4558)
+      Topic label: Unintelligible communication/noise
+      Emotion distribution: {'neutral': 0.4557823129251701, 'anger': 0.17687074829931973, 'surprise': 0.1564625850340136, 'joy': 0.09523809523809523, 'sadness': 0.08843537414965986, 'disgust': 0.013605442176870748, 'fear': 0.013605442176870748}
+
+  --- Topic 12 (n=128) ---
+      Dominant emotion: neutral (purity=0.5234)
+      Topic label: Emotional pleas and requests for continued presence
+      Emotion distribution: {'neutral': 0.5234375, 'anger': 0.140625, 'joy': 0.109375, 'sadness': 0.09375, 'fear': 0.0703125, 'surprise': 0.046875, 'disgust': 0.015625}
+
+  --- Topic 13 (n=123) ---
+      Dominant emotion: neutral (purity=0.3821)
+      Topic label: Emotional distress and lack of planning
+      Emotion distribution: {'neutral': 0.3821138211382114, 'joy': 0.21951219512195122, 'anger': 0.17886178861788618, 'sadness': 0.08130081300813008, 'surprise': 0.06504065040650407, 'disgust': 0.04065040650406504, 'fear': 0.032520325203252036}
+
+  --- Topic 14 (n=122) ---
+      Dominant emotion: neutral (purity=0.4344)
+      Topic label: Clothing and personal appearance
+      Emotion distribution: {'neutral': 0.4344262295081967, 'joy': 0.16393442622950818, 'anger': 0.13934426229508196, 'surprise': 0.11475409836065574, 'sadness': 0.09016393442622951, 'disgust': 0.03278688524590164, 'fear': 0.02459016393442623}
+
+  --- Topic 15 (n=118) ---
+      Dominant emotion: neutral (purity=0.4237)
+      Topic label: Pregnancy and childbirth
+      Emotion distribution: {'neutral': 0.423728813559322, 'joy': 0.16101694915254236, 'surprise': 0.1440677966101695, 'anger': 0.1440677966101695, 'sadness': 0.07627118644067797, 'fear': 0.0423728813559322, 'disgust': 0.00847457627118644}
+
+  --- Topic 16 (n=106) ---
+      Dominant emotion: neutral (purity=0.6226)
+      Topic label: Time management and lateness
+      Emotion distribution: {'neutral': 0.6226415094339622, 'sadness': 0.11320754716981132, 'anger': 0.10377358490566038, 'joy': 0.0660377358490566, 'surprise': 0.0660377358490566, 'fear': 0.018867924528301886, 'disgust': 0.009433962264150943}
+
+  --- Topic 17 (n=95) ---
+      Dominant emotion: neutral (purity=0.6316)
+      Topic label: Counting and Ordering Issues
+      Emotion distribution: {'neutral': 0.631578947368421, 'joy': 0.11578947368421053, 'anger': 0.10526315789473684, 'surprise': 0.09473684210526316, 'sadness': 0.021052631578947368, 'disgust': 0.021052631578947368, 'fear': 0.010526315789473684}
+
+  --- Topic 18 (n=89) ---
+      Dominant emotion: neutral (purity=0.4270)
+      Topic label: Medical professionals and patients
+      Emotion distribution: {'neutral': 0.42696629213483145, 'surprise': 0.1348314606741573, 'anger': 0.12359550561797752, 'sadness': 0.0898876404494382, 'joy': 0.0898876404494382, 'disgust': 0.0898876404494382, 'fear': 0.0449438202247191}
+
+  --- Topic 19 (n=81) ---
+      Dominant emotion: neutral (purity=0.5185)
+      Topic label: Room design and usage disputes
+      Emotion distribution: {'neutral': 0.5185185185185185, 'anger': 0.13580246913580246, 'joy': 0.13580246913580246, 'disgust': 0.07407407407407407, 'surprise': 0.06172839506172839, 'sadness': 0.04938271604938271, 'fear': 0.024691358024691357}
+
+  --- Topic 20 (n=80) ---
+      Dominant emotion: joy (purity=0.4250)
+      Topic label: Expressions of happiness and positive emotions
+      Emotion distribution: {'joy': 0.425, 'neutral': 0.175, 'anger': 0.1375, 'sadness': 0.1125, 'surprise': 0.1, 'fear': 0.0375, 'disgust': 0.0125}
+
+  --- Topic 21 (n=79) ---
+      Dominant emotion: neutral (purity=0.5949)
+      Topic label: Resistance to a new product
+      Emotion distribution: {'neutral': 0.5949367088607594, 'anger': 0.1518987341772152, 'surprise': 0.08860759493670886, 'joy': 0.0759493670886076, 'disgust': 0.05063291139240506, 'sadness': 0.0379746835443038}
+
+  --- Topic 22 (n=79) ---
+      Dominant emotion: joy (purity=0.4557)
+      Topic label: Excessive use of the word "sweet"
+      Emotion distribution: {'joy': 0.45569620253164556, 'neutral': 0.21518987341772153, 'sadness': 0.12658227848101267, 'surprise': 0.10126582278481013, 'anger': 0.06329113924050633, 'disgust': 0.02531645569620253, 'fear': 0.012658227848101266}
+
+  --- Topic 23 (n=79) ---
+      Dominant emotion: neutral (purity=0.5823)
+      Topic label: Communication and contact requests
+      Emotion distribution: {'neutral': 0.5822784810126582, 'joy': 0.16455696202531644, 'anger': 0.13924050632911392, 'fear': 0.0379746835443038, 'disgust': 0.02531645569620253, 'sadness': 0.02531645569620253, 'surprise': 0.02531645569620253}
+
+  --- Topic 24 (n=78) ---
+      Dominant emotion: joy (purity=0.3333)
+      Topic label: Employment and Job Seeking
+      Emotion distribution: {'joy': 0.3333333333333333, 'neutral': 0.32051282051282054, 'sadness': 0.14102564102564102, 'anger': 0.08974358974358974, 'surprise': 0.07692307692307693, 'disgust': 0.02564102564102564, 'fear': 0.01282051282051282}
+
+  --- Topic 25 (n=75) ---
+      Dominant emotion: neutral (purity=0.5200)
+      Topic label: Nudity and suggestive content
+      Emotion distribution: {'neutral': 0.52, 'joy': 0.13333333333333333, 'sadness': 0.10666666666666667, 'surprise': 0.10666666666666667, 'anger': 0.08, 'disgust': 0.05333333333333334}
+
+  --- Topic 26 (n=73) ---
+      Dominant emotion: sadness (purity=0.5753)
+      Topic label: Apology and regret
+      Emotion distribution: {'sadness': 0.5753424657534246, 'neutral': 0.1643835616438356, 'surprise': 0.0958904109589041, 'fear': 0.0684931506849315, 'joy': 0.0684931506849315, 'disgust': 0.0136986301369863, 'anger': 0.0136986301369863}
+
+  --- Topic 27 (n=73) ---
+      Dominant emotion: neutral (purity=0.4384)
+      Topic label: Unidentifiable names and random words
+      Emotion distribution: {'neutral': 0.4383561643835616, 'surprise': 0.1780821917808219, 'joy': 0.1232876712328767, 'anger': 0.0821917808219178, 'sadness': 0.0821917808219178, 'fear': 0.0684931506849315, 'disgust': 0.0273972602739726}
+
+  --- Topic 28 (n=73) ---
+      Dominant emotion: neutral (purity=0.6301)
+      Topic label: Character introductions in *Friends*
+      Emotion distribution: {'neutral': 0.6301369863013698, 'joy': 0.1506849315068493, 'surprise': 0.0821917808219178, 'sadness': 0.0547945205479452, 'anger': 0.0547945205479452, 'fear': 0.0136986301369863, 'disgust': 0.0136986301369863}
+
+  --- Topic 29 (n=71) ---
+      Dominant emotion: joy (purity=0.7746)
+      Topic label: Greetings and informal communication
+      Emotion distribution: {'joy': 0.7746478873239436, 'neutral': 0.1267605633802817, 'surprise': 0.07042253521126761, 'sadness': 0.028169014084507043}
+
+  --- Topic 30 (n=66) ---
+      Dominant emotion: neutral (purity=0.5606)
+      Topic label: End of conversation
+      Emotion distribution: {'neutral': 0.5606060606060606, 'joy': 0.2878787878787879, 'sadness': 0.09090909090909091, 'disgust': 0.030303030303030304, 'surprise': 0.015151515151515152, 'anger': 0.015151515151515152}
+
+  --- Topic 31 (n=66) ---
+      Dominant emotion: neutral (purity=0.4848)
+      Topic label: Unintelligible online chatter
+      Emotion distribution: {'neutral': 0.48484848484848486, 'joy': 0.30303030303030304, 'surprise': 0.09090909090909091, 'sadness': 0.09090909090909091, 'anger': 0.030303030303030304}
+
+  --- Topic 32 (n=65) ---
+      Dominant emotion: neutral (purity=0.5538)
+      Topic label: Lack of substantive content/filler words
+      Emotion distribution: {'neutral': 0.5538461538461539, 'joy': 0.23076923076923078, 'sadness': 0.07692307692307693, 'anger': 0.07692307692307693, 'surprise': 0.046153846153846156, 'fear': 0.015384615384615385}
+
+  --- Topic 33 (n=65) ---
+      Dominant emotion: surprise (purity=0.6462)
+      Topic label: Unclear or Disbelief
+      Emotion distribution: {'surprise': 0.6461538461538462, 'neutral': 0.2923076923076923, 'fear': 0.03076923076923077, 'anger': 0.03076923076923077}
+
+  --- Topic 34 (n=64) ---
+      Dominant emotion: surprise (purity=0.6875)
+      Topic label: Confusion and uncertainty
+      Emotion distribution: {'surprise': 0.6875, 'neutral': 0.296875, 'sadness': 0.015625}
+
+  --- Topic 35 (n=62) ---
+      Dominant emotion: neutral (purity=0.5323)
+      Topic label: Casual greetings and small talk
+      Emotion distribution: {'neutral': 0.532258064516129, 'surprise': 0.1935483870967742, 'joy': 0.1935483870967742, 'sadness': 0.04838709677419355, 'disgust': 0.016129032258064516, 'anger': 0.016129032258064516}
+
+  --- Topic 36 (n=59) ---
+      Dominant emotion: neutral (purity=0.7288)
+      Topic label: Unclear or filler communication
+      Emotion distribution: {'neutral': 0.7288135593220338, 'sadness': 0.11864406779661017, 'anger': 0.05084745762711865, 'joy': 0.05084745762711865, 'fear': 0.01694915254237288, 'surprise': 0.01694915254237288, 'disgust': 0.01694915254237288}
+
+  --- Topic 37 (n=58) ---
+      Dominant emotion: neutral (purity=0.3966)
+      Topic label: Physical discomfort and pain
+      Emotion distribution: {'neutral': 0.39655172413793105, 'surprise': 0.1724137931034483, 'anger': 0.15517241379310345, 'sadness': 0.10344827586206896, 'joy': 0.10344827586206896, 'disgust': 0.05172413793103448, 'fear': 0.017241379310344827}
+
+  --- Topic 38 (n=57) ---
+      Dominant emotion: surprise (purity=0.7193)
+      Topic label: Exclamations and expressions of surprise/emotion
+      Emotion distribution: {'surprise': 0.7192982456140351, 'joy': 0.08771929824561403, 'anger': 0.08771929824561403, 'disgust': 0.05263157894736842, 'sadness': 0.05263157894736842}
+
+  --- Topic 39 (n=57) ---
+      Dominant emotion: neutral (purity=0.2632)
+      Topic label: Subjective statements and declarations
+      Emotion distribution: {'neutral': 0.2631578947368421, 'anger': 0.22807017543859648, 'surprise': 0.19298245614035087, 'joy': 0.19298245614035087, 'disgust': 0.05263157894736842, 'sadness': 0.05263157894736842, 'fear': 0.017543859649122806}
+
+  --- Topic 40 (n=57) ---
+      Dominant emotion: neutral (purity=0.3860)
+      Topic label: Childlike vocalizations and playful expressions
+      Emotion distribution: {'neutral': 0.38596491228070173, 'joy': 0.2631578947368421, 'anger': 0.14035087719298245, 'sadness': 0.08771929824561403, 'surprise': 0.07017543859649122, 'disgust': 0.03508771929824561, 'fear': 0.017543859649122806}
+
+  --- Topic 41 (n=56) ---
+      Dominant emotion: joy (purity=0.5179)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'joy': 0.5178571428571429, 'neutral': 0.30357142857142855, 'surprise': 0.08928571428571429, 'anger': 0.05357142857142857, 'disgust': 0.017857142857142856, 'sadness': 0.017857142857142856}
+
+  --- Topic 42 (n=56) ---
+      Dominant emotion: joy (purity=0.5893)
+      Topic label: Unnecessary greetings
+      Emotion distribution: {'joy': 0.5892857142857143, 'neutral': 0.2857142857142857, 'surprise': 0.07142857142857142, 'anger': 0.05357142857142857}
+
+  --- Topic 43 (n=56) ---
+      Dominant emotion: neutral (purity=0.3929)
+      Topic label: Audition processes and experiences
+      Emotion distribution: {'neutral': 0.39285714285714285, 'joy': 0.21428571428571427, 'sadness': 0.14285714285714285, 'anger': 0.10714285714285714, 'surprise': 0.07142857142857142, 'disgust': 0.05357142857142857, 'fear': 0.017857142857142856}
+
+  --- Topic 44 (n=54) ---
+      Dominant emotion: neutral (purity=0.7963)
+      Topic label: Negative responses
+      Emotion distribution: {'neutral': 0.7962962962962963, 'sadness': 0.12962962962962962, 'anger': 0.037037037037037035, 'disgust': 0.018518518518518517, 'joy': 0.018518518518518517}
+
+  --- Topic 45 (n=54) ---
+      Dominant emotion: neutral (purity=0.4630)
+      Topic label: Dance and movement education
+      Emotion distribution: {'neutral': 0.46296296296296297, 'joy': 0.18518518518518517, 'anger': 0.14814814814814814, 'surprise': 0.09259259259259259, 'disgust': 0.05555555555555555, 'sadness': 0.05555555555555555}
+
+  --- Topic 46 (n=54) ---
+      Dominant emotion: neutral (purity=0.7222)
+      Topic label: Coffee consumption and preferences
+      Emotion distribution: {'neutral': 0.7222222222222222, 'disgust': 0.07407407407407407, 'joy': 0.05555555555555555, 'anger': 0.05555555555555555, 'surprise': 0.05555555555555555, 'sadness': 0.037037037037037035}
+
+  --- Topic 47 (n=53) ---
+      Dominant emotion: neutral (purity=0.7736)
+      Topic label: Filler words and greetings
+      Emotion distribution: {'neutral': 0.7735849056603774, 'joy': 0.16981132075471697, 'sadness': 0.05660377358490566}
+
+  --- Topic 48 (n=53) ---
+      Dominant emotion: neutral (purity=0.4340)
+      Topic label: Unclear/Irrelevant Communication
+      Emotion distribution: {'neutral': 0.4339622641509434, 'joy': 0.22641509433962265, 'sadness': 0.16981132075471697, 'anger': 0.11320754716981132, 'surprise': 0.05660377358490566}
+
+  --- Topic 49 (n=51) ---
+      Dominant emotion: surprise (purity=0.4314)
+      Topic label: Expressing frustration and annoyance
+      Emotion distribution: {'surprise': 0.43137254901960786, 'neutral': 0.13725490196078433, 'joy': 0.13725490196078433, 'anger': 0.11764705882352941, 'disgust': 0.0784313725490196, 'fear': 0.058823529411764705, 'sadness': 0.0392156862745098}
+
+  --- Topic 50 (n=50) ---
+      Dominant emotion: neutral (purity=0.9400)
+      Topic label: Lack of substantive communication
+      Emotion distribution: {'neutral': 0.94, 'joy': 0.06}
+
+  --- Topic 51 (n=48) ---
+      Dominant emotion: surprise (purity=0.7708)
+      Topic label: Expressing surprise and confusion
+      Emotion distribution: {'surprise': 0.7708333333333334, 'neutral': 0.14583333333333334, 'joy': 0.041666666666666664, 'fear': 0.020833333333333332, 'anger': 0.020833333333333332}
+
+  --- Topic 52 (n=48) ---
+      Dominant emotion: anger (purity=0.4375)
+      Topic label: Aggressive or dismissive commands
+      Emotion distribution: {'anger': 0.4375, 'neutral': 0.2708333333333333, 'joy': 0.14583333333333334, 'fear': 0.10416666666666667, 'disgust': 0.041666666666666664}
+
+  --- Topic 53 (n=48) ---
+      Dominant emotion: neutral (purity=0.2708)
+      Topic label: Restrictions and prohibitions
+      Emotion distribution: {'neutral': 0.2708333333333333, 'sadness': 0.25, 'anger': 0.14583333333333334, 'joy': 0.125, 'fear': 0.125, 'surprise': 0.08333333333333333}
+
+  --- Topic 54 (n=48) ---
+      Dominant emotion: surprise (purity=0.5625)
+      Topic label: Emotional distress and expressions of need
+      Emotion distribution: {'surprise': 0.5625, 'joy': 0.14583333333333334, 'sadness': 0.125, 'disgust': 0.08333333333333333, 'fear': 0.0625, 'anger': 0.020833333333333332}
+
+  --- Topic 55 (n=47) ---
+      Dominant emotion: neutral (purity=0.4043)
+      Topic label: Footwear and Personal Possessions
+      Emotion distribution: {'neutral': 0.40425531914893614, 'joy': 0.2765957446808511, 'anger': 0.14893617021276595, 'surprise': 0.0851063829787234, 'disgust': 0.0425531914893617, 'sadness': 0.0425531914893617}
+
+  --- Topic 56 (n=47) ---
+      Dominant emotion: neutral (purity=0.8936)
+      Topic label: Unsubstantiated greetings and fragments of conversation
+      Emotion distribution: {'neutral': 0.8936170212765957, 'joy': 0.10638297872340426}
+
+  --- Topic 57 (n=47) ---
+      Dominant emotion: neutral (purity=0.4043)
+      Topic label: Social awkwardness and embarrassment
+      Emotion distribution: {'neutral': 0.40425531914893614, 'anger': 0.1702127659574468, 'sadness': 0.14893617021276595, 'disgust': 0.0851063829787234, 'joy': 0.0851063829787234, 'surprise': 0.06382978723404255, 'fear': 0.0425531914893617}
+
+  --- Topic 58 (n=46) ---
+      Dominant emotion: anger (purity=0.5000)
+      Topic label: Negative responses and dismissals
+      Emotion distribution: {'anger': 0.5, 'disgust': 0.15217391304347827, 'joy': 0.13043478260869565, 'neutral': 0.06521739130434782, 'fear': 0.06521739130434782, 'surprise': 0.043478260869565216, 'sadness': 0.043478260869565216}
+
+  --- Topic 59 (n=46) ---
+      Dominant emotion: surprise (purity=0.7391)
+      Topic label: Confusion and uncertainty
+      Emotion distribution: {'surprise': 0.7391304347826086, 'neutral': 0.21739130434782608, 'sadness': 0.021739130434782608, 'fear': 0.021739130434782608}
+
+  --- Topic 60 (n=46) ---
+      Dominant emotion: neutral (purity=0.4348)
+      Topic label: Uncertainty and vagueness
+      Emotion distribution: {'neutral': 0.43478260869565216, 'joy': 0.2391304347826087, 'anger': 0.17391304347826086, 'sadness': 0.06521739130434782, 'surprise': 0.043478260869565216, 'fear': 0.021739130434782608, 'disgust': 0.021739130434782608}
+
+  --- Topic 61 (n=45) ---
+      Dominant emotion: neutral (purity=0.5111)
+      Topic label: Unclear communication and social interaction
+      Emotion distribution: {'neutral': 0.5111111111111111, 'joy': 0.2222222222222222, 'sadness': 0.13333333333333333, 'anger': 0.06666666666666667, 'surprise': 0.044444444444444446, 'fear': 0.022222222222222223}
+
+  --- Topic 62 (n=45) ---
+      Dominant emotion: neutral (purity=0.4222)
+      Topic label: Fear and anxiety
+      Emotion distribution: {'neutral': 0.4222222222222222, 'anger': 0.17777777777777778, 'fear': 0.13333333333333333, 'sadness': 0.1111111111111111, 'surprise': 0.08888888888888889, 'joy': 0.06666666666666667}
+
+  --- Topic 63 (n=45) ---
+      Dominant emotion: neutral (purity=0.6222)
+      Topic label: Lack of information / Unresponsive
+      Emotion distribution: {'neutral': 0.6222222222222222, 'sadness': 0.15555555555555556, 'fear': 0.06666666666666667, 'anger': 0.06666666666666667, 'surprise': 0.06666666666666667, 'joy': 0.022222222222222223}
+
+  --- Topic 64 (n=45) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Release and surrender
+      Emotion distribution: {'neutral': 0.6666666666666666, 'joy': 0.2, 'anger': 0.13333333333333333}
+
+  --- Topic 65 (n=44) ---
+      Dominant emotion: sadness (purity=0.3182)
+      Topic label: Family relationships and familial dynamics
+      Emotion distribution: {'sadness': 0.3181818181818182, 'neutral': 0.29545454545454547, 'surprise': 0.1590909090909091, 'joy': 0.13636363636363635, 'anger': 0.06818181818181818, 'disgust': 0.022727272727272728}
+
+  --- Topic 66 (n=44) ---
+      Dominant emotion: neutral (purity=0.5227)
+      Topic label: Name: Unclear/Fragmented Text
+      Emotion distribution: {'neutral': 0.5227272727272727, 'joy': 0.20454545454545456, 'surprise': 0.20454545454545456, 'fear': 0.022727272727272728, 'anger': 0.022727272727272728, 'disgust': 0.022727272727272728}
+
+  --- Topic 67 (n=42) ---
+      Dominant emotion: neutral (purity=0.3095)
+      Topic label: Romantic tension and desire
+      Emotion distribution: {'neutral': 0.30952380952380953, 'joy': 0.2857142857142857, 'sadness': 0.19047619047619047, 'surprise': 0.09523809523809523, 'anger': 0.09523809523809523, 'disgust': 0.023809523809523808}
+
+  --- Topic 68 (n=41) ---
+      Dominant emotion: neutral (purity=0.5610)
+      Topic label: General well-being check-ins
+      Emotion distribution: {'neutral': 0.5609756097560976, 'sadness': 0.14634146341463414, 'surprise': 0.12195121951219512, 'joy': 0.0975609756097561, 'fear': 0.024390243902439025, 'anger': 0.024390243902439025, 'disgust': 0.024390243902439025}
+
+  --- Topic 69 (n=41) ---
+      Dominant emotion: neutral (purity=0.4390)
+      Topic label: Disagreement and denial
+      Emotion distribution: {'neutral': 0.43902439024390244, 'surprise': 0.24390243902439024, 'joy': 0.14634146341463414, 'anger': 0.0975609756097561, 'disgust': 0.024390243902439025, 'sadness': 0.024390243902439025, 'fear': 0.024390243902439025}
+
+  --- Topic 70 (n=41) ---
+      Dominant emotion: neutral (purity=0.4634)
+      Topic label: Bear sightings and unusual events
+      Emotion distribution: {'neutral': 0.4634146341463415, 'joy': 0.17073170731707318, 'surprise': 0.12195121951219512, 'anger': 0.12195121951219512, 'fear': 0.04878048780487805, 'sadness': 0.04878048780487805, 'disgust': 0.024390243902439025}
+
+  --- Topic 71 (n=40) ---
+      Dominant emotion: neutral (purity=0.4750)
+      Topic label: Unnecessary conversational filler
+      Emotion distribution: {'neutral': 0.475, 'joy': 0.175, 'sadness': 0.15, 'anger': 0.1, 'disgust': 0.05, 'surprise': 0.025, 'fear': 0.025}
+
+  --- Topic 72 (n=40) ---
+      Dominant emotion: neutral (purity=0.9250)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.925, 'joy': 0.075}
+
+  --- Topic 73 (n=40) ---
+      Dominant emotion: neutral (purity=0.8500)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.85, 'joy': 0.125, 'sadness': 0.025}
+
+  --- Topic 74 (n=39) ---
+      Dominant emotion: anger (purity=0.2308)
+      Topic label: The obsession with a ring
+      Emotion distribution: {'anger': 0.23076923076923078, 'joy': 0.20512820512820512, 'surprise': 0.20512820512820512, 'neutral': 0.15384615384615385, 'sadness': 0.1282051282051282, 'fear': 0.07692307692307693}
+
+  --- Topic 75 (n=39) ---
+      Dominant emotion: neutral (purity=0.4872)
+      Topic label: Creative writing and artistic expression
+      Emotion distribution: {'neutral': 0.48717948717948717, 'joy': 0.28205128205128205, 'sadness': 0.07692307692307693, 'surprise': 0.07692307692307693, 'anger': 0.07692307692307693}
+
+  --- Topic 76 (n=39) ---
+      Dominant emotion: neutral (purity=0.5641)
+      Topic label: Instructions and commands
+      Emotion distribution: {'neutral': 0.5641025641025641, 'anger': 0.15384615384615385, 'surprise': 0.10256410256410256, 'sadness': 0.05128205128205128, 'joy': 0.05128205128205128, 'disgust': 0.05128205128205128, 'fear': 0.02564102564102564}
+
+  --- Topic 77 (n=38) ---
+      Dominant emotion: neutral (purity=0.5263)
+      Topic label: Unclear questions and identity
+      Emotion distribution: {'neutral': 0.5263157894736842, 'surprise': 0.2894736842105263, 'joy': 0.07894736842105263, 'anger': 0.05263157894736842, 'fear': 0.02631578947368421, 'disgust': 0.02631578947368421}
+
+  --- Topic 78 (n=38) ---
+      Dominant emotion: neutral (purity=0.4474)
+      Topic label: Unclear communication and delays
+      Emotion distribution: {'neutral': 0.4473684210526316, 'joy': 0.2631578947368421, 'surprise': 0.10526315789473684, 'anger': 0.07894736842105263, 'sadness': 0.05263157894736842, 'disgust': 0.05263157894736842}
+
+  --- Topic 79 (n=38) ---
+      Dominant emotion: neutral (purity=0.7895)
+      Topic label: Gratitude and acknowledgement
+      Emotion distribution: {'neutral': 0.7894736842105263, 'joy': 0.13157894736842105, 'sadness': 0.07894736842105263}
+
+  --- Topic 80 (n=38) ---
+      Dominant emotion: neutral (purity=0.5789)
+      Topic label: Unintelligible communication
+      Emotion distribution: {'neutral': 0.5789473684210527, 'joy': 0.2631578947368421, 'surprise': 0.07894736842105263, 'anger': 0.05263157894736842, 'disgust': 0.02631578947368421}
+
+  --- Topic 81 (n=37) ---
+      Dominant emotion: joy (purity=0.6486)
+      Topic label: Random greetings and filler words
+      Emotion distribution: {'joy': 0.6486486486486487, 'neutral': 0.16216216216216217, 'surprise': 0.10810810810810811, 'anger': 0.05405405405405406, 'sadness': 0.02702702702702703}
+
+  --- Topic 82 (n=37) ---
+      Dominant emotion: surprise (purity=0.5946)
+      Topic label: Expressing disbelief and questioning
+      Emotion distribution: {'surprise': 0.5945945945945946, 'neutral': 0.1891891891891892, 'anger': 0.10810810810810811, 'joy': 0.05405405405405406, 'fear': 0.02702702702702703, 'sadness': 0.02702702702702703}
+
+  --- Topic 83 (n=36) ---
+      Dominant emotion: anger (purity=0.3889)
+      Topic label: Humor and Tone
+      Emotion distribution: {'anger': 0.3888888888888889, 'joy': 0.2222222222222222, 'neutral': 0.19444444444444445, 'disgust': 0.08333333333333333, 'surprise': 0.08333333333333333, 'sadness': 0.027777777777777776}
+
+  --- Topic 84 (n=36) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Financial disputes and account issues
+      Emotion distribution: {'neutral': 0.5, 'anger': 0.16666666666666666, 'sadness': 0.1388888888888889, 'surprise': 0.1111111111111111, 'joy': 0.05555555555555555, 'fear': 0.027777777777777776}
+
+  --- Topic 85 (n=36) ---
+      Dominant emotion: neutral (purity=0.5556)
+      Topic label: Ben-related communication and potential naming confusion
+      Emotion distribution: {'neutral': 0.5555555555555556, 'joy': 0.2222222222222222, 'sadness': 0.05555555555555555, 'surprise': 0.05555555555555555, 'fear': 0.05555555555555555, 'anger': 0.027777777777777776, 'disgust': 0.027777777777777776}
+
+  --- Topic 86 (n=35) ---
+      Dominant emotion: neutral (purity=0.6571)
+      Topic label: Lack of meaningful content
+      Emotion distribution: {'neutral': 0.6571428571428571, 'surprise': 0.2, 'joy': 0.11428571428571428, 'sadness': 0.02857142857142857}
+
+  --- Topic 87 (n=34) ---
+      Dominant emotion: surprise (purity=1.0000)
+      Topic label: Expressing disbelief and confusion
+      Emotion distribution: {'surprise': 1.0}
+
+  --- Topic 88 (n=34) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Personal reflections and introspection
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.17647058823529413, 'sadness': 0.11764705882352941, 'fear': 0.058823529411764705, 'disgust': 0.058823529411764705, 'anger': 0.058823529411764705, 'surprise': 0.029411764705882353}
+
+  --- Topic 89 (n=34) ---
+      Dominant emotion: neutral (purity=0.3824)
+      Topic label: Sleepiness and inactivity
+      Emotion distribution: {'neutral': 0.38235294117647056, 'anger': 0.23529411764705882, 'sadness': 0.11764705882352941, 'disgust': 0.08823529411764706, 'surprise': 0.08823529411764706, 'joy': 0.058823529411764705, 'fear': 0.029411764705882353}
+
+  --- Topic 90 (n=34) ---
+      Dominant emotion: neutral (purity=0.5294)
+      Topic label: Unexpected phone gifts and requests
+      Emotion distribution: {'neutral': 0.5294117647058824, 'surprise': 0.17647058823529413, 'joy': 0.14705882352941177, 'anger': 0.058823529411764705, 'fear': 0.029411764705882353, 'sadness': 0.029411764705882353, 'disgust': 0.029411764705882353}
+
+  --- Topic 91 (n=33) ---
+      Dominant emotion: neutral (purity=0.3030)
+      Topic label: Unclear communication and repetition
+      Emotion distribution: {'neutral': 0.30303030303030304, 'surprise': 0.24242424242424243, 'sadness': 0.18181818181818182, 'joy': 0.12121212121212122, 'anger': 0.09090909090909091, 'fear': 0.030303030303030304, 'disgust': 0.030303030303030304}
+
+  --- Topic 92 (n=33) ---
+      Dominant emotion: joy (purity=0.4242)
+      Topic label: Affirmative responses
+      Emotion distribution: {'joy': 0.42424242424242425, 'neutral': 0.24242424242424243, 'surprise': 0.15151515151515152, 'fear': 0.12121212121212122, 'disgust': 0.030303030303030304, 'anger': 0.030303030303030304}
+
+  --- Topic 93 (n=32) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.75, 'joy': 0.15625, 'sadness': 0.0625, 'disgust': 0.03125}
+
+  --- Topic 94 (n=32) ---
+      Dominant emotion: neutral (purity=0.6562)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.65625, 'sadness': 0.21875, 'joy': 0.0625, 'surprise': 0.0625}
+
+  --- Topic 95 (n=31) ---
+      Dominant emotion: neutral (purity=0.2903)
+      Topic label: Attention-seeking behavior
+      Emotion distribution: {'neutral': 0.2903225806451613, 'anger': 0.25806451612903225, 'surprise': 0.1935483870967742, 'sadness': 0.12903225806451613, 'joy': 0.0967741935483871, 'fear': 0.03225806451612903}
+
+  --- Topic 96 (n=31) ---
+      Dominant emotion: neutral (purity=0.8710)
+      Topic label: Filler words and conversational hesitations
+      Emotion distribution: {'neutral': 0.8709677419354839, 'sadness': 0.0967741935483871, 'disgust': 0.03225806451612903}
+
+  --- Topic 97 (n=31) ---
+      Dominant emotion: joy (purity=0.7097)
+      Topic label: Unnecessary greetings
+      Emotion distribution: {'joy': 0.7096774193548387, 'neutral': 0.16129032258064516, 'surprise': 0.0967741935483871, 'anger': 0.03225806451612903}
+
+  --- Topic 98 (n=31) ---
+      Dominant emotion: neutral (purity=0.5484)
+      Topic label: Communication difficulties and clarification requests
+      Emotion distribution: {'neutral': 0.5483870967741935, 'joy': 0.25806451612903225, 'anger': 0.16129032258064516, 'sadness': 0.03225806451612903}
+
+  --- Topic 99 (n=30) ---
+      Dominant emotion: neutral (purity=0.5667)
+      Topic label: Gratitude and appreciation
+      Emotion distribution: {'neutral': 0.5666666666666667, 'joy': 0.4, 'anger': 0.03333333333333333}
+
+  --- Topic 100 (n=29) ---
+      Dominant emotion: neutral (purity=0.3793)
+      Topic label: Miscommunication and unclear speech
+      Emotion distribution: {'neutral': 0.3793103448275862, 'surprise': 0.3448275862068966, 'fear': 0.10344827586206896, 'anger': 0.06896551724137931, 'sadness': 0.06896551724137931, 'joy': 0.034482758620689655}
+
+  --- Topic 101 (n=29) ---
+      Dominant emotion: surprise (purity=0.4138)
+      Topic label: Expressing disbelief and shock
+      Emotion distribution: {'surprise': 0.41379310344827586, 'neutral': 0.27586206896551724, 'anger': 0.10344827586206896, 'joy': 0.10344827586206896, 'disgust': 0.06896551724137931, 'sadness': 0.034482758620689655}
+
+  --- Topic 102 (n=27) ---
+      Dominant emotion: neutral (purity=0.2963)
+      Topic label: Lack of empathy and dismissive responses
+      Emotion distribution: {'neutral': 0.2962962962962963, 'surprise': 0.2222222222222222, 'anger': 0.2222222222222222, 'sadness': 0.14814814814814814, 'joy': 0.07407407407407407, 'disgust': 0.037037037037037035}
+
+  --- Topic 103 (n=27) ---
+      Dominant emotion: joy (purity=0.4074)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'joy': 0.4074074074074074, 'neutral': 0.3333333333333333, 'anger': 0.1111111111111111, 'surprise': 0.07407407407407407, 'sadness': 0.07407407407407407}
+
+  --- Topic 104 (n=27) ---
+      Dominant emotion: neutral (purity=0.2222)
+      Topic label: Negative feedback and incomprehensible responses
+      Emotion distribution: {'neutral': 0.2222222222222222, 'surprise': 0.2222222222222222, 'fear': 0.18518518518518517, 'anger': 0.14814814814814814, 'disgust': 0.1111111111111111, 'sadness': 0.07407407407407407, 'joy': 0.037037037037037035}
+
+  --- Topic 105 (n=27) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Confusion and Identity Crisis
+      Emotion distribution: {'neutral': 0.4444444444444444, 'sadness': 0.18518518518518517, 'anger': 0.14814814814814814, 'surprise': 0.1111111111111111, 'fear': 0.037037037037037035, 'joy': 0.037037037037037035, 'disgust': 0.037037037037037035}
+
+  --- Topic 106 (n=27) ---
+      Dominant emotion: surprise (purity=0.6296)
+      Topic label: Confusion and uncertainty
+      Emotion distribution: {'surprise': 0.6296296296296297, 'anger': 0.1111111111111111, 'neutral': 0.1111111111111111, 'sadness': 0.07407407407407407, 'disgust': 0.037037037037037035, 'fear': 0.037037037037037035}
+
+  --- Topic 107 (n=26) ---
+      Dominant emotion: surprise (purity=0.6154)
+      Topic label: Pain and discomfort
+      Emotion distribution: {'surprise': 0.6153846153846154, 'anger': 0.15384615384615385, 'fear': 0.11538461538461539, 'sadness': 0.07692307692307693, 'joy': 0.038461538461538464}
+
+  --- Topic 108 (n=26) ---
+      Dominant emotion: neutral (purity=0.5385)
+      Topic label: Lack of information / Absence
+      Emotion distribution: {'neutral': 0.5384615384615384, 'anger': 0.15384615384615385, 'joy': 0.11538461538461539, 'sadness': 0.07692307692307693, 'surprise': 0.07692307692307693, 'disgust': 0.038461538461538464}
+
+  --- Topic 109 (n=26) ---
+      Dominant emotion: neutral (purity=0.7308)
+      Topic label: Customer service inquiries
+      Emotion distribution: {'neutral': 0.7307692307692307, 'sadness': 0.11538461538461539, 'anger': 0.07692307692307693, 'surprise': 0.07692307692307693}
+
+  --- Topic 110 (n=25) ---
+      Dominant emotion: neutral (purity=0.5600)
+      Topic label: Identity and Attraction Concerns
+      Emotion distribution: {'neutral': 0.56, 'joy': 0.08, 'sadness': 0.08, 'surprise': 0.08, 'anger': 0.08, 'disgust': 0.08, 'fear': 0.04}
+
+  --- Topic 111 (n=25) ---
+      Dominant emotion: surprise (purity=1.0000)
+      Topic label: Expressing disbelief or confusion
+      Emotion distribution: {'surprise': 1.0}
+
+  --- Topic 112 (n=25) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Client introductions and initial interactions
+      Emotion distribution: {'neutral': 0.6, 'anger': 0.16, 'surprise': 0.08, 'sadness': 0.08, 'disgust': 0.04, 'joy': 0.04}
+
+  --- Topic 113 (n=25) ---
+      Dominant emotion: surprise (purity=0.4400)
+      Topic label: Unclear communication/Questioning
+      Emotion distribution: {'surprise': 0.44, 'neutral': 0.36, 'anger': 0.12, 'disgust': 0.08}
+
+  --- Topic 114 (n=24) ---
+      Dominant emotion: neutral (purity=0.6250)
+      Topic label: Polite responses and acknowledgements
+      Emotion distribution: {'neutral': 0.625, 'joy': 0.20833333333333334, 'sadness': 0.125, 'anger': 0.041666666666666664}
+
+  --- Topic 115 (n=24) ---
+      Dominant emotion: surprise (purity=0.8750)
+      Topic label: Confusion and disbelief
+      Emotion distribution: {'surprise': 0.875, 'anger': 0.08333333333333333, 'neutral': 0.041666666666666664}
+
+  --- Topic 116 (n=24) ---
+      Dominant emotion: neutral (purity=0.4583)
+      Topic label: Confirmation of receipt
+      Emotion distribution: {'neutral': 0.4583333333333333, 'joy': 0.2916666666666667, 'anger': 0.125, 'sadness': 0.08333333333333333, 'surprise': 0.041666666666666664}
+
+  --- Topic 117 (n=24) ---
+      Dominant emotion: neutral (purity=0.3750)
+      Topic label: Unclear questions and uncertainty
+      Emotion distribution: {'neutral': 0.375, 'fear': 0.20833333333333334, 'surprise': 0.16666666666666666, 'sadness': 0.125, 'anger': 0.08333333333333333, 'disgust': 0.041666666666666664}
+
+  --- Topic 118 (n=23) ---
+      Dominant emotion: neutral (purity=0.4348)
+      Topic label: Porsche ownership and related discussions
+      Emotion distribution: {'neutral': 0.43478260869565216, 'joy': 0.21739130434782608, 'surprise': 0.13043478260869565, 'anger': 0.08695652173913043, 'sadness': 0.08695652173913043, 'fear': 0.043478260869565216}
+
+  --- Topic 119 (n=23) ---
+      Dominant emotion: neutral (purity=0.3478)
+      Topic label: Relocation and displacement
+      Emotion distribution: {'neutral': 0.34782608695652173, 'surprise': 0.21739130434782608, 'sadness': 0.17391304347826086, 'joy': 0.13043478260869565, 'disgust': 0.043478260869565216, 'fear': 0.043478260869565216, 'anger': 0.043478260869565216}
+
+  --- Topic 120 (n=23) ---
+      Dominant emotion: neutral (purity=0.8261)
+      Topic label: Unclear utterances/filler words
+      Emotion distribution: {'neutral': 0.8260869565217391, 'anger': 0.08695652173913043, 'joy': 0.043478260869565216, 'sadness': 0.043478260869565216}
+
+  --- Topic 121 (n=22) ---
+      Dominant emotion: neutral (purity=0.5455)
+      Topic label: Personal responsibility and problem-solving
+      Emotion distribution: {'neutral': 0.5454545454545454, 'joy': 0.13636363636363635, 'anger': 0.13636363636363635, 'sadness': 0.09090909090909091, 'surprise': 0.045454545454545456, 'disgust': 0.045454545454545456}
+
+  --- Topic 122 (n=22) ---
+      Dominant emotion: surprise (purity=0.7273)
+      Topic label: Exclamations and expressions of surprise/disappointment
+      Emotion distribution: {'surprise': 0.7272727272727273, 'sadness': 0.09090909090909091, 'fear': 0.09090909090909091, 'joy': 0.09090909090909091}
+
+  --- Topic 123 (n=22) ---
+      Dominant emotion: neutral (purity=0.4545)
+      Topic label: Agreement and affirmation
+      Emotion distribution: {'neutral': 0.45454545454545453, 'joy': 0.4090909090909091, 'sadness': 0.09090909090909091, 'surprise': 0.045454545454545456}
+
+  --- Topic 124 (n=22) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Uncertainty and vagueness
+      Emotion distribution: {'neutral': 0.5, 'surprise': 0.22727272727272727, 'joy': 0.18181818181818182, 'anger': 0.045454545454545456, 'sadness': 0.045454545454545456}
+
+  --- Topic 125 (n=22) ---
+      Dominant emotion: neutral (purity=0.6818)
+      Topic label: Fake Tickets and Travel Requests
+      Emotion distribution: {'neutral': 0.6818181818181818, 'joy': 0.13636363636363635, 'anger': 0.09090909090909091, 'sadness': 0.09090909090909091}
+
+  --- Topic 126 (n=22) ---
+      Dominant emotion: joy (purity=0.6364)
+      Topic label: Expressive reactions and interjections
+      Emotion distribution: {'joy': 0.6363636363636364, 'disgust': 0.13636363636363635, 'neutral': 0.09090909090909091, 'surprise': 0.045454545454545456, 'sadness': 0.045454545454545456, 'fear': 0.045454545454545456}
+
+  --- Topic 127 (n=22) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Conversational dialogue and character interaction
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.2727272727272727, 'anger': 0.09090909090909091, 'surprise': 0.09090909090909091, 'sadness': 0.045454545454545456}
+
+  --- Topic 128 (n=21) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Unintelligible or filler sounds
+      Emotion distribution: {'neutral': 0.42857142857142855, 'fear': 0.3333333333333333, 'joy': 0.09523809523809523, 'surprise': 0.09523809523809523, 'sadness': 0.047619047619047616}
+
+  --- Topic 129 (n=21) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Uninformative responses
+      Emotion distribution: {'neutral': 0.7142857142857143, 'joy': 0.23809523809523808, 'anger': 0.047619047619047616}
+
+  --- Topic 130 (n=20) ---
+      Dominant emotion: surprise (purity=0.4500)
+      Topic label: Questioning and uncertainty
+      Emotion distribution: {'surprise': 0.45, 'neutral': 0.35, 'joy': 0.15, 'anger': 0.05}
+
+
+
+================================================================================
+VARIATION: UMAP(default) + HDBSCAN(default)
+================================================================================
+Topics: 492  |  Outliers: 3951  |  Purity: 0.4978  |  NMI: 0.0795
+  Homogeneity: 0.1572  |  Completeness: 0.0532
+
+  --- Topic -1 (n=3951) ---
+      Dominant emotion: neutral (purity=0.4500)
+      Topic label: Social anxiety and interpersonal communication
+      Emotion distribution: {'neutral': 0.45001265502404453, 'joy': 0.1569222981523665, 'anger': 0.1331308529486206, 'surprise': 0.11592002024803848, 'sadness': 0.07896735003796507, 'disgust': 0.036952670210073396, 'fear': 0.02809415337889142}
+
+  --- Topic 0 (n=257) ---
+      Dominant emotion: neutral (purity=0.3619)
+      Topic label: Random, nonsensical text
+      Emotion distribution: {'neutral': 0.36186770428015563, 'anger': 0.19455252918287938, 'sadness': 0.14785992217898833, 'joy': 0.12840466926070038, 'surprise': 0.11284046692607004, 'disgust': 0.0311284046692607, 'fear': 0.023346303501945526}
+
+  --- Topic 1 (n=247) ---
+      Dominant emotion: neutral (purity=0.3887)
+      Topic label: Unintelligible text/noise
+      Emotion distribution: {'neutral': 0.38866396761133604, 'joy': 0.19838056680161945, 'surprise': 0.14979757085020243, 'anger': 0.1214574898785425, 'sadness': 0.08097165991902834, 'fear': 0.032388663967611336, 'disgust': 0.02834008097165992}
+
+  --- Topic 2 (n=182) ---
+      Dominant emotion: neutral (purity=0.4615)
+      Topic label: Unclear text/nonsense
+      Emotion distribution: {'neutral': 0.46153846153846156, 'joy': 0.15934065934065933, 'surprise': 0.15384615384615385, 'anger': 0.10989010989010989, 'sadness': 0.07692307692307693, 'fear': 0.027472527472527472, 'disgust': 0.01098901098901099}
+
+  --- Topic 3 (n=177) ---
+      Dominant emotion: neutral (purity=0.3898)
+      Topic label: Character names and references (Friends)
+      Emotion distribution: {'neutral': 0.3898305084745763, 'anger': 0.1638418079096045, 'surprise': 0.1638418079096045, 'joy': 0.1638418079096045, 'sadness': 0.096045197740113, 'fear': 0.01694915254237288, 'disgust': 0.005649717514124294}
+
+  --- Topic 4 (n=153) ---
+      Dominant emotion: neutral (purity=0.4510)
+      Topic label: Unrelated/Random Text
+      Emotion distribution: {'neutral': 0.45098039215686275, 'anger': 0.1895424836601307, 'surprise': 0.13725490196078433, 'joy': 0.1111111111111111, 'sadness': 0.0915032679738562, 'fear': 0.013071895424836602, 'disgust': 0.006535947712418301}
+
+  --- Topic 5 (n=126) ---
+      Dominant emotion: neutral (purity=0.3889)
+      Topic label: The chaotic antics of Monica Geller from *Friends*
+      Emotion distribution: {'neutral': 0.3888888888888889, 'anger': 0.15873015873015872, 'joy': 0.15873015873015872, 'surprise': 0.12698412698412698, 'sadness': 0.11904761904761904, 'fear': 0.023809523809523808, 'disgust': 0.023809523809523808}
+
+  --- Topic 6 (n=110) ---
+      Dominant emotion: neutral (purity=0.3909)
+      Topic label: Clothing and Fashion Preferences
+      Emotion distribution: {'neutral': 0.39090909090909093, 'joy': 0.17272727272727273, 'anger': 0.13636363636363635, 'disgust': 0.09090909090909091, 'surprise': 0.09090909090909091, 'sadness': 0.07272727272727272, 'fear': 0.045454545454545456}
+
+  --- Topic 7 (n=88) ---
+      Dominant emotion: neutral (purity=0.3977)
+      Topic label: Pregnancy and childbirth
+      Emotion distribution: {'neutral': 0.3977272727272727, 'joy': 0.17045454545454544, 'anger': 0.1590909090909091, 'surprise': 0.125, 'sadness': 0.07954545454545454, 'fear': 0.045454545454545456, 'disgust': 0.022727272727272728}
+
+  --- Topic 8 (n=80) ---
+      Dominant emotion: neutral (purity=0.4875)
+      Topic label: Romantic relationships and attraction
+      Emotion distribution: {'neutral': 0.4875, 'anger': 0.175, 'fear': 0.1125, 'surprise': 0.0875, 'sadness': 0.0875, 'joy': 0.0375, 'disgust': 0.0125}
+
+  --- Topic 9 (n=80) ---
+      Dominant emotion: neutral (purity=0.5625)
+      Topic label: Need to use the bathroom
+      Emotion distribution: {'neutral': 0.5625, 'surprise': 0.125, 'joy': 0.1125, 'anger': 0.1, 'disgust': 0.0625, 'sadness': 0.0375}
+
+  --- Topic 10 (n=77) ---
+      Dominant emotion: neutral (purity=0.3636)
+      Topic label: Actor auditions and casting processes
+      Emotion distribution: {'neutral': 0.36363636363636365, 'joy': 0.2077922077922078, 'anger': 0.12987012987012986, 'sadness': 0.1038961038961039, 'surprise': 0.1038961038961039, 'fear': 0.05194805194805195, 'disgust': 0.03896103896103896}
+
+  --- Topic 11 (n=76) ---
+      Dominant emotion: sadness (purity=0.5000)
+      Topic label: Apologies and expressions of regret
+      Emotion distribution: {'sadness': 0.5, 'neutral': 0.21052631578947367, 'surprise': 0.11842105263157894, 'fear': 0.06578947368421052, 'joy': 0.05263157894736842, 'anger': 0.039473684210526314, 'disgust': 0.013157894736842105}
+
+  --- Topic 12 (n=74) ---
+      Dominant emotion: neutral (purity=0.4459)
+      Topic label: Relocation and Travel Logistics
+      Emotion distribution: {'neutral': 0.44594594594594594, 'joy': 0.17567567567567569, 'surprise': 0.12162162162162163, 'sadness': 0.0945945945945946, 'anger': 0.0945945945945946, 'disgust': 0.04054054054054054, 'fear': 0.02702702702702703}
+
+  --- Topic 13 (n=67) ---
+      Dominant emotion: neutral (purity=0.4776)
+      Topic label: Online slang and abbreviations
+      Emotion distribution: {'neutral': 0.47761194029850745, 'joy': 0.29850746268656714, 'surprise': 0.08955223880597014, 'sadness': 0.08955223880597014, 'anger': 0.04477611940298507}
+
+  --- Topic 14 (n=57) ---
+      Dominant emotion: neutral (purity=0.3860)
+      Topic label: Anxiety and fear
+      Emotion distribution: {'neutral': 0.38596491228070173, 'fear': 0.19298245614035087, 'anger': 0.15789473684210525, 'sadness': 0.08771929824561403, 'joy': 0.07017543859649122, 'disgust': 0.05263157894736842, 'surprise': 0.05263157894736842}
+
+  --- Topic 15 (n=56) ---
+      Dominant emotion: surprise (purity=0.7143)
+      Topic label: Confusion and Uncertainty
+      Emotion distribution: {'surprise': 0.7142857142857143, 'neutral': 0.25, 'sadness': 0.017857142857142856, 'fear': 0.017857142857142856}
+
+  --- Topic 16 (n=55) ---
+      Dominant emotion: neutral (purity=0.2909)
+      Topic label: Mental instability and difficult relationships
+      Emotion distribution: {'neutral': 0.2909090909090909, 'anger': 0.23636363636363636, 'joy': 0.18181818181818182, 'surprise': 0.14545454545454545, 'sadness': 0.05454545454545454, 'disgust': 0.05454545454545454, 'fear': 0.03636363636363636}
+
+  --- Topic 17 (n=55) ---
+      Dominant emotion: neutral (purity=0.5636)
+      Topic label: Farewell messages
+      Emotion distribution: {'neutral': 0.5636363636363636, 'joy': 0.2, 'sadness': 0.12727272727272726, 'surprise': 0.05454545454545454, 'disgust': 0.03636363636363636, 'anger': 0.01818181818181818}
+
+  --- Topic 18 (n=55) ---
+      Dominant emotion: joy (purity=0.5273)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'joy': 0.5272727272727272, 'neutral': 0.2727272727272727, 'surprise': 0.09090909090909091, 'anger': 0.05454545454545454, 'fear': 0.01818181818181818, 'disgust': 0.01818181818181818, 'sadness': 0.01818181818181818}
+
+  --- Topic 19 (n=54) ---
+      Dominant emotion: neutral (purity=0.7963)
+      Topic label: Lack of information/response
+      Emotion distribution: {'neutral': 0.7962962962962963, 'sadness': 0.12962962962962962, 'anger': 0.037037037037037035, 'disgust': 0.018518518518518517, 'joy': 0.018518518518518517}
+
+  --- Topic 20 (n=54) ---
+      Dominant emotion: neutral (purity=0.3519)
+      Topic label: Combat sports and competition
+      Emotion distribution: {'neutral': 0.35185185185185186, 'joy': 0.2962962962962963, 'anger': 0.18518518518518517, 'sadness': 0.14814814814814814, 'surprise': 0.018518518518518517}
+
+  --- Topic 21 (n=52) ---
+      Dominant emotion: neutral (purity=0.7692)
+      Topic label: Unnecessary greetings and filler words
+      Emotion distribution: {'neutral': 0.7692307692307693, 'joy': 0.17307692307692307, 'sadness': 0.057692307692307696}
+
+  --- Topic 22 (n=51) ---
+      Dominant emotion: neutral (purity=0.6471)
+      Topic label: Coffee consumption and preferences
+      Emotion distribution: {'neutral': 0.6470588235294118, 'surprise': 0.09803921568627451, 'disgust': 0.0784313725490196, 'joy': 0.0784313725490196, 'anger': 0.058823529411764705, 'sadness': 0.0392156862745098}
+
+  --- Topic 23 (n=51) ---
+      Dominant emotion: neutral (purity=0.4706)
+      Topic label: Sexual objectification and relationship dynamics
+      Emotion distribution: {'neutral': 0.47058823529411764, 'joy': 0.17647058823529413, 'anger': 0.11764705882352941, 'disgust': 0.0784313725490196, 'surprise': 0.0784313725490196, 'sadness': 0.058823529411764705, 'fear': 0.0196078431372549}
+
+  --- Topic 24 (n=50) ---
+      Dominant emotion: joy (purity=0.9000)
+      Topic label: Greetings and informal communication
+      Emotion distribution: {'joy': 0.9, 'surprise': 0.04, 'neutral': 0.04, 'sadness': 0.02}
+
+  --- Topic 25 (n=49) ---
+      Dominant emotion: neutral (purity=0.3673)
+      Topic label: Wedding planning and related concerns
+      Emotion distribution: {'neutral': 0.3673469387755102, 'joy': 0.2857142857142857, 'anger': 0.20408163265306123, 'surprise': 0.061224489795918366, 'sadness': 0.04081632653061224, 'disgust': 0.02040816326530612, 'fear': 0.02040816326530612}
+
+  --- Topic 26 (n=48) ---
+      Dominant emotion: neutral (purity=0.3542)
+      Topic label: The Robot's Request for a Song
+      Emotion distribution: {'neutral': 0.3541666666666667, 'joy': 0.3125, 'anger': 0.16666666666666666, 'surprise': 0.0625, 'fear': 0.0625, 'disgust': 0.041666666666666664}
+
+  --- Topic 27 (n=48) ---
+      Dominant emotion: neutral (purity=0.2917)
+      Topic label: Family relationships and communication
+      Emotion distribution: {'neutral': 0.2916666666666667, 'sadness': 0.25, 'joy': 0.16666666666666666, 'surprise': 0.125, 'anger': 0.10416666666666667, 'disgust': 0.0625}
+
+  --- Topic 28 (n=48) ---
+      Dominant emotion: surprise (purity=0.9167)
+      Topic label: Disbelief and questioning
+      Emotion distribution: {'surprise': 0.9166666666666666, 'neutral': 0.041666666666666664, 'anger': 0.020833333333333332, 'fear': 0.020833333333333332}
+
+  --- Topic 29 (n=46) ---
+      Dominant emotion: neutral (purity=0.2609)
+      Topic label: Confirmation of actions/statements
+      Emotion distribution: {'neutral': 0.2608695652173913, 'anger': 0.1956521739130435, 'joy': 0.1956521739130435, 'surprise': 0.15217391304347827, 'sadness': 0.15217391304347827, 'fear': 0.043478260869565216}
+
+  --- Topic 30 (n=46) ---
+      Dominant emotion: neutral (purity=0.3261)
+      Topic label: Unhealthy romantic relationships
+      Emotion distribution: {'neutral': 0.32608695652173914, 'joy': 0.2391304347826087, 'anger': 0.13043478260869565, 'surprise': 0.13043478260869565, 'sadness': 0.08695652173913043, 'fear': 0.043478260869565216, 'disgust': 0.043478260869565216}
+
+  --- Topic 31 (n=46) ---
+      Dominant emotion: neutral (purity=0.4348)
+      Topic label: School and adolescent experiences
+      Emotion distribution: {'neutral': 0.43478260869565216, 'anger': 0.17391304347826086, 'joy': 0.17391304347826086, 'surprise': 0.13043478260869565, 'disgust': 0.06521739130434782, 'sadness': 0.021739130434782608}
+
+  --- Topic 32 (n=46) ---
+      Dominant emotion: neutral (purity=0.5217)
+      Topic label: Character names and dialogue
+      Emotion distribution: {'neutral': 0.5217391304347826, 'joy': 0.21739130434782608, 'sadness': 0.10869565217391304, 'surprise': 0.06521739130434782, 'anger': 0.06521739130434782, 'fear': 0.021739130434782608}
+
+  --- Topic 33 (n=45) ---
+      Dominant emotion: neutral (purity=0.5111)
+      Topic label: Risqué and suggestive content
+      Emotion distribution: {'neutral': 0.5111111111111111, 'joy': 0.15555555555555556, 'anger': 0.1111111111111111, 'surprise': 0.1111111111111111, 'sadness': 0.08888888888888889, 'disgust': 0.022222222222222223}
+
+  --- Topic 34 (n=45) ---
+      Dominant emotion: neutral (purity=0.3556)
+      Topic label: Wedding planning and engagement
+      Emotion distribution: {'neutral': 0.35555555555555557, 'joy': 0.28888888888888886, 'anger': 0.17777777777777778, 'sadness': 0.08888888888888889, 'fear': 0.044444444444444446, 'surprise': 0.022222222222222223, 'disgust': 0.022222222222222223}
+
+  --- Topic 35 (n=45) ---
+      Dominant emotion: neutral (purity=0.5556)
+      Topic label: Room design and usage disputes
+      Emotion distribution: {'neutral': 0.5555555555555556, 'anger': 0.13333333333333333, 'joy': 0.13333333333333333, 'disgust': 0.08888888888888889, 'sadness': 0.06666666666666667, 'surprise': 0.022222222222222223}
+
+  --- Topic 36 (n=44) ---
+      Dominant emotion: anger (purity=0.5227)
+      Topic label: Negative responses
+      Emotion distribution: {'anger': 0.5227272727272727, 'disgust': 0.1590909090909091, 'joy': 0.13636363636363635, 'fear': 0.06818181818181818, 'surprise': 0.045454545454545456, 'sadness': 0.045454545454545456, 'neutral': 0.022727272727272728}
+
+  --- Topic 37 (n=44) ---
+      Dominant emotion: neutral (purity=0.6136)
+      Topic label: Conversational dialogue and troubleshooting
+      Emotion distribution: {'neutral': 0.6136363636363636, 'joy': 0.13636363636363635, 'anger': 0.11363636363636363, 'sadness': 0.06818181818181818, 'surprise': 0.06818181818181818}
+
+  --- Topic 38 (n=43) ---
+      Dominant emotion: sadness (purity=0.2558)
+      Topic label: Limitations and inability to perform tasks
+      Emotion distribution: {'sadness': 0.2558139534883721, 'neutral': 0.2558139534883721, 'anger': 0.16279069767441862, 'surprise': 0.13953488372093023, 'joy': 0.09302325581395349, 'fear': 0.09302325581395349}
+
+  --- Topic 39 (n=42) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Holiday food and treats
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.14285714285714285, 'surprise': 0.11904761904761904, 'sadness': 0.11904761904761904, 'anger': 0.047619047619047616}
+
+  --- Topic 40 (n=41) ---
+      Dominant emotion: neutral (purity=0.5610)
+      Topic label: Simple reactions and responses
+      Emotion distribution: {'neutral': 0.5609756097560976, 'sadness': 0.1951219512195122, 'surprise': 0.12195121951219512, 'joy': 0.04878048780487805, 'fear': 0.04878048780487805, 'anger': 0.024390243902439025}
+
+  --- Topic 41 (n=40) ---
+      Dominant emotion: neutral (purity=0.4750)
+      Topic label: Emotional responses and confirmations
+      Emotion distribution: {'neutral': 0.475, 'sadness': 0.2, 'joy': 0.15, 'surprise': 0.125, 'fear': 0.025, 'anger': 0.025}
+
+  --- Topic 42 (n=40) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Mac and Cheese TV series
+      Emotion distribution: {'neutral': 0.4, 'joy': 0.225, 'surprise': 0.15, 'anger': 0.1, 'sadness': 0.1, 'fear': 0.025}
+
+  --- Topic 43 (n=40) ---
+      Dominant emotion: surprise (purity=0.2250)
+      Topic label: The elusive ring
+      Emotion distribution: {'surprise': 0.225, 'neutral': 0.225, 'joy': 0.2, 'anger': 0.15, 'sadness': 0.125, 'fear': 0.075}
+
+  --- Topic 44 (n=40) ---
+      Dominant emotion: neutral (purity=0.3000)
+      Topic label: Unspoken narratives and hidden secrets
+      Emotion distribution: {'neutral': 0.3, 'joy': 0.175, 'surprise': 0.175, 'sadness': 0.15, 'anger': 0.125, 'disgust': 0.05, 'fear': 0.025}
+
+  --- Topic 45 (n=40) ---
+      Dominant emotion: neutral (purity=0.8500)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.85, 'joy': 0.075, 'sadness': 0.05, 'disgust': 0.025}
+
+  --- Topic 46 (n=39) ---
+      Dominant emotion: neutral (purity=0.7179)
+      Topic label: Counting and collecting items
+      Emotion distribution: {'neutral': 0.717948717948718, 'anger': 0.10256410256410256, 'joy': 0.07692307692307693, 'surprise': 0.05128205128205128, 'sadness': 0.02564102564102564, 'fear': 0.02564102564102564}
+
+  --- Topic 47 (n=38) ---
+      Dominant emotion: neutral (purity=0.4474)
+      Topic label: Identity and Naming
+      Emotion distribution: {'neutral': 0.4473684210526316, 'anger': 0.15789473684210525, 'sadness': 0.13157894736842105, 'joy': 0.13157894736842105, 'surprise': 0.07894736842105263, 'disgust': 0.05263157894736842}
+
+  --- Topic 48 (n=36) ---
+      Dominant emotion: neutral (purity=0.4167)
+      Topic label: Complex interpersonal relationships and regret
+      Emotion distribution: {'neutral': 0.4166666666666667, 'joy': 0.25, 'anger': 0.1388888888888889, 'surprise': 0.08333333333333333, 'sadness': 0.05555555555555555, 'fear': 0.027777777777777776, 'disgust': 0.027777777777777776}
+
+  --- Topic 49 (n=36) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Unintelligible communication
+      Emotion distribution: {'neutral': 0.6666666666666666, 'surprise': 0.19444444444444445, 'joy': 0.1111111111111111, 'sadness': 0.027777777777777776}
+
+  --- Topic 50 (n=35) ---
+      Dominant emotion: neutral (purity=0.9429)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.9428571428571428, 'joy': 0.05714285714285714}
+
+  --- Topic 51 (n=35) ---
+      Dominant emotion: neutral (purity=0.4857)
+      Topic label: Healthcare facilities and patients
+      Emotion distribution: {'neutral': 0.4857142857142857, 'anger': 0.22857142857142856, 'surprise': 0.11428571428571428, 'sadness': 0.05714285714285714, 'disgust': 0.05714285714285714, 'joy': 0.05714285714285714}
+
+  --- Topic 52 (n=35) ---
+      Dominant emotion: neutral (purity=0.4571)
+      Topic label: Frustration and delays
+      Emotion distribution: {'neutral': 0.45714285714285713, 'joy': 0.17142857142857143, 'sadness': 0.14285714285714285, 'anger': 0.08571428571428572, 'fear': 0.05714285714285714, 'disgust': 0.05714285714285714, 'surprise': 0.02857142857142857}
+
+  --- Topic 53 (n=35) ---
+      Dominant emotion: neutral (purity=0.6286)
+      Topic label: Lack of planning and uncertainty
+      Emotion distribution: {'neutral': 0.6285714285714286, 'anger': 0.17142857142857143, 'sadness': 0.11428571428571428, 'joy': 0.05714285714285714, 'fear': 0.02857142857142857}
+
+  --- Topic 54 (n=35) ---
+      Dominant emotion: neutral (purity=0.3143)
+      Topic label: Dance movement descriptions
+      Emotion distribution: {'neutral': 0.3142857142857143, 'joy': 0.17142857142857143, 'anger': 0.14285714285714285, 'sadness': 0.14285714285714285, 'disgust': 0.08571428571428572, 'surprise': 0.08571428571428572, 'fear': 0.05714285714285714}
+
+  --- Topic 55 (n=34) ---
+      Dominant emotion: joy (purity=0.4706)
+      Topic label: Romantic expressions of affection
+      Emotion distribution: {'joy': 0.47058823529411764, 'neutral': 0.29411764705882354, 'surprise': 0.14705882352941177, 'sadness': 0.058823529411764705, 'fear': 0.029411764705882353}
+
+  --- Topic 56 (n=34) ---
+      Dominant emotion: joy (purity=0.7353)
+      Topic label: Unnecessary greetings
+      Emotion distribution: {'joy': 0.7352941176470589, 'surprise': 0.08823529411764706, 'anger': 0.08823529411764706, 'neutral': 0.08823529411764706}
+
+  --- Topic 57 (n=34) ---
+      Dominant emotion: neutral (purity=0.5294)
+      Topic label: Dance and movement analysis
+      Emotion distribution: {'neutral': 0.5294117647058824, 'joy': 0.14705882352941177, 'anger': 0.11764705882352941, 'sadness': 0.08823529411764706, 'disgust': 0.058823529411764705, 'surprise': 0.058823529411764705}
+
+  --- Topic 58 (n=34) ---
+      Dominant emotion: anger (purity=0.3824)
+      Topic label: Humor and its perception
+      Emotion distribution: {'anger': 0.38235294117647056, 'joy': 0.23529411764705882, 'neutral': 0.17647058823529413, 'disgust': 0.08823529411764706, 'surprise': 0.08823529411764706, 'sadness': 0.029411764705882353}
+
+  --- Topic 59 (n=33) ---
+      Dominant emotion: joy (purity=0.5455)
+      Topic label: Unnecessary greetings
+      Emotion distribution: {'joy': 0.5454545454545454, 'neutral': 0.36363636363636365, 'surprise': 0.06060606060606061, 'anger': 0.030303030303030304}
+
+  --- Topic 60 (n=33) ---
+      Dominant emotion: surprise (purity=0.6061)
+      Topic label: Expressing confusion and disbelief
+      Emotion distribution: {'surprise': 0.6060606060606061, 'neutral': 0.12121212121212122, 'anger': 0.09090909090909091, 'fear': 0.09090909090909091, 'sadness': 0.06060606060606061, 'disgust': 0.030303030303030304}
+
+  --- Topic 61 (n=33) ---
+      Dominant emotion: neutral (purity=0.3636)
+      Topic label: Disputes over personal belongings
+      Emotion distribution: {'neutral': 0.36363636363636365, 'anger': 0.21212121212121213, 'surprise': 0.15151515151515152, 'joy': 0.15151515151515152, 'sadness': 0.09090909090909091, 'disgust': 0.030303030303030304}
+
+  --- Topic 62 (n=33) ---
+      Dominant emotion: neutral (purity=0.5152)
+      Topic label: Agreement and affirmation
+      Emotion distribution: {'neutral': 0.5151515151515151, 'joy': 0.2727272727272727, 'sadness': 0.09090909090909091, 'surprise': 0.09090909090909091, 'anger': 0.030303030303030304}
+
+  --- Topic 63 (n=33) ---
+      Dominant emotion: neutral (purity=0.7576)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.7575757575757576, 'joy': 0.21212121212121213, 'sadness': 0.030303030303030304}
+
+  --- Topic 64 (n=32) ---
+      Dominant emotion: neutral (purity=0.4375)
+      Topic label: Dental and oral health concerns
+      Emotion distribution: {'neutral': 0.4375, 'sadness': 0.125, 'joy': 0.125, 'anger': 0.125, 'surprise': 0.09375, 'disgust': 0.09375}
+
+  --- Topic 65 (n=32) ---
+      Dominant emotion: neutral (purity=0.4688)
+      Topic label: Unclear communication/Interruptions
+      Emotion distribution: {'neutral': 0.46875, 'surprise': 0.3125, 'joy': 0.15625, 'disgust': 0.03125, 'fear': 0.03125}
+
+  --- Topic 66 (n=32) ---
+      Dominant emotion: neutral (purity=0.5625)
+      Topic label: Emotional release/Letting go
+      Emotion distribution: {'neutral': 0.5625, 'joy': 0.1875, 'anger': 0.1875, 'fear': 0.03125, 'sadness': 0.03125}
+
+  --- Topic 67 (n=32) ---
+      Dominant emotion: surprise (purity=1.0000)
+      Topic label: Confusion and disbelief
+      Emotion distribution: {'surprise': 1.0}
+
+  --- Topic 68 (n=31) ---
+      Dominant emotion: neutral (purity=0.9355)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.9354838709677419, 'joy': 0.06451612903225806}
+
+  --- Topic 69 (n=31) ---
+      Dominant emotion: joy (purity=0.6452)
+      Topic label: Emotional expression and affirmation
+      Emotion distribution: {'joy': 0.6451612903225806, 'neutral': 0.16129032258064516, 'sadness': 0.06451612903225806, 'anger': 0.06451612903225806, 'fear': 0.03225806451612903, 'surprise': 0.03225806451612903}
+
+  --- Topic 70 (n=31) ---
+      Dominant emotion: neutral (purity=0.4839)
+      Topic label: Unclear communication and identity confusion
+      Emotion distribution: {'neutral': 0.4838709677419355, 'surprise': 0.2903225806451613, 'joy': 0.0967741935483871, 'anger': 0.06451612903225806, 'fear': 0.03225806451612903, 'disgust': 0.03225806451612903}
+
+  --- Topic 71 (n=31) ---
+      Dominant emotion: neutral (purity=0.7419)
+      Topic label: Unintelligible utterances
+      Emotion distribution: {'neutral': 0.7419354838709677, 'sadness': 0.06451612903225806, 'surprise': 0.06451612903225806, 'anger': 0.06451612903225806, 'joy': 0.03225806451612903, 'fear': 0.03225806451612903}
+
+  --- Topic 72 (n=31) ---
+      Dominant emotion: neutral (purity=0.9032)
+      Topic label: Filler/Non-Substantive Communication
+      Emotion distribution: {'neutral': 0.9032258064516129, 'sadness': 0.06451612903225806, 'disgust': 0.03225806451612903}
+
+  --- Topic 73 (n=31) ---
+      Dominant emotion: joy (purity=0.5484)
+      Topic label: Positive feedback
+      Emotion distribution: {'joy': 0.5483870967741935, 'neutral': 0.3225806451612903, 'anger': 0.0967741935483871, 'disgust': 0.03225806451612903}
+
+  --- Topic 74 (n=30) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Repetitive vocalizations and filler words
+      Emotion distribution: {'neutral': 0.4, 'joy': 0.26666666666666666, 'anger': 0.16666666666666666, 'fear': 0.06666666666666667, 'sadness': 0.06666666666666667, 'surprise': 0.03333333333333333}
+
+  --- Topic 75 (n=30) ---
+      Dominant emotion: neutral (purity=0.8000)
+      Topic label: Uncertainty and hedging language
+      Emotion distribution: {'neutral': 0.8, 'joy': 0.1, 'sadness': 0.1}
+
+  --- Topic 76 (n=30) ---
+      Dominant emotion: neutral (purity=0.6333)
+      Topic label: Abstract communication and non-verbal cues
+      Emotion distribution: {'neutral': 0.6333333333333333, 'joy': 0.2, 'anger': 0.06666666666666667, 'surprise': 0.03333333333333333, 'fear': 0.03333333333333333, 'disgust': 0.03333333333333333}
+
+  --- Topic 77 (n=30) ---
+      Dominant emotion: neutral (purity=0.4667)
+      Topic label: Cheesecake ordering and delivery problems
+      Emotion distribution: {'neutral': 0.4666666666666667, 'joy': 0.2, 'anger': 0.16666666666666666, 'disgust': 0.06666666666666667, 'surprise': 0.06666666666666667, 'sadness': 0.03333333333333333}
+
+  --- Topic 78 (n=30) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Character identification in dialogue
+      Emotion distribution: {'neutral': 0.5, 'surprise': 0.23333333333333334, 'joy': 0.2, 'fear': 0.03333333333333333, 'anger': 0.03333333333333333}
+
+  --- Topic 79 (n=30) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Misidentified voices and mistaken identities
+      Emotion distribution: {'neutral': 0.4, 'sadness': 0.23333333333333334, 'joy': 0.13333333333333333, 'anger': 0.13333333333333333, 'surprise': 0.06666666666666667, 'disgust': 0.03333333333333333}
+
+  --- Topic 80 (n=30) ---
+      Dominant emotion: neutral (purity=0.4333)
+      Topic label: Sensory experiences of food
+      Emotion distribution: {'neutral': 0.43333333333333335, 'joy': 0.2, 'surprise': 0.13333333333333333, 'disgust': 0.1, 'anger': 0.1, 'sadness': 0.03333333333333333}
+
+  --- Topic 81 (n=30) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Romantic Dates and Relationships
+      Emotion distribution: {'neutral': 0.3333333333333333, 'surprise': 0.2, 'joy': 0.13333333333333333, 'disgust': 0.13333333333333333, 'anger': 0.1, 'sadness': 0.1}
+
+  --- Topic 82 (n=29) ---
+      Dominant emotion: joy (purity=0.3793)
+      Topic label: Unclear or meaningless communication
+      Emotion distribution: {'joy': 0.3793103448275862, 'neutral': 0.3103448275862069, 'anger': 0.13793103448275862, 'surprise': 0.06896551724137931, 'sadness': 0.06896551724137931, 'fear': 0.034482758620689655}
+
+  --- Topic 83 (n=29) ---
+      Dominant emotion: neutral (purity=0.4828)
+      Topic label: Character interactions and naming
+      Emotion distribution: {'neutral': 0.4827586206896552, 'joy': 0.27586206896551724, 'sadness': 0.06896551724137931, 'fear': 0.06896551724137931, 'anger': 0.034482758620689655, 'disgust': 0.034482758620689655, 'surprise': 0.034482758620689655}
+
+  --- Topic 84 (n=29) ---
+      Dominant emotion: neutral (purity=0.7241)
+      Topic label: Repetitive phrases and pointing
+      Emotion distribution: {'neutral': 0.7241379310344828, 'joy': 0.1724137931034483, 'anger': 0.06896551724137931, 'sadness': 0.034482758620689655}
+
+  --- Topic 85 (n=28) ---
+      Dominant emotion: neutral (purity=0.6786)
+      Topic label: The Friends TV Show - Character Introductions
+      Emotion distribution: {'neutral': 0.6785714285714286, 'joy': 0.17857142857142858, 'anger': 0.07142857142857142, 'sadness': 0.03571428571428571, 'surprise': 0.03571428571428571}
+
+  --- Topic 86 (n=28) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Casual greetings and small talk
+      Emotion distribution: {'neutral': 0.42857142857142855, 'joy': 0.35714285714285715, 'sadness': 0.10714285714285714, 'surprise': 0.10714285714285714}
+
+  --- Topic 87 (n=28) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Unclear inquiries and greetings
+      Emotion distribution: {'neutral': 0.5714285714285714, 'surprise': 0.32142857142857145, 'disgust': 0.03571428571428571, 'joy': 0.03571428571428571, 'anger': 0.03571428571428571}
+
+  --- Topic 88 (n=27) ---
+      Dominant emotion: surprise (purity=0.4074)
+      Topic label: Emotional expressions and reactions
+      Emotion distribution: {'surprise': 0.4074074074074074, 'anger': 0.18518518518518517, 'joy': 0.14814814814814814, 'neutral': 0.1111111111111111, 'disgust': 0.07407407407407407, 'fear': 0.07407407407407407}
+
+  --- Topic 89 (n=27) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Romantic feelings and contemplation
+      Emotion distribution: {'neutral': 0.4444444444444444, 'joy': 0.1111111111111111, 'sadness': 0.1111111111111111, 'surprise': 0.1111111111111111, 'anger': 0.07407407407407407, 'fear': 0.07407407407407407, 'disgust': 0.07407407407407407}
+
+  --- Topic 90 (n=27) ---
+      Dominant emotion: neutral (purity=0.5556)
+      Topic label: Confirmation and agreement
+      Emotion distribution: {'neutral': 0.5555555555555556, 'joy': 0.3333333333333333, 'anger': 0.07407407407407407, 'surprise': 0.037037037037037035}
+
+  --- Topic 91 (n=27) ---
+      Dominant emotion: neutral (purity=0.5926)
+      Topic label: Gratitude and acknowledgement
+      Emotion distribution: {'neutral': 0.5925925925925926, 'joy': 0.4074074074074074}
+
+  --- Topic 92 (n=27) ---
+      Dominant emotion: surprise (purity=0.7778)
+      Topic label: Lack of explanation/Justification
+      Emotion distribution: {'surprise': 0.7777777777777778, 'neutral': 0.18518518518518517, 'anger': 0.037037037037037035}
+
+  --- Topic 93 (n=27) ---
+      Dominant emotion: fear (purity=0.2593)
+      Topic label: Negative feedback and frustration
+      Emotion distribution: {'fear': 0.25925925925925924, 'surprise': 0.2222222222222222, 'neutral': 0.18518518518518517, 'anger': 0.14814814814814814, 'disgust': 0.1111111111111111, 'sadness': 0.07407407407407407}
+
+  --- Topic 94 (n=26) ---
+      Dominant emotion: joy (purity=0.6538)
+      Topic label: Unidentified greetings/filler words
+      Emotion distribution: {'joy': 0.6538461538461539, 'neutral': 0.19230769230769232, 'surprise': 0.11538461538461539, 'anger': 0.038461538461538464}
+
+  --- Topic 95 (n=26) ---
+      Dominant emotion: neutral (purity=0.4231)
+      Topic label: Customer frustration and disbelief
+      Emotion distribution: {'neutral': 0.4230769230769231, 'sadness': 0.23076923076923078, 'anger': 0.15384615384615385, 'surprise': 0.15384615384615385, 'joy': 0.038461538461538464}
+
+  --- Topic 96 (n=26) ---
+      Dominant emotion: neutral (purity=0.5769)
+      Topic label: Filler words and conversational hesitations
+      Emotion distribution: {'neutral': 0.5769230769230769, 'joy': 0.19230769230769232, 'sadness': 0.15384615384615385, 'anger': 0.07692307692307693}
+
+  --- Topic 97 (n=25) ---
+      Dominant emotion: neutral (purity=0.5600)
+      Topic label: Bank account issues and customer service complaints
+      Emotion distribution: {'neutral': 0.56, 'joy': 0.2, 'anger': 0.16, 'surprise': 0.04, 'sadness': 0.04}
+
+  --- Topic 98 (n=25) ---
+      Dominant emotion: surprise (purity=0.9200)
+      Topic label: Confusion and disbelief
+      Emotion distribution: {'surprise': 0.92, 'neutral': 0.04, 'anger': 0.04}
+
+  --- Topic 99 (n=25) ---
+      Dominant emotion: surprise (purity=0.7200)
+      Topic label: Confusion and disbelief
+      Emotion distribution: {'surprise': 0.72, 'neutral': 0.24, 'anger': 0.04}
+
+  --- Topic 100 (n=25) ---
+      Dominant emotion: neutral (purity=0.8800)
+      Topic label: Unsubstantiated greetings and casual conversation
+      Emotion distribution: {'neutral': 0.88, 'joy': 0.12}
+
+  --- Topic 101 (n=25) ---
+      Dominant emotion: joy (purity=0.6400)
+      Topic label: Unnecessary greetings
+      Emotion distribution: {'joy': 0.64, 'neutral': 0.24, 'surprise': 0.12}
+
+  --- Topic 102 (n=25) ---
+      Dominant emotion: neutral (purity=0.9200)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.92, 'joy': 0.08}
+
+  --- Topic 103 (n=25) ---
+      Dominant emotion: neutral (purity=0.4400)
+      Topic label: Greetings and small talk
+      Emotion distribution: {'neutral': 0.44, 'joy': 0.4, 'anger': 0.08, 'surprise': 0.04, 'disgust': 0.04}
+
+  --- Topic 104 (n=24) ---
+      Dominant emotion: surprise (purity=0.6250)
+      Topic label: Pain and discomfort
+      Emotion distribution: {'surprise': 0.625, 'anger': 0.16666666666666666, 'fear': 0.125, 'sadness': 0.041666666666666664, 'joy': 0.041666666666666664}
+
+  --- Topic 105 (n=24) ---
+      Dominant emotion: neutral (purity=0.5417)
+      Topic label: Disputes over housing
+      Emotion distribution: {'neutral': 0.5416666666666666, 'anger': 0.16666666666666666, 'joy': 0.125, 'surprise': 0.125, 'disgust': 0.041666666666666664}
+
+  --- Topic 106 (n=24) ---
+      Dominant emotion: neutral (purity=0.3750)
+      Topic label: Theft and Hidden Gifts
+      Emotion distribution: {'neutral': 0.375, 'anger': 0.25, 'joy': 0.16666666666666666, 'sadness': 0.16666666666666666, 'surprise': 0.041666666666666664}
+
+  --- Topic 107 (n=24) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Uncomfortable and unsettling interactions
+      Emotion distribution: {'neutral': 0.5, 'anger': 0.16666666666666666, 'surprise': 0.125, 'joy': 0.08333333333333333, 'fear': 0.041666666666666664, 'sadness': 0.041666666666666664, 'disgust': 0.041666666666666664}
+
+  --- Topic 108 (n=24) ---
+      Dominant emotion: neutral (purity=0.6250)
+      Topic label: Gratitude and acknowledgement
+      Emotion distribution: {'neutral': 0.625, 'joy': 0.2916666666666667, 'sadness': 0.08333333333333333}
+
+  --- Topic 109 (n=24) ---
+      Dominant emotion: surprise (purity=1.0000)
+      Topic label: Expressing disbelief or confusion
+      Emotion distribution: {'surprise': 1.0}
+
+  --- Topic 110 (n=23) ---
+      Dominant emotion: joy (purity=0.4783)
+      Topic label: Abstract and nonsensical vocalizations
+      Emotion distribution: {'joy': 0.4782608695652174, 'neutral': 0.21739130434782608, 'anger': 0.13043478260869565, 'surprise': 0.08695652173913043, 'disgust': 0.043478260869565216, 'fear': 0.043478260869565216}
+
+  --- Topic 111 (n=23) ---
+      Dominant emotion: neutral (purity=0.5217)
+      Topic label: Confirmation of agreement
+      Emotion distribution: {'neutral': 0.5217391304347826, 'joy': 0.17391304347826086, 'surprise': 0.13043478260869565, 'anger': 0.08695652173913043, 'disgust': 0.043478260869565216, 'sadness': 0.043478260869565216}
+
+  --- Topic 112 (n=23) ---
+      Dominant emotion: neutral (purity=0.3478)
+      Topic label: Feedback on ideas
+      Emotion distribution: {'neutral': 0.34782608695652173, 'joy': 0.30434782608695654, 'surprise': 0.13043478260869565, 'anger': 0.13043478260869565, 'sadness': 0.08695652173913043}
+
+  --- Topic 113 (n=23) ---
+      Dominant emotion: neutral (purity=0.6522)
+      Topic label: Unexplained anomalies and disbelief
+      Emotion distribution: {'neutral': 0.6521739130434783, 'surprise': 0.17391304347826086, 'anger': 0.043478260869565216, 'disgust': 0.043478260869565216, 'sadness': 0.043478260869565216, 'joy': 0.043478260869565216}
+
+  --- Topic 114 (n=23) ---
+      Dominant emotion: neutral (purity=0.6087)
+      Topic label: Repetitive and nonsensical statements
+      Emotion distribution: {'neutral': 0.6086956521739131, 'joy': 0.30434782608695654, 'surprise': 0.043478260869565216, 'sadness': 0.043478260869565216}
+
+  --- Topic 115 (n=23) ---
+      Dominant emotion: neutral (purity=0.6087)
+      Topic label: Romantic comedy scene excerpts
+      Emotion distribution: {'neutral': 0.6086956521739131, 'joy': 0.17391304347826086, 'sadness': 0.08695652173913043, 'disgust': 0.043478260869565216, 'surprise': 0.043478260869565216, 'fear': 0.043478260869565216}
+
+  --- Topic 116 (n=23) ---
+      Dominant emotion: neutral (purity=0.5217)
+      Topic label: Celebrations and social gatherings
+      Emotion distribution: {'neutral': 0.5217391304347826, 'joy': 0.13043478260869565, 'surprise': 0.13043478260869565, 'anger': 0.13043478260869565, 'sadness': 0.043478260869565216, 'disgust': 0.043478260869565216}
+
+  --- Topic 117 (n=23) ---
+      Dominant emotion: surprise (purity=0.9130)
+      Topic label: Exclamations and expressions of surprise
+      Emotion distribution: {'surprise': 0.9130434782608695, 'joy': 0.043478260869565216, 'disgust': 0.043478260869565216}
+
+  --- Topic 118 (n=23) ---
+      Dominant emotion: neutral (purity=0.2609)
+      Topic label: Physical and emotional distress
+      Emotion distribution: {'neutral': 0.2608695652173913, 'surprise': 0.2608695652173913, 'sadness': 0.21739130434782608, 'joy': 0.13043478260869565, 'disgust': 0.043478260869565216, 'fear': 0.043478260869565216, 'anger': 0.043478260869565216}
+
+  --- Topic 119 (n=23) ---
+      Dominant emotion: neutral (purity=0.5652)
+      Topic label: High School Social Dynamics
+      Emotion distribution: {'neutral': 0.5652173913043478, 'surprise': 0.13043478260869565, 'anger': 0.13043478260869565, 'sadness': 0.08695652173913043, 'joy': 0.043478260869565216, 'disgust': 0.043478260869565216}
+
+  --- Topic 120 (n=22) ---
+      Dominant emotion: neutral (purity=0.6818)
+      Topic label: Lack of information / Unclear responses
+      Emotion distribution: {'neutral': 0.6818181818181818, 'anger': 0.09090909090909091, 'fear': 0.09090909090909091, 'sadness': 0.09090909090909091, 'surprise': 0.045454545454545456}
+
+  --- Topic 121 (n=22) ---
+      Dominant emotion: neutral (purity=0.4091)
+      Topic label: Difficulties with memory and remembrance
+      Emotion distribution: {'neutral': 0.4090909090909091, 'sadness': 0.22727272727272727, 'surprise': 0.13636363636363635, 'anger': 0.09090909090909091, 'joy': 0.09090909090909091, 'fear': 0.045454545454545456}
+
+  --- Topic 122 (n=22) ---
+      Dominant emotion: neutral (purity=0.7273)
+      Topic label: Character dialogue - Joe
+      Emotion distribution: {'neutral': 0.7272727272727273, 'surprise': 0.13636363636363635, 'fear': 0.045454545454545456, 'anger': 0.045454545454545456, 'disgust': 0.045454545454545456}
+
+  --- Topic 123 (n=22) ---
+      Dominant emotion: neutral (purity=0.4545)
+      Topic label: Negative sentiment and dissatisfaction
+      Emotion distribution: {'neutral': 0.45454545454545453, 'joy': 0.22727272727272727, 'sadness': 0.13636363636363635, 'anger': 0.045454545454545456, 'disgust': 0.045454545454545456, 'surprise': 0.045454545454545456, 'fear': 0.045454545454545456}
+
+  --- Topic 124 (n=22) ---
+      Dominant emotion: joy (purity=0.5455)
+      Topic label: Children's book references
+      Emotion distribution: {'joy': 0.5454545454545454, 'neutral': 0.18181818181818182, 'surprise': 0.13636363636363635, 'anger': 0.09090909090909091, 'sadness': 0.045454545454545456}
+
+  --- Topic 125 (n=22) ---
+      Dominant emotion: surprise (purity=0.3182)
+      Topic label: Lack of concern or denial
+      Emotion distribution: {'surprise': 0.3181818181818182, 'neutral': 0.2727272727272727, 'anger': 0.22727272727272727, 'joy': 0.09090909090909091, 'sadness': 0.09090909090909091}
+
+  --- Topic 126 (n=22) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Restaurant criticism and chef interactions
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.2727272727272727, 'surprise': 0.09090909090909091, 'sadness': 0.045454545454545456, 'anger': 0.045454545454545456, 'disgust': 0.045454545454545456}
+
+  --- Topic 127 (n=22) ---
+      Dominant emotion: surprise (purity=0.4091)
+      Topic label: Unidentifiable names/nonsense
+      Emotion distribution: {'surprise': 0.4090909090909091, 'neutral': 0.2727272727272727, 'fear': 0.09090909090909091, 'sadness': 0.09090909090909091, 'joy': 0.09090909090909091, 'anger': 0.045454545454545456}
+
+  --- Topic 128 (n=22) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Real estate disputes and property issues
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.18181818181818182, 'anger': 0.13636363636363635, 'surprise': 0.09090909090909091, 'fear': 0.045454545454545456, 'sadness': 0.045454545454545456}
+
+  --- Topic 129 (n=22) ---
+      Dominant emotion: neutral (purity=0.5455)
+      Topic label: Fire emergencies and investigations
+      Emotion distribution: {'neutral': 0.5454545454545454, 'anger': 0.18181818181818182, 'sadness': 0.13636363636363635, 'surprise': 0.09090909090909091, 'disgust': 0.045454545454545456}
+
+  --- Topic 130 (n=22) ---
+      Dominant emotion: neutral (purity=0.7727)
+      Topic label: Customer service interactions
+      Emotion distribution: {'neutral': 0.7727272727272727, 'anger': 0.09090909090909091, 'surprise': 0.09090909090909091, 'joy': 0.045454545454545456}
+
+  --- Topic 131 (n=21) ---
+      Dominant emotion: neutral (purity=0.8571)
+      Topic label: Lack of response/uncertainty
+      Emotion distribution: {'neutral': 0.8571428571428571, 'fear': 0.047619047619047616, 'anger': 0.047619047619047616, 'surprise': 0.047619047619047616}
+
+  --- Topic 132 (n=21) ---
+      Dominant emotion: joy (purity=0.3810)
+      Topic label: Romantic longing and desire
+      Emotion distribution: {'joy': 0.38095238095238093, 'sadness': 0.3333333333333333, 'neutral': 0.14285714285714285, 'surprise': 0.09523809523809523, 'anger': 0.047619047619047616}
+
+  --- Topic 133 (n=21) ---
+      Dominant emotion: surprise (purity=0.6190)
+      Topic label: Expressing disbelief and frustration
+      Emotion distribution: {'surprise': 0.6190476190476191, 'anger': 0.14285714285714285, 'sadness': 0.09523809523809523, 'joy': 0.09523809523809523, 'disgust': 0.047619047619047616}
+
+  --- Topic 134 (n=21) ---
+      Dominant emotion: neutral (purity=0.4762)
+      Topic label: Confirmation and agreement
+      Emotion distribution: {'neutral': 0.47619047619047616, 'joy': 0.23809523809523808, 'anger': 0.14285714285714285, 'surprise': 0.047619047619047616, 'sadness': 0.047619047619047616, 'fear': 0.047619047619047616}
+
+  --- Topic 135 (n=21) ---
+      Dominant emotion: neutral (purity=0.6190)
+      Topic label: Unintelligible communication
+      Emotion distribution: {'neutral': 0.6190476190476191, 'joy': 0.14285714285714285, 'anger': 0.09523809523809523, 'disgust': 0.09523809523809523, 'fear': 0.047619047619047616}
+
+  --- Topic 136 (n=21) ---
+      Dominant emotion: surprise (purity=0.7619)
+      Topic label: Confusion and uncertainty
+      Emotion distribution: {'surprise': 0.7619047619047619, 'neutral': 0.23809523809523808}
+
+  --- Topic 137 (n=21) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Missing window mystery
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.14285714285714285, 'surprise': 0.14285714285714285, 'anger': 0.09523809523809523, 'disgust': 0.047619047619047616}
+
+  --- Topic 138 (n=21) ---
+      Dominant emotion: sadness (purity=0.3810)
+      Topic label: Regret and missed opportunities
+      Emotion distribution: {'sadness': 0.38095238095238093, 'neutral': 0.3333333333333333, 'anger': 0.14285714285714285, 'joy': 0.09523809523809523, 'surprise': 0.047619047619047616}
+
+  --- Topic 139 (n=21) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Communication difficulties
+      Emotion distribution: {'neutral': 0.6666666666666666, 'joy': 0.19047619047619047, 'sadness': 0.047619047619047616, 'surprise': 0.047619047619047616, 'anger': 0.047619047619047616}
+
+  --- Topic 140 (n=20) ---
+      Dominant emotion: neutral (purity=0.3500)
+      Topic label: Frustration with work and life
+      Emotion distribution: {'neutral': 0.35, 'sadness': 0.3, 'joy': 0.2, 'anger': 0.05, 'disgust': 0.05, 'surprise': 0.05}
+
+  --- Topic 141 (n=20) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Unintelligible communication
+      Emotion distribution: {'neutral': 0.6, 'surprise': 0.3, 'anger': 0.1}
+
+  --- Topic 142 (n=20) ---
+      Dominant emotion: neutral (purity=0.4500)
+      Topic label: Unclear communication/Questioning
+      Emotion distribution: {'neutral': 0.45, 'surprise': 0.3, 'anger': 0.15, 'disgust': 0.1}
+
+  --- Topic 143 (n=20) ---
+      Dominant emotion: neutral (purity=0.3500)
+      Topic label: Body care and grooming concerns
+      Emotion distribution: {'neutral': 0.35, 'surprise': 0.2, 'anger': 0.15, 'sadness': 0.1, 'joy': 0.1, 'fear': 0.05, 'disgust': 0.05}
+
+  --- Topic 144 (n=20) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Difficult and chaotic personal experiences
+      Emotion distribution: {'neutral': 0.6, 'anger': 0.15, 'sadness': 0.1, 'joy': 0.1, 'surprise': 0.05}
+
+  --- Topic 145 (n=20) ---
+      Dominant emotion: neutral (purity=0.4500)
+      Topic label: Unclear communication and frustration
+      Emotion distribution: {'neutral': 0.45, 'surprise': 0.3, 'joy': 0.15, 'sadness': 0.1}
+
+  --- Topic 146 (n=20) ---
+      Dominant emotion: joy (purity=0.3500)
+      Topic label: Childish demands and requests
+      Emotion distribution: {'joy': 0.35, 'neutral': 0.3, 'anger': 0.1, 'sadness': 0.1, 'surprise': 0.1, 'fear': 0.05}
+
+  --- Topic 147 (n=20) ---
+      Dominant emotion: neutral (purity=0.7000)
+      Topic label: Confirmation/Agreement
+      Emotion distribution: {'neutral': 0.7, 'joy': 0.2, 'anger': 0.05, 'disgust': 0.05}
+
+  --- Topic 148 (n=20) ---
+      Dominant emotion: joy (purity=0.4000)
+      Topic label: Negative feedback and conflict
+      Emotion distribution: {'joy': 0.4, 'neutral': 0.2, 'anger': 0.15, 'surprise': 0.1, 'fear': 0.05, 'disgust': 0.05, 'sadness': 0.05}
+
+  --- Topic 149 (n=19) ---
+      Dominant emotion: neutral (purity=0.3684)
+      Topic label: Emotional distress and confrontation
+      Emotion distribution: {'neutral': 0.3684210526315789, 'disgust': 0.15789473684210525, 'anger': 0.15789473684210525, 'sadness': 0.10526315789473684, 'surprise': 0.10526315789473684, 'joy': 0.10526315789473684}
+
+  --- Topic 150 (n=19) ---
+      Dominant emotion: sadness (purity=0.2105)
+      Topic label: Personal transformation and relationships
+      Emotion distribution: {'sadness': 0.21052631578947367, 'joy': 0.21052631578947367, 'neutral': 0.15789473684210525, 'disgust': 0.15789473684210525, 'anger': 0.10526315789473684, 'surprise': 0.10526315789473684, 'fear': 0.05263157894736842}
+
+  --- Topic 151 (n=19) ---
+      Dominant emotion: neutral (purity=0.5263)
+      Topic label: Camera acquisition and confusion
+      Emotion distribution: {'neutral': 0.5263157894736842, 'anger': 0.15789473684210525, 'joy': 0.10526315789473684, 'surprise': 0.10526315789473684, 'disgust': 0.05263157894736842, 'fear': 0.05263157894736842}
+
+  --- Topic 152 (n=19) ---
+      Dominant emotion: joy (purity=0.7368)
+      Topic label: Expressions of excitement and affirmation
+      Emotion distribution: {'joy': 0.7368421052631579, 'neutral': 0.21052631578947367, 'sadness': 0.05263157894736842}
+
+  --- Topic 153 (n=19) ---
+      Dominant emotion: neutral (purity=0.5263)
+      Topic label: Emotional distress and irrationality
+      Emotion distribution: {'neutral': 0.5263157894736842, 'joy': 0.15789473684210525, 'anger': 0.15789473684210525, 'fear': 0.10526315789473684, 'surprise': 0.05263157894736842}
+
+  --- Topic 154 (n=19) ---
+      Dominant emotion: neutral (purity=0.6316)
+      Topic label: Names and nicknames
+      Emotion distribution: {'neutral': 0.631578947368421, 'joy': 0.21052631578947367, 'surprise': 0.10526315789473684, 'disgust': 0.05263157894736842}
+
+  --- Topic 155 (n=19) ---
+      Dominant emotion: neutral (purity=0.8947)
+      Topic label: Unnecessary greetings
+      Emotion distribution: {'neutral': 0.8947368421052632, 'joy': 0.10526315789473684}
+
+  --- Topic 156 (n=19) ---
+      Dominant emotion: surprise (purity=0.8421)
+      Topic label: Frustration and Exclamations
+      Emotion distribution: {'surprise': 0.8421052631578947, 'sadness': 0.05263157894736842, 'joy': 0.05263157894736842, 'fear': 0.05263157894736842}
+
+  --- Topic 157 (n=19) ---
+      Dominant emotion: neutral (purity=0.5789)
+      Topic label: Restaurant service and staff
+      Emotion distribution: {'neutral': 0.5789473684210527, 'surprise': 0.15789473684210525, 'sadness': 0.10526315789473684, 'joy': 0.10526315789473684, 'disgust': 0.05263157894736842}
+
+  --- Topic 158 (n=19) ---
+      Dominant emotion: surprise (purity=0.8421)
+      Topic label: Expressing disbelief and surprise
+      Emotion distribution: {'surprise': 0.8421052631578947, 'disgust': 0.10526315789473684, 'joy': 0.05263157894736842}
+
+  --- Topic 159 (n=19) ---
+      Dominant emotion: neutral (purity=0.3684)
+      Topic label: Adult content and suggestive conversations
+      Emotion distribution: {'neutral': 0.3684210526315789, 'surprise': 0.3157894736842105, 'sadness': 0.15789473684210525, 'joy': 0.10526315789473684, 'anger': 0.05263157894736842}
+
+  --- Topic 160 (n=19) ---
+      Dominant emotion: neutral (purity=0.5263)
+      Topic label: Emotional distress and impulsive behavior
+      Emotion distribution: {'neutral': 0.5263157894736842, 'anger': 0.15789473684210525, 'joy': 0.10526315789473684, 'sadness': 0.10526315789473684, 'surprise': 0.05263157894736842, 'disgust': 0.05263157894736842}
+
+  --- Topic 161 (n=19) ---
+      Dominant emotion: neutral (purity=0.5789)
+      Topic label: Agreement and Confirmation
+      Emotion distribution: {'neutral': 0.5789473684210527, 'joy': 0.15789473684210525, 'sadness': 0.15789473684210525, 'anger': 0.05263157894736842, 'surprise': 0.05263157894736842}
+
+  --- Topic 162 (n=19) ---
+      Dominant emotion: neutral (purity=0.4211)
+      Topic label: Relationship and intimacy concerns
+      Emotion distribution: {'neutral': 0.42105263157894735, 'joy': 0.2631578947368421, 'anger': 0.10526315789473684, 'fear': 0.05263157894736842, 'disgust': 0.05263157894736842, 'sadness': 0.05263157894736842, 'surprise': 0.05263157894736842}
+
+  --- Topic 163 (n=19) ---
+      Dominant emotion: neutral (purity=0.5789)
+      Topic label: Social interactions and introductions
+      Emotion distribution: {'neutral': 0.5789473684210527, 'surprise': 0.10526315789473684, 'sadness': 0.10526315789473684, 'anger': 0.10526315789473684, 'disgust': 0.05263157894736842, 'joy': 0.05263157894736842}
+
+  --- Topic 164 (n=19) ---
+      Dominant emotion: surprise (purity=0.5789)
+      Topic label: Lack of clarity and direction
+      Emotion distribution: {'surprise': 0.5789473684210527, 'neutral': 0.3157894736842105, 'sadness': 0.05263157894736842, 'anger': 0.05263157894736842}
+
+  --- Topic 165 (n=18) ---
+      Dominant emotion: neutral (purity=0.6111)
+      Topic label: Strange and unsettling experiences
+      Emotion distribution: {'neutral': 0.6111111111111112, 'anger': 0.16666666666666666, 'joy': 0.1111111111111111, 'sadness': 0.05555555555555555, 'surprise': 0.05555555555555555}
+
+  --- Topic 166 (n=18) ---
+      Dominant emotion: joy (purity=0.6111)
+      Topic label: Informal greetings and conversation starters
+      Emotion distribution: {'joy': 0.6111111111111112, 'neutral': 0.2222222222222222, 'sadness': 0.1111111111111111, 'disgust': 0.05555555555555555}
+
+  --- Topic 167 (n=18) ---
+      Dominant emotion: neutral (purity=0.2222)
+      Topic label: Romantic relationships and social dynamics
+      Emotion distribution: {'neutral': 0.2222222222222222, 'sadness': 0.2222222222222222, 'joy': 0.2222222222222222, 'surprise': 0.16666666666666666, 'anger': 0.1111111111111111, 'fear': 0.05555555555555555}
+
+  --- Topic 168 (n=18) ---
+      Dominant emotion: neutral (purity=0.7222)
+      Topic label: Difficult communication and avoidance
+      Emotion distribution: {'neutral': 0.7222222222222222, 'surprise': 0.1111111111111111, 'disgust': 0.05555555555555555, 'anger': 0.05555555555555555, 'fear': 0.05555555555555555}
+
+  --- Topic 169 (n=18) ---
+      Dominant emotion: surprise (purity=0.8889)
+      Topic label: Exclamations and expressions of surprise
+      Emotion distribution: {'surprise': 0.8888888888888888, 'joy': 0.1111111111111111}
+
+  --- Topic 170 (n=18) ---
+      Dominant emotion: surprise (purity=0.6111)
+      Topic label: Customer frustration and disbelief
+      Emotion distribution: {'surprise': 0.6111111111111112, 'neutral': 0.2222222222222222, 'joy': 0.05555555555555555, 'sadness': 0.05555555555555555, 'anger': 0.05555555555555555}
+
+  --- Topic 171 (n=18) ---
+      Dominant emotion: surprise (purity=0.7222)
+      Topic label: Expressing enthusiasm
+      Emotion distribution: {'surprise': 0.7222222222222222, 'joy': 0.2777777777777778}
+
+  --- Topic 172 (n=18) ---
+      Dominant emotion: joy (purity=0.2222)
+      Topic label: Emotional reactions and jealousy
+      Emotion distribution: {'joy': 0.2222222222222222, 'anger': 0.2222222222222222, 'neutral': 0.2222222222222222, 'sadness': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 173 (n=18) ---
+      Dominant emotion: neutral (purity=0.2778)
+      Topic label: Confusing and rambling conversation
+      Emotion distribution: {'neutral': 0.2777777777777778, 'surprise': 0.2777777777777778, 'joy': 0.2222222222222222, 'anger': 0.1111111111111111, 'disgust': 0.05555555555555555, 'sadness': 0.05555555555555555}
+
+  --- Topic 174 (n=18) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Police interrogation and apprehension
+      Emotion distribution: {'neutral': 0.4444444444444444, 'joy': 0.16666666666666666, 'sadness': 0.1111111111111111, 'anger': 0.1111111111111111, 'fear': 0.1111111111111111, 'surprise': 0.05555555555555555}
+
+  --- Topic 175 (n=18) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Conflict and confrontation
+      Emotion distribution: {'neutral': 0.5, 'anger': 0.2222222222222222, 'surprise': 0.2222222222222222, 'sadness': 0.05555555555555555}
+
+  --- Topic 176 (n=18) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Relationship problems and divorce
+      Emotion distribution: {'neutral': 0.4444444444444444, 'sadness': 0.2777777777777778, 'anger': 0.1111111111111111, 'joy': 0.1111111111111111, 'surprise': 0.05555555555555555}
+
+  --- Topic 177 (n=17) ---
+      Dominant emotion: neutral (purity=0.5882)
+      Topic label: Unusual and sensational news stories
+      Emotion distribution: {'neutral': 0.5882352941176471, 'anger': 0.17647058823529413, 'joy': 0.11764705882352941, 'sadness': 0.058823529411764705, 'disgust': 0.058823529411764705}
+
+  --- Topic 178 (n=17) ---
+      Dominant emotion: neutral (purity=0.3529)
+      Topic label: Frustration and urgency
+      Emotion distribution: {'neutral': 0.35294117647058826, 'anger': 0.29411764705882354, 'joy': 0.23529411764705882, 'sadness': 0.058823529411764705, 'surprise': 0.058823529411764705}
+
+  --- Topic 179 (n=17) ---
+      Dominant emotion: neutral (purity=0.4706)
+      Topic label: Threats and violence
+      Emotion distribution: {'neutral': 0.47058823529411764, 'anger': 0.29411764705882354, 'fear': 0.11764705882352941, 'joy': 0.058823529411764705, 'surprise': 0.058823529411764705}
+
+  --- Topic 180 (n=17) ---
+      Dominant emotion: surprise (purity=0.2941)
+      Topic label: Filler words and conversational hesitations
+      Emotion distribution: {'surprise': 0.29411764705882354, 'fear': 0.23529411764705882, 'neutral': 0.17647058823529413, 'joy': 0.17647058823529413, 'disgust': 0.058823529411764705, 'anger': 0.058823529411764705}
+
+  --- Topic 181 (n=17) ---
+      Dominant emotion: joy (purity=0.5294)
+      Topic label: Over-the-top reactions and bizarre statements
+      Emotion distribution: {'joy': 0.5294117647058824, 'surprise': 0.23529411764705882, 'sadness': 0.11764705882352941, 'fear': 0.058823529411764705, 'anger': 0.058823529411764705}
+
+  --- Topic 182 (n=17) ---
+      Dominant emotion: neutral (purity=0.4706)
+      Topic label: Uncomfortable social situations and bodily distress
+      Emotion distribution: {'neutral': 0.47058823529411764, 'sadness': 0.17647058823529413, 'joy': 0.11764705882352941, 'surprise': 0.11764705882352941, 'disgust': 0.058823529411764705, 'anger': 0.058823529411764705}
+
+  --- Topic 183 (n=17) ---
+      Dominant emotion: joy (purity=0.4706)
+      Topic label: Unclear or vague statements/feedback
+      Emotion distribution: {'joy': 0.47058823529411764, 'neutral': 0.23529411764705882, 'sadness': 0.17647058823529413, 'surprise': 0.058823529411764705, 'anger': 0.058823529411764705}
+
+  --- Topic 184 (n=17) ---
+      Dominant emotion: neutral (purity=0.4706)
+      Topic label: Confirmation of receipt
+      Emotion distribution: {'neutral': 0.47058823529411764, 'joy': 0.4117647058823529, 'surprise': 0.058823529411764705, 'anger': 0.058823529411764705}
+
+  --- Topic 185 (n=17) ---
+      Dominant emotion: joy (purity=0.2353)
+      Topic label: Sexual harassment and inappropriate behavior
+      Emotion distribution: {'joy': 0.23529411764705882, 'neutral': 0.23529411764705882, 'surprise': 0.23529411764705882, 'anger': 0.17647058823529413, 'disgust': 0.11764705882352941}
+
+  --- Topic 186 (n=17) ---
+      Dominant emotion: neutral (purity=0.5294)
+      Topic label: Confusion about time
+      Emotion distribution: {'neutral': 0.5294117647058824, 'joy': 0.11764705882352941, 'anger': 0.11764705882352941, 'surprise': 0.11764705882352941, 'disgust': 0.058823529411764705, 'sadness': 0.058823529411764705}
+
+  --- Topic 187 (n=17) ---
+      Dominant emotion: neutral (purity=0.6471)
+      Topic label: Interim instructions and commands
+      Emotion distribution: {'neutral': 0.6470588235294118, 'anger': 0.29411764705882354, 'disgust': 0.058823529411764705}
+
+  --- Topic 188 (n=17) ---
+      Dominant emotion: surprise (purity=0.2941)
+      Topic label: Self-deprecating remarks and feelings of inadequacy
+      Emotion distribution: {'surprise': 0.29411764705882354, 'sadness': 0.29411764705882354, 'anger': 0.17647058823529413, 'disgust': 0.11764705882352941, 'joy': 0.058823529411764705, 'neutral': 0.058823529411764705}
+
+  --- Topic 189 (n=17) ---
+      Dominant emotion: neutral (purity=0.7647)
+      Topic label: Lack of substantive response
+      Emotion distribution: {'neutral': 0.7647058823529411, 'joy': 0.11764705882352941, 'surprise': 0.11764705882352941}
+
+  --- Topic 190 (n=17) ---
+      Dominant emotion: neutral (purity=0.4118)
+      Topic label: Random chatter and informal conversation
+      Emotion distribution: {'neutral': 0.4117647058823529, 'joy': 0.23529411764705882, 'anger': 0.23529411764705882, 'sadness': 0.058823529411764705, 'surprise': 0.058823529411764705}
+
+  --- Topic 191 (n=17) ---
+      Dominant emotion: neutral (purity=0.3529)
+      Topic label: Cartoon dialogue and character names
+      Emotion distribution: {'neutral': 0.35294117647058826, 'joy': 0.29411764705882354, 'sadness': 0.17647058823529413, 'surprise': 0.11764705882352941, 'fear': 0.058823529411764705}
+
+  --- Topic 192 (n=17) ---
+      Dominant emotion: neutral (purity=0.4118)
+      Topic label: Conversational disagreement and redirection
+      Emotion distribution: {'neutral': 0.4117647058823529, 'joy': 0.35294117647058826, 'surprise': 0.17647058823529413, 'anger': 0.058823529411764705}
+
+  --- Topic 193 (n=17) ---
+      Dominant emotion: neutral (purity=0.2941)
+      Topic label: Delayed responses and pauses
+      Emotion distribution: {'neutral': 0.29411764705882354, 'sadness': 0.29411764705882354, 'surprise': 0.23529411764705882, 'anger': 0.11764705882352941, 'joy': 0.058823529411764705}
+
+  --- Topic 194 (n=17) ---
+      Dominant emotion: sadness (purity=0.3529)
+      Topic label: Loss of father and family history
+      Emotion distribution: {'sadness': 0.35294117647058826, 'neutral': 0.29411764705882354, 'anger': 0.23529411764705882, 'fear': 0.058823529411764705, 'surprise': 0.058823529411764705}
+
+  --- Topic 195 (n=16) ---
+      Dominant emotion: neutral (purity=0.6250)
+      Topic label: Roger-related communication difficulties
+      Emotion distribution: {'neutral': 0.625, 'sadness': 0.1875, 'joy': 0.0625, 'anger': 0.0625, 'surprise': 0.0625}
+
+  --- Topic 196 (n=16) ---
+      Dominant emotion: joy (purity=0.8125)
+      Topic label: Informal conversation and requests
+      Emotion distribution: {'joy': 0.8125, 'neutral': 0.1875}
+
+  --- Topic 197 (n=16) ---
+      Dominant emotion: neutral (purity=0.5625)
+      Topic label: Emotional vulnerability and seeking reassurance
+      Emotion distribution: {'neutral': 0.5625, 'joy': 0.25, 'surprise': 0.125, 'fear': 0.0625}
+
+  --- Topic 198 (n=16) ---
+      Dominant emotion: neutral (purity=0.5625)
+      Topic label: Abduction and Distress
+      Emotion distribution: {'neutral': 0.5625, 'anger': 0.125, 'surprise': 0.125, 'joy': 0.0625, 'sadness': 0.0625, 'fear': 0.0625}
+
+  --- Topic 199 (n=16) ---
+      Dominant emotion: anger (purity=1.0000)
+      Topic label: Lack of substantive response
+      Emotion distribution: {'anger': 1.0}
+
+  --- Topic 200 (n=16) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Intense personal experiences and emotional distress
+      Emotion distribution: {'neutral': 0.5, 'sadness': 0.1875, 'surprise': 0.125, 'anger': 0.125, 'fear': 0.0625}
+
+  --- Topic 201 (n=16) ---
+      Dominant emotion: neutral (purity=0.4375)
+      Topic label: Movie reviews and discussions
+      Emotion distribution: {'neutral': 0.4375, 'joy': 0.3125, 'anger': 0.1875, 'disgust': 0.0625}
+
+  --- Topic 202 (n=16) ---
+      Dominant emotion: surprise (purity=0.5625)
+      Topic label: Customer frustration and disbelief
+      Emotion distribution: {'surprise': 0.5625, 'anger': 0.1875, 'neutral': 0.125, 'fear': 0.0625, 'joy': 0.0625}
+
+  --- Topic 203 (n=16) ---
+      Dominant emotion: neutral (purity=0.5625)
+      Topic label: Dilemmas and decision-making
+      Emotion distribution: {'neutral': 0.5625, 'anger': 0.3125, 'surprise': 0.125}
+
+  --- Topic 204 (n=16) ---
+      Dominant emotion: sadness (purity=0.3125)
+      Topic label: Dark and disturbing narratives
+      Emotion distribution: {'sadness': 0.3125, 'joy': 0.25, 'anger': 0.1875, 'disgust': 0.125, 'neutral': 0.125}
+
+  --- Topic 205 (n=16) ---
+      Dominant emotion: neutral (purity=0.5625)
+      Topic label: Communication difficulties and clarification requests
+      Emotion distribution: {'neutral': 0.5625, 'sadness': 0.125, 'anger': 0.125, 'fear': 0.0625, 'surprise': 0.0625, 'joy': 0.0625}
+
+  --- Topic 206 (n=16) ---
+      Dominant emotion: neutral (purity=0.8750)
+      Topic label: Casual conversation and greetings
+      Emotion distribution: {'neutral': 0.875, 'joy': 0.0625, 'anger': 0.0625}
+
+  --- Topic 207 (n=16) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Travel plans and destinations
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.25, 'surprise': 0.1875, 'disgust': 0.0625}
+
+  --- Topic 208 (n=16) ---
+      Dominant emotion: neutral (purity=0.5625)
+      Topic label: Disagreement and Confusion
+      Emotion distribution: {'neutral': 0.5625, 'anger': 0.1875, 'surprise': 0.125, 'joy': 0.0625, 'sadness': 0.0625}
+
+  --- Topic 209 (n=15) ---
+      Dominant emotion: joy (purity=0.6000)
+      Topic label: Customer feedback and sentiment
+      Emotion distribution: {'joy': 0.6, 'neutral': 0.13333333333333333, 'disgust': 0.13333333333333333, 'surprise': 0.13333333333333333}
+
+  --- Topic 210 (n=15) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Identity and Recognition in a Conversation
+      Emotion distribution: {'neutral': 0.4, 'surprise': 0.2, 'joy': 0.2, 'anger': 0.13333333333333333, 'sadness': 0.06666666666666667}
+
+  --- Topic 211 (n=15) ---
+      Dominant emotion: joy (purity=0.3333)
+      Topic label: Fan requests and interactions
+      Emotion distribution: {'joy': 0.3333333333333333, 'sadness': 0.26666666666666666, 'neutral': 0.2, 'anger': 0.2}
+
+  --- Topic 212 (n=15) ---
+      Dominant emotion: neutral (purity=0.9333)
+      Topic label: Lack of substantive content
+      Emotion distribution: {'neutral': 0.9333333333333333, 'sadness': 0.06666666666666667}
+
+  --- Topic 213 (n=15) ---
+      Dominant emotion: neutral (purity=0.7333)
+      Topic label: Professional development and interpersonal skills
+      Emotion distribution: {'neutral': 0.7333333333333333, 'surprise': 0.13333333333333333, 'anger': 0.06666666666666667, 'joy': 0.06666666666666667}
+
+  --- Topic 214 (n=15) ---
+      Dominant emotion: neutral (purity=0.8000)
+      Topic label: Acknowledgement and delivery
+      Emotion distribution: {'neutral': 0.8, 'joy': 0.2}
+
+  --- Topic 215 (n=15) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Porsche ownership and concerns
+      Emotion distribution: {'neutral': 0.3333333333333333, 'surprise': 0.2, 'joy': 0.2, 'anger': 0.13333333333333333, 'sadness': 0.13333333333333333}
+
+  --- Topic 216 (n=15) ---
+      Dominant emotion: neutral (purity=0.4667)
+      Topic label: Deceptive communication
+      Emotion distribution: {'neutral': 0.4666666666666667, 'joy': 0.2, 'sadness': 0.2, 'anger': 0.13333333333333333}
+
+  --- Topic 217 (n=15) ---
+      Dominant emotion: neutral (purity=0.2667)
+      Topic label: Negative sentiment and disapproval
+      Emotion distribution: {'neutral': 0.26666666666666666, 'anger': 0.2, 'disgust': 0.13333333333333333, 'joy': 0.13333333333333333, 'surprise': 0.13333333333333333, 'sadness': 0.06666666666666667, 'fear': 0.06666666666666667}
+
+  --- Topic 218 (n=15) ---
+      Dominant emotion: neutral (purity=0.7333)
+      Topic label: Unresponsive or dismissive replies
+      Emotion distribution: {'neutral': 0.7333333333333333, 'sadness': 0.13333333333333333, 'anger': 0.06666666666666667, 'joy': 0.06666666666666667}
+
+  --- Topic 219 (n=15) ---
+      Dominant emotion: surprise (purity=0.6000)
+      Topic label: Unnecessary questioning
+      Emotion distribution: {'surprise': 0.6, 'neutral': 0.3333333333333333, 'joy': 0.06666666666666667}
+
+  --- Topic 220 (n=15) ---
+      Dominant emotion: neutral (purity=0.5333)
+      Topic label: Risky online encounters
+      Emotion distribution: {'neutral': 0.5333333333333333, 'joy': 0.2, 'fear': 0.13333333333333333, 'surprise': 0.06666666666666667, 'anger': 0.06666666666666667}
+
+  --- Topic 221 (n=14) ---
+      Dominant emotion: anger (purity=0.4286)
+      Topic label: Sleep and unconsciousness
+      Emotion distribution: {'anger': 0.42857142857142855, 'neutral': 0.35714285714285715, 'sadness': 0.14285714285714285, 'surprise': 0.07142857142857142}
+
+  --- Topic 222 (n=14) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Pacing and speed issues
+      Emotion distribution: {'neutral': 0.5714285714285714, 'surprise': 0.14285714285714285, 'fear': 0.14285714285714285, 'joy': 0.07142857142857142, 'anger': 0.07142857142857142}
+
+  --- Topic 223 (n=14) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Lack of clarity and communication
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.21428571428571427, 'surprise': 0.14285714285714285, 'anger': 0.07142857142857142}
+
+  --- Topic 224 (n=14) ---
+      Dominant emotion: joy (purity=0.5000)
+      Topic label: Positive experiences and reactions
+      Emotion distribution: {'joy': 0.5, 'sadness': 0.14285714285714285, 'neutral': 0.14285714285714285, 'surprise': 0.14285714285714285, 'anger': 0.07142857142857142}
+
+  --- Topic 225 (n=14) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Relationship drama and personal anecdotes
+      Emotion distribution: {'neutral': 0.42857142857142855, 'sadness': 0.21428571428571427, 'anger': 0.21428571428571427, 'surprise': 0.07142857142857142, 'joy': 0.07142857142857142}
+
+  --- Topic 226 (n=14) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Emotional distress and communication difficulties
+      Emotion distribution: {'neutral': 0.5714285714285714, 'sadness': 0.21428571428571427, 'anger': 0.14285714285714285, 'surprise': 0.07142857142857142}
+
+  --- Topic 227 (n=14) ---
+      Dominant emotion: neutral (purity=0.3571)
+      Topic label: Emotional expression and acting techniques
+      Emotion distribution: {'neutral': 0.35714285714285715, 'sadness': 0.21428571428571427, 'surprise': 0.14285714285714285, 'anger': 0.14285714285714285, 'disgust': 0.07142857142857142, 'joy': 0.07142857142857142}
+
+  --- Topic 228 (n=14) ---
+      Dominant emotion: neutral (purity=0.6429)
+      Topic label: Lost keys and possessions
+      Emotion distribution: {'neutral': 0.6428571428571429, 'sadness': 0.21428571428571427, 'disgust': 0.07142857142857142, 'surprise': 0.07142857142857142}
+
+  --- Topic 229 (n=14) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Geographical locations and place names
+      Emotion distribution: {'neutral': 0.5714285714285714, 'surprise': 0.21428571428571427, 'fear': 0.07142857142857142, 'joy': 0.07142857142857142, 'anger': 0.07142857142857142}
+
+  --- Topic 230 (n=14) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Lack of rules and chaos
+      Emotion distribution: {'neutral': 0.5, 'anger': 0.35714285714285715, 'fear': 0.07142857142857142, 'joy': 0.07142857142857142}
+
+  --- Topic 231 (n=14) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Bike theft and related incidents
+      Emotion distribution: {'neutral': 0.42857142857142855, 'sadness': 0.2857142857142857, 'joy': 0.14285714285714285, 'anger': 0.14285714285714285}
+
+  --- Topic 232 (n=14) ---
+      Dominant emotion: joy (purity=0.7143)
+      Topic label: Customer sentiment and feedback
+      Emotion distribution: {'joy': 0.7142857142857143, 'anger': 0.14285714285714285, 'disgust': 0.07142857142857142, 'neutral': 0.07142857142857142}
+
+  --- Topic 233 (n=14) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Introduction of a new person
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.2857142857142857, 'sadness': 0.07142857142857142, 'anger': 0.07142857142857142, 'surprise': 0.07142857142857142}
+
+  --- Topic 234 (n=14) ---
+      Dominant emotion: neutral (purity=0.8571)
+      Topic label: Farewell and goodbyes
+      Emotion distribution: {'neutral': 0.8571428571428571, 'joy': 0.14285714285714285}
+
+  --- Topic 235 (n=14) ---
+      Dominant emotion: neutral (purity=0.2143)
+      Topic label: Relationship breakdown and emotional distress
+      Emotion distribution: {'neutral': 0.21428571428571427, 'fear': 0.21428571428571427, 'joy': 0.14285714285714285, 'surprise': 0.14285714285714285, 'anger': 0.14285714285714285, 'sadness': 0.07142857142857142, 'disgust': 0.07142857142857142}
+
+  --- Topic 236 (n=14) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Invitations and offers for refreshments
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.21428571428571427, 'surprise': 0.14285714285714285, 'anger': 0.07142857142857142}
+
+  --- Topic 237 (n=14) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Struggles with quitting/persistence
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.2857142857142857, 'anger': 0.14285714285714285, 'disgust': 0.07142857142857142}
+
+  --- Topic 238 (n=14) ---
+      Dominant emotion: surprise (purity=0.8571)
+      Topic label: Exclamations and expressions of surprise
+      Emotion distribution: {'surprise': 0.8571428571428571, 'joy': 0.07142857142857142, 'anger': 0.07142857142857142}
+
+  --- Topic 239 (n=14) ---
+      Dominant emotion: neutral (purity=0.3571)
+      Topic label: Emotional distress and uncertainty
+      Emotion distribution: {'neutral': 0.35714285714285715, 'surprise': 0.2857142857142857, 'fear': 0.2857142857142857, 'anger': 0.07142857142857142}
+
+  --- Topic 240 (n=14) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Legal and investigative procedures
+      Emotion distribution: {'neutral': 0.42857142857142855, 'joy': 0.2857142857142857, 'anger': 0.21428571428571427, 'surprise': 0.07142857142857142}
+
+  --- Topic 241 (n=13) ---
+      Dominant emotion: joy (purity=0.6923)
+      Topic label: Confirmation/Agreement
+      Emotion distribution: {'joy': 0.6923076923076923, 'neutral': 0.15384615384615385, 'surprise': 0.07692307692307693, 'sadness': 0.07692307692307693}
+
+  --- Topic 242 (n=13) ---
+      Dominant emotion: neutral (purity=0.3846)
+      Topic label: Difficult interpersonal communication
+      Emotion distribution: {'neutral': 0.38461538461538464, 'sadness': 0.15384615384615385, 'surprise': 0.15384615384615385, 'anger': 0.15384615384615385, 'joy': 0.07692307692307693, 'disgust': 0.07692307692307693}
+
+  --- Topic 243 (n=13) ---
+      Dominant emotion: neutral (purity=0.3846)
+      Topic label: Abusive and disrespectful communication
+      Emotion distribution: {'neutral': 0.38461538461538464, 'anger': 0.38461538461538464, 'disgust': 0.07692307692307693, 'joy': 0.07692307692307693, 'surprise': 0.07692307692307693}
+
+  --- Topic 244 (n=13) ---
+      Dominant emotion: neutral (purity=0.2308)
+      Topic label: Intense and disruptive sounds/experiences
+      Emotion distribution: {'neutral': 0.23076923076923078, 'anger': 0.23076923076923078, 'sadness': 0.15384615384615385, 'surprise': 0.15384615384615385, 'disgust': 0.07692307692307693, 'joy': 0.07692307692307693, 'fear': 0.07692307692307693}
+
+  --- Topic 245 (n=13) ---
+      Dominant emotion: neutral (purity=0.6923)
+      Topic label: Museum navigation and instructions
+      Emotion distribution: {'neutral': 0.6923076923076923, 'surprise': 0.15384615384615385, 'disgust': 0.07692307692307693, 'anger': 0.07692307692307693}
+
+  --- Topic 246 (n=13) ---
+      Dominant emotion: neutral (purity=0.7692)
+      Topic label: Unrelated events and anecdotes
+      Emotion distribution: {'neutral': 0.7692307692307693, 'surprise': 0.07692307692307693, 'joy': 0.07692307692307693, 'anger': 0.07692307692307693}
+
+  --- Topic 247 (n=13) ---
+      Dominant emotion: neutral (purity=0.5385)
+      Topic label: Complex interpersonal relationships and attraction
+      Emotion distribution: {'neutral': 0.5384615384615384, 'joy': 0.15384615384615385, 'sadness': 0.15384615384615385, 'anger': 0.07692307692307693, 'surprise': 0.07692307692307693}
+
+  --- Topic 248 (n=13) ---
+      Dominant emotion: neutral (purity=0.4615)
+      Topic label: Instructions to sit down
+      Emotion distribution: {'neutral': 0.46153846153846156, 'anger': 0.38461538461538464, 'sadness': 0.07692307692307693, 'fear': 0.07692307692307693}
+
+  --- Topic 249 (n=13) ---
+      Dominant emotion: neutral (purity=0.6154)
+      Topic label: Romantic metaphors and abstract concepts
+      Emotion distribution: {'neutral': 0.6153846153846154, 'joy': 0.3076923076923077, 'sadness': 0.07692307692307693}
+
+  --- Topic 250 (n=13) ---
+      Dominant emotion: neutral (purity=0.3077)
+      Topic label: Relationship and celebration events
+      Emotion distribution: {'neutral': 0.3076923076923077, 'anger': 0.3076923076923077, 'joy': 0.23076923076923078, 'sadness': 0.07692307692307693, 'surprise': 0.07692307692307693}
+
+  --- Topic 251 (n=13) ---
+      Dominant emotion: neutral (purity=0.4615)
+      Topic label: Drake-related online discussions and questions
+      Emotion distribution: {'neutral': 0.46153846153846156, 'joy': 0.3076923076923077, 'anger': 0.15384615384615385, 'surprise': 0.07692307692307693}
+
+  --- Topic 252 (n=13) ---
+      Dominant emotion: neutral (purity=0.3846)
+      Topic label: Violent and disturbing content
+      Emotion distribution: {'neutral': 0.38461538461538464, 'joy': 0.3076923076923077, 'anger': 0.15384615384615385, 'sadness': 0.07692307692307693, 'disgust': 0.07692307692307693}
+
+  --- Topic 253 (n=13) ---
+      Dominant emotion: neutral (purity=0.5385)
+      Topic label: Lack of empathy and disinterest
+      Emotion distribution: {'neutral': 0.5384615384615384, 'anger': 0.38461538461538464, 'disgust': 0.07692307692307693}
+
+  --- Topic 254 (n=13) ---
+      Dominant emotion: joy (purity=0.4615)
+      Topic label: Repetitive and nonsensical statements
+      Emotion distribution: {'joy': 0.46153846153846156, 'anger': 0.23076923076923078, 'surprise': 0.15384615384615385, 'neutral': 0.07692307692307693, 'fear': 0.07692307692307693}
+
+  --- Topic 255 (n=13) ---
+      Dominant emotion: neutral (purity=0.5385)
+      Topic label: Sensory experiences and descriptions
+      Emotion distribution: {'neutral': 0.5384615384615384, 'surprise': 0.23076923076923078, 'joy': 0.15384615384615385, 'sadness': 0.07692307692307693}
+
+  --- Topic 256 (n=13) ---
+      Dominant emotion: neutral (purity=0.4615)
+      Topic label: Milk and Dairy Products
+      Emotion distribution: {'neutral': 0.46153846153846156, 'disgust': 0.15384615384615385, 'joy': 0.15384615384615385, 'sadness': 0.07692307692307693, 'surprise': 0.07692307692307693, 'anger': 0.07692307692307693}
+
+  --- Topic 257 (n=13) ---
+      Dominant emotion: neutral (purity=0.5385)
+      Topic label: Audio tape requests and disputes
+      Emotion distribution: {'neutral': 0.5384615384615384, 'anger': 0.23076923076923078, 'surprise': 0.15384615384615385, 'sadness': 0.07692307692307693}
+
+  --- Topic 258 (n=13) ---
+      Dominant emotion: neutral (purity=0.5385)
+      Topic label: Male sexuality and social commentary
+      Emotion distribution: {'neutral': 0.5384615384615384, 'anger': 0.23076923076923078, 'surprise': 0.07692307692307693, 'disgust': 0.07692307692307693, 'joy': 0.07692307692307693}
+
+  --- Topic 259 (n=13) ---
+      Dominant emotion: disgust (purity=0.2308)
+      Topic label: Derogatory language and insults
+      Emotion distribution: {'disgust': 0.23076923076923078, 'anger': 0.23076923076923078, 'neutral': 0.15384615384615385, 'sadness': 0.15384615384615385, 'joy': 0.15384615384615385, 'surprise': 0.07692307692307693}
+
+  --- Topic 260 (n=12) ---
+      Dominant emotion: sadness (purity=0.3333)
+      Topic label: Romantic regret and unresolved emotions
+      Emotion distribution: {'sadness': 0.3333333333333333, 'neutral': 0.16666666666666666, 'anger': 0.16666666666666666, 'joy': 0.16666666666666666, 'disgust': 0.08333333333333333, 'surprise': 0.08333333333333333}
+
+  --- Topic 261 (n=12) ---
+      Dominant emotion: neutral (purity=0.5833)
+      Topic label: Unclear communication and social interaction
+      Emotion distribution: {'neutral': 0.5833333333333334, 'joy': 0.16666666666666666, 'fear': 0.08333333333333333, 'sadness': 0.08333333333333333, 'surprise': 0.08333333333333333}
+
+  --- Topic 262 (n=12) ---
+      Dominant emotion: neutral (purity=0.5833)
+      Topic label: Roommate search and living arrangements
+      Emotion distribution: {'neutral': 0.5833333333333334, 'sadness': 0.16666666666666666, 'anger': 0.08333333333333333, 'surprise': 0.08333333333333333, 'joy': 0.08333333333333333}
+
+  --- Topic 263 (n=12) ---
+      Dominant emotion: anger (purity=0.8333)
+      Topic label: Aggressive and hostile behavior
+      Emotion distribution: {'anger': 0.8333333333333334, 'neutral': 0.08333333333333333, 'joy': 0.08333333333333333}
+
+  --- Topic 264 (n=12) ---
+      Dominant emotion: sadness (purity=0.5833)
+      Topic label: Customer frustration and blame
+      Emotion distribution: {'sadness': 0.5833333333333334, 'surprise': 0.16666666666666666, 'fear': 0.08333333333333333, 'joy': 0.08333333333333333, 'neutral': 0.08333333333333333}
+
+  --- Topic 265 (n=12) ---
+      Dominant emotion: fear (purity=0.5833)
+      Topic label: Filler words and hesitations
+      Emotion distribution: {'fear': 0.5833333333333334, 'neutral': 0.3333333333333333, 'joy': 0.08333333333333333}
+
+  --- Topic 266 (n=12) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Time and scheduling conflicts
+      Emotion distribution: {'neutral': 0.75, 'joy': 0.16666666666666666, 'disgust': 0.08333333333333333}
+
+  --- Topic 267 (n=12) ---
+      Dominant emotion: joy (purity=0.5000)
+      Topic label: Confirmation and agreement
+      Emotion distribution: {'joy': 0.5, 'neutral': 0.4166666666666667, 'anger': 0.08333333333333333}
+
+  --- Topic 268 (n=12) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Lack of information / Absence of response
+      Emotion distribution: {'neutral': 0.75, 'fear': 0.08333333333333333, 'disgust': 0.08333333333333333, 'anger': 0.08333333333333333}
+
+  --- Topic 269 (n=12) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Conversational filler and uncertainty
+      Emotion distribution: {'neutral': 0.75, 'surprise': 0.16666666666666666, 'joy': 0.08333333333333333}
+
+  --- Topic 270 (n=12) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Social interactions and conversations
+      Emotion distribution: {'neutral': 0.3333333333333333, 'surprise': 0.25, 'anger': 0.25, 'sadness': 0.16666666666666666}
+
+  --- Topic 271 (n=12) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Concerns about personal appearance and judgment
+      Emotion distribution: {'neutral': 0.3333333333333333, 'anger': 0.25, 'sadness': 0.16666666666666666, 'joy': 0.16666666666666666, 'surprise': 0.08333333333333333}
+
+  --- Topic 272 (n=12) ---
+      Dominant emotion: neutral (purity=0.9167)
+      Topic label: Unclear communication
+      Emotion distribution: {'neutral': 0.9166666666666666, 'surprise': 0.08333333333333333}
+
+  --- Topic 273 (n=12) ---
+      Dominant emotion: neutral (purity=0.5833)
+      Topic label: Lack of concern or agreement
+      Emotion distribution: {'neutral': 0.5833333333333334, 'joy': 0.16666666666666666, 'anger': 0.08333333333333333, 'surprise': 0.08333333333333333, 'sadness': 0.08333333333333333}
+
+  --- Topic 274 (n=11) ---
+      Dominant emotion: sadness (purity=0.2727)
+      Topic label: Distress and pleading
+      Emotion distribution: {'sadness': 0.2727272727272727, 'neutral': 0.2727272727272727, 'surprise': 0.18181818181818182, 'joy': 0.09090909090909091, 'fear': 0.09090909090909091, 'anger': 0.09090909090909091}
+
+  --- Topic 275 (n=11) ---
+      Dominant emotion: neutral (purity=0.3636)
+      Topic label: Medical concerns and personal health issues
+      Emotion distribution: {'neutral': 0.36363636363636365, 'anger': 0.18181818181818182, 'surprise': 0.18181818181818182, 'fear': 0.18181818181818182, 'sadness': 0.09090909090909091}
+
+  --- Topic 276 (n=11) ---
+      Dominant emotion: joy (purity=0.8182)
+      Topic label: Customer appreciation
+      Emotion distribution: {'joy': 0.8181818181818182, 'neutral': 0.18181818181818182}
+
+  --- Topic 277 (n=11) ---
+      Dominant emotion: surprise (purity=0.3636)
+      Topic label: Frustration and distress
+      Emotion distribution: {'surprise': 0.36363636363636365, 'sadness': 0.36363636363636365, 'fear': 0.18181818181818182, 'disgust': 0.09090909090909091}
+
+  --- Topic 278 (n=11) ---
+      Dominant emotion: neutral (purity=0.4545)
+      Topic label: Financial challenges and spending limits
+      Emotion distribution: {'neutral': 0.45454545454545453, 'joy': 0.36363636363636365, 'surprise': 0.18181818181818182}
+
+  --- Topic 279 (n=11) ---
+      Dominant emotion: neutral (purity=0.4545)
+      Topic label: Simple acknowledgements and responses
+      Emotion distribution: {'neutral': 0.45454545454545453, 'joy': 0.36363636363636365, 'sadness': 0.18181818181818182}
+
+  --- Topic 280 (n=11) ---
+      Dominant emotion: neutral (purity=0.3636)
+      Topic label: Contract disputes and missing documents
+      Emotion distribution: {'neutral': 0.36363636363636365, 'surprise': 0.18181818181818182, 'fear': 0.18181818181818182, 'anger': 0.18181818181818182, 'joy': 0.09090909090909091}
+
+  --- Topic 281 (n=11) ---
+      Dominant emotion: neutral (purity=0.2727)
+      Topic label: Social awkwardness and self-perception
+      Emotion distribution: {'neutral': 0.2727272727272727, 'joy': 0.18181818181818182, 'surprise': 0.18181818181818182, 'sadness': 0.09090909090909091, 'fear': 0.09090909090909091, 'disgust': 0.09090909090909091, 'anger': 0.09090909090909091}
+
+  --- Topic 282 (n=11) ---
+      Dominant emotion: neutral (purity=0.6364)
+      Topic label: Ownership disputes
+      Emotion distribution: {'neutral': 0.6363636363636364, 'surprise': 0.09090909090909091, 'fear': 0.09090909090909091, 'joy': 0.09090909090909091, 'anger': 0.09090909090909091}
+
+  --- Topic 283 (n=11) ---
+      Dominant emotion: neutral (purity=0.5455)
+      Topic label: Social awkwardness and reactions to unusual situations
+      Emotion distribution: {'neutral': 0.5454545454545454, 'joy': 0.18181818181818182, 'surprise': 0.09090909090909091, 'fear': 0.09090909090909091, 'anger': 0.09090909090909091}
+
+  --- Topic 284 (n=11) ---
+      Dominant emotion: sadness (purity=0.3636)
+      Topic label: Disturbing and surreal experiences
+      Emotion distribution: {'sadness': 0.36363636363636365, 'neutral': 0.36363636363636365, 'anger': 0.2727272727272727}
+
+  --- Topic 285 (n=11) ---
+      Dominant emotion: joy (purity=0.3636)
+      Topic label: Unspecified sounds/exclamations
+      Emotion distribution: {'joy': 0.36363636363636365, 'surprise': 0.2727272727272727, 'neutral': 0.18181818181818182, 'disgust': 0.09090909090909091, 'fear': 0.09090909090909091}
+
+  --- Topic 286 (n=11) ---
+      Dominant emotion: neutral (purity=0.8182)
+      Topic label: Geographical locations - Minsk
+      Emotion distribution: {'neutral': 0.8181818181818182, 'sadness': 0.09090909090909091, 'surprise': 0.09090909090909091}
+
+  --- Topic 287 (n=11) ---
+      Dominant emotion: neutral (purity=0.3636)
+      Topic label: Conversational AI limitations and quirks
+      Emotion distribution: {'neutral': 0.36363636363636365, 'anger': 0.2727272727272727, 'joy': 0.09090909090909091, 'disgust': 0.09090909090909091, 'surprise': 0.09090909090909091, 'fear': 0.09090909090909091}
+
+  --- Topic 288 (n=11) ---
+      Dominant emotion: neutral (purity=0.9091)
+      Topic label: Discussions and questions
+      Emotion distribution: {'neutral': 0.9090909090909091, 'joy': 0.09090909090909091}
+
+  --- Topic 289 (n=11) ---
+      Dominant emotion: neutral (purity=0.6364)
+      Topic label: Interpersonal conflict and communication
+      Emotion distribution: {'neutral': 0.6363636363636364, 'joy': 0.2727272727272727, 'anger': 0.09090909090909091}
+
+  --- Topic 290 (n=11) ---
+      Dominant emotion: neutral (purity=0.6364)
+      Topic label: Lack of confidence and denial
+      Emotion distribution: {'neutral': 0.6363636363636364, 'surprise': 0.18181818181818182, 'anger': 0.09090909090909091, 'joy': 0.09090909090909091}
+
+  --- Topic 291 (n=11) ---
+      Dominant emotion: surprise (purity=0.4545)
+      Topic label: Expressing disbelief or frustration
+      Emotion distribution: {'surprise': 0.45454545454545453, 'sadness': 0.18181818181818182, 'joy': 0.18181818181818182, 'fear': 0.09090909090909091, 'disgust': 0.09090909090909091}
+
+  --- Topic 292 (n=11) ---
+      Dominant emotion: neutral (purity=0.5455)
+      Topic label: Confidential communication and secrecy
+      Emotion distribution: {'neutral': 0.5454545454545454, 'fear': 0.18181818181818182, 'sadness': 0.09090909090909091, 'surprise': 0.09090909090909091, 'anger': 0.09090909090909091}
+
+  --- Topic 293 (n=11) ---
+      Dominant emotion: neutral (purity=0.7273)
+      Topic label: LGBTQ+ identity and stereotypes
+      Emotion distribution: {'neutral': 0.7272727272727273, 'anger': 0.09090909090909091, 'sadness': 0.09090909090909091, 'surprise': 0.09090909090909091}
+
+  --- Topic 294 (n=11) ---
+      Dominant emotion: neutral (purity=0.5455)
+      Topic label: Conflicting accounts and deception
+      Emotion distribution: {'neutral': 0.5454545454545454, 'joy': 0.18181818181818182, 'fear': 0.09090909090909091, 'anger': 0.09090909090909091, 'surprise': 0.09090909090909091}
+
+  --- Topic 295 (n=11) ---
+      Dominant emotion: neutral (purity=0.4545)
+      Topic label: Trauma and family history
+      Emotion distribution: {'neutral': 0.45454545454545453, 'surprise': 0.2727272727272727, 'sadness': 0.18181818181818182, 'joy': 0.09090909090909091}
+
+  --- Topic 296 (n=10) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Charity fundraising and communication
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.2, 'surprise': 0.1, 'sadness': 0.1, 'fear': 0.1}
+
+  --- Topic 297 (n=10) ---
+      Dominant emotion: neutral (purity=0.8000)
+      Topic label: Wage disputes
+      Emotion distribution: {'neutral': 0.8, 'surprise': 0.2}
+
+  --- Topic 298 (n=10) ---
+      Dominant emotion: anger (purity=0.6000)
+      Topic label: Frustration and anger
+      Emotion distribution: {'anger': 0.6, 'disgust': 0.2, 'joy': 0.2}
+
+  --- Topic 299 (n=10) ---
+      Dominant emotion: neutral (purity=0.3000)
+      Topic label: Emotional distress and conflict
+      Emotion distribution: {'neutral': 0.3, 'joy': 0.3, 'anger': 0.1, 'disgust': 0.1, 'sadness': 0.1, 'surprise': 0.1}
+
+  --- Topic 300 (n=10) ---
+      Dominant emotion: neutral (purity=0.8000)
+      Topic label: Smoking habits and denial
+      Emotion distribution: {'neutral': 0.8, 'surprise': 0.1, 'disgust': 0.1}
+
+  --- Topic 301 (n=10) ---
+      Dominant emotion: neutral (purity=0.7000)
+      Topic label: Hesitation and uncertainty in communication
+      Emotion distribution: {'neutral': 0.7, 'surprise': 0.1, 'joy': 0.1, 'anger': 0.1}
+
+  --- Topic 302 (n=10) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Customer frustration and complaints
+      Emotion distribution: {'neutral': 0.6, 'sadness': 0.1, 'anger': 0.1, 'disgust': 0.1, 'surprise': 0.1}
+
+  --- Topic 303 (n=10) ---
+      Dominant emotion: joy (purity=0.4000)
+      Topic label: General agreement and affirmation
+      Emotion distribution: {'joy': 0.4, 'neutral': 0.3, 'anger': 0.1, 'sadness': 0.1, 'surprise': 0.1}
+
+  --- Topic 304 (n=10) ---
+      Dominant emotion: surprise (purity=0.3000)
+      Topic label: Customer satisfaction and product experience
+      Emotion distribution: {'surprise': 0.3, 'joy': 0.3, 'disgust': 0.2, 'neutral': 0.2}
+
+  --- Topic 305 (n=10) ---
+      Dominant emotion: joy (purity=0.7000)
+      Topic label: Confirmation
+      Emotion distribution: {'joy': 0.7, 'neutral': 0.3}
+
+  --- Topic 306 (n=10) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Romantic entanglements and miscommunication
+      Emotion distribution: {'neutral': 0.4, 'surprise': 0.2, 'sadness': 0.2, 'anger': 0.1, 'joy': 0.1}
+
+  --- Topic 307 (n=10) ---
+      Dominant emotion: joy (purity=0.3000)
+      Topic label: Job loss and employment challenges
+      Emotion distribution: {'joy': 0.3, 'neutral': 0.3, 'sadness': 0.2, 'anger': 0.2}
+
+  --- Topic 308 (n=10) ---
+      Dominant emotion: neutral (purity=0.3000)
+      Topic label: Exploitative and objectifying interactions
+      Emotion distribution: {'neutral': 0.3, 'joy': 0.2, 'fear': 0.2, 'surprise': 0.2, 'disgust': 0.1}
+
+  --- Topic 309 (n=10) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Medical emergencies and unusual cases
+      Emotion distribution: {'neutral': 0.5, 'disgust': 0.2, 'sadness': 0.2, 'fear': 0.1}
+
+  --- Topic 310 (n=10) ---
+      Dominant emotion: neutral (purity=0.7000)
+      Topic label: Lack of information/Irrelevant response
+      Emotion distribution: {'neutral': 0.7, 'surprise': 0.2, 'disgust': 0.1}
+
+  --- Topic 311 (n=10) ---
+      Dominant emotion: surprise (purity=0.4000)
+      Topic label: Strong negative sentiment and frustration
+      Emotion distribution: {'surprise': 0.4, 'neutral': 0.3, 'joy': 0.1, 'disgust': 0.1, 'anger': 0.1}
+
+  --- Topic 312 (n=10) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Challenges to achieving goals and aspirations
+      Emotion distribution: {'neutral': 0.6, 'sadness': 0.2, 'joy': 0.1, 'anger': 0.1}
+
+  --- Topic 313 (n=10) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Poetic interpretation and criticism
+      Emotion distribution: {'neutral': 0.4, 'anger': 0.2, 'joy': 0.2, 'surprise': 0.1, 'sadness': 0.1}
+
+  --- Topic 314 (n=10) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Sales and persuasion techniques
+      Emotion distribution: {'neutral': 0.6, 'sadness': 0.2, 'fear': 0.1, 'anger': 0.1}
+
+  --- Topic 315 (n=10) ---
+      Dominant emotion: surprise (purity=0.5000)
+      Topic label: Lack of clarity and understanding
+      Emotion distribution: {'surprise': 0.5, 'neutral': 0.3, 'sadness': 0.1, 'fear': 0.1}
+
+  --- Topic 316 (n=10) ---
+      Dominant emotion: neutral (purity=0.3000)
+      Topic label: Unclear requests and rambling conversation
+      Emotion distribution: {'neutral': 0.3, 'joy': 0.3, 'fear': 0.1, 'surprise': 0.1, 'sadness': 0.1, 'anger': 0.1}
+
+  --- Topic 317 (n=9) ---
+      Dominant emotion: joy (purity=0.5556)
+      Topic label: Informal greetings and introductions
+      Emotion distribution: {'joy': 0.5555555555555556, 'surprise': 0.2222222222222222, 'neutral': 0.2222222222222222}
+
+  --- Topic 318 (n=9) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Emotional expressions and vocalizations
+      Emotion distribution: {'neutral': 0.6666666666666666, 'joy': 0.2222222222222222, 'sadness': 0.1111111111111111}
+
+  --- Topic 319 (n=9) ---
+      Dominant emotion: sadness (purity=0.4444)
+      Topic label: Family relationships and familial roles
+      Emotion distribution: {'sadness': 0.4444444444444444, 'neutral': 0.1111111111111111, 'fear': 0.1111111111111111, 'joy': 0.1111111111111111, 'disgust': 0.1111111111111111, 'anger': 0.1111111111111111}
+
+  --- Topic 320 (n=9) ---
+      Dominant emotion: surprise (purity=0.6667)
+      Topic label: Uncertainty and Doubt
+      Emotion distribution: {'surprise': 0.6666666666666666, 'sadness': 0.1111111111111111, 'joy': 0.1111111111111111, 'neutral': 0.1111111111111111}
+
+  --- Topic 321 (n=9) ---
+      Dominant emotion: joy (purity=0.6667)
+      Topic label: Morning and sunrise experiences
+      Emotion distribution: {'joy': 0.6666666666666666, 'neutral': 0.3333333333333333}
+
+  --- Topic 322 (n=9) ---
+      Dominant emotion: neutral (purity=0.5556)
+      Topic label: Celebratory and conversational dialogue
+      Emotion distribution: {'neutral': 0.5555555555555556, 'sadness': 0.2222222222222222, 'surprise': 0.1111111111111111, 'joy': 0.1111111111111111}
+
+  --- Topic 323 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Unclear communication
+      Emotion distribution: {'neutral': 0.4444444444444444, 'sadness': 0.2222222222222222, 'joy': 0.1111111111111111, 'surprise': 0.1111111111111111, 'fear': 0.1111111111111111}
+
+  --- Topic 324 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Ross and Rachel's relationship drama
+      Emotion distribution: {'neutral': 0.4444444444444444, 'surprise': 0.2222222222222222, 'joy': 0.2222222222222222, 'sadness': 0.1111111111111111}
+
+  --- Topic 325 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Difficult pregnancy and animal welfare
+      Emotion distribution: {'neutral': 0.4444444444444444, 'anger': 0.3333333333333333, 'joy': 0.1111111111111111, 'sadness': 0.1111111111111111}
+
+  --- Topic 326 (n=9) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Lack of clarity and communication
+      Emotion distribution: {'neutral': 0.6666666666666666, 'anger': 0.2222222222222222, 'surprise': 0.1111111111111111}
+
+  --- Topic 327 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Thanksgiving and food complaints
+      Emotion distribution: {'neutral': 0.4444444444444444, 'surprise': 0.2222222222222222, 'joy': 0.1111111111111111, 'disgust': 0.1111111111111111, 'anger': 0.1111111111111111}
+
+  --- Topic 328 (n=9) ---
+      Dominant emotion: neutral (purity=0.8889)
+      Topic label: Unintelligible communication
+      Emotion distribution: {'neutral': 0.8888888888888888, 'surprise': 0.1111111111111111}
+
+  --- Topic 329 (n=9) ---
+      Dominant emotion: sadness (purity=0.3333)
+      Topic label: Miscommunication and disagreement
+      Emotion distribution: {'sadness': 0.3333333333333333, 'neutral': 0.2222222222222222, 'surprise': 0.2222222222222222, 'joy': 0.1111111111111111, 'anger': 0.1111111111111111}
+
+  --- Topic 330 (n=9) ---
+      Dominant emotion: surprise (purity=0.2222)
+      Topic label: Conflict and interpersonal issues
+      Emotion distribution: {'surprise': 0.2222222222222222, 'anger': 0.2222222222222222, 'neutral': 0.2222222222222222, 'fear': 0.2222222222222222, 'sadness': 0.1111111111111111}
+
+  --- Topic 331 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Unclear communication and distress
+      Emotion distribution: {'neutral': 0.4444444444444444, 'sadness': 0.3333333333333333, 'surprise': 0.1111111111111111, 'joy': 0.1111111111111111}
+
+  --- Topic 332 (n=9) ---
+      Dominant emotion: joy (purity=0.6667)
+      Topic label: Personal anecdotes and observations
+      Emotion distribution: {'joy': 0.6666666666666666, 'neutral': 0.3333333333333333}
+
+  --- Topic 333 (n=9) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Mental health crisis and isolation
+      Emotion distribution: {'neutral': 0.3333333333333333, 'sadness': 0.2222222222222222, 'anger': 0.1111111111111111, 'disgust': 0.1111111111111111, 'surprise': 0.1111111111111111, 'joy': 0.1111111111111111}
+
+  --- Topic 334 (n=9) ---
+      Dominant emotion: joy (purity=0.6667)
+      Topic label: Joseph Stalin and related figures
+      Emotion distribution: {'joy': 0.6666666666666666, 'neutral': 0.2222222222222222, 'anger': 0.1111111111111111}
+
+  --- Topic 335 (n=9) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Informal conversation and greetings
+      Emotion distribution: {'neutral': 0.3333333333333333, 'joy': 0.2222222222222222, 'sadness': 0.2222222222222222, 'surprise': 0.1111111111111111, 'anger': 0.1111111111111111}
+
+  --- Topic 336 (n=9) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Jam making and related food experiences
+      Emotion distribution: {'neutral': 0.6666666666666666, 'joy': 0.2222222222222222, 'sadness': 0.1111111111111111}
+
+  --- Topic 337 (n=9) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Emergency protocols and warnings
+      Emotion distribution: {'neutral': 0.6666666666666666, 'anger': 0.3333333333333333}
+
+  --- Topic 338 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Reproductive challenges and assisted reproduction
+      Emotion distribution: {'neutral': 0.4444444444444444, 'surprise': 0.3333333333333333, 'anger': 0.1111111111111111, 'sadness': 0.1111111111111111}
+
+  --- Topic 339 (n=9) ---
+      Dominant emotion: neutral (purity=0.5556)
+      Topic label: Agreement and affirmation
+      Emotion distribution: {'neutral': 0.5555555555555556, 'joy': 0.4444444444444444}
+
+  --- Topic 340 (n=9) ---
+      Dominant emotion: surprise (purity=0.6667)
+      Topic label: Aggressive or hostile communication
+      Emotion distribution: {'surprise': 0.6666666666666666, 'neutral': 0.2222222222222222, 'anger': 0.1111111111111111}
+
+  --- Topic 341 (n=9) ---
+      Dominant emotion: sadness (purity=0.3333)
+      Topic label: Emotional distress and avoidance
+      Emotion distribution: {'sadness': 0.3333333333333333, 'anger': 0.3333333333333333, 'neutral': 0.2222222222222222, 'fear': 0.1111111111111111}
+
+  --- Topic 342 (n=9) ---
+      Dominant emotion: sadness (purity=0.7778)
+      Topic label: Lack of substantive response
+      Emotion distribution: {'sadness': 0.7777777777777778, 'neutral': 0.2222222222222222}
+
+  --- Topic 343 (n=9) ---
+      Dominant emotion: neutral (purity=0.7778)
+      Topic label: Emotional distress and uncertainty
+      Emotion distribution: {'neutral': 0.7777777777777778, 'surprise': 0.2222222222222222}
+
+  --- Topic 344 (n=9) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Unclear communication and questioning
+      Emotion distribution: {'neutral': 0.6666666666666666, 'surprise': 0.2222222222222222, 'anger': 0.1111111111111111}
+
+  --- Topic 345 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Childlike address and informal communication
+      Emotion distribution: {'neutral': 0.4444444444444444, 'joy': 0.2222222222222222, 'disgust': 0.1111111111111111, 'anger': 0.1111111111111111, 'sadness': 0.1111111111111111}
+
+  --- Topic 346 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Accidental fires and related incidents
+      Emotion distribution: {'neutral': 0.4444444444444444, 'anger': 0.3333333333333333, 'fear': 0.1111111111111111, 'disgust': 0.1111111111111111}
+
+  --- Topic 347 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Informal farewells and departures
+      Emotion distribution: {'neutral': 0.4444444444444444, 'anger': 0.4444444444444444, 'joy': 0.1111111111111111}
+
+  --- Topic 348 (n=9) ---
+      Dominant emotion: joy (purity=0.3333)
+      Topic label: Unclear communication and frustration
+      Emotion distribution: {'joy': 0.3333333333333333, 'sadness': 0.3333333333333333, 'neutral': 0.3333333333333333}
+
+  --- Topic 349 (n=9) ---
+      Dominant emotion: surprise (purity=0.2222)
+      Topic label: Emotional reactions to a character (Treeger)
+      Emotion distribution: {'surprise': 0.2222222222222222, 'neutral': 0.2222222222222222, 'anger': 0.2222222222222222, 'joy': 0.1111111111111111, 'disgust': 0.1111111111111111, 'sadness': 0.1111111111111111}
+
+  --- Topic 350 (n=9) ---
+      Dominant emotion: surprise (purity=0.3333)
+      Topic label: Customer dissatisfaction and frustration
+      Emotion distribution: {'surprise': 0.3333333333333333, 'disgust': 0.2222222222222222, 'joy': 0.2222222222222222, 'neutral': 0.2222222222222222}
+
+  --- Topic 351 (n=9) ---
+      Dominant emotion: neutral (purity=0.5556)
+      Topic label: Positive experiences with Tulsa
+      Emotion distribution: {'neutral': 0.5555555555555556, 'sadness': 0.2222222222222222, 'fear': 0.2222222222222222}
+
+  --- Topic 352 (n=9) ---
+      Dominant emotion: neutral (purity=0.4444)
+      Topic label: Bird disturbance complaints
+      Emotion distribution: {'neutral': 0.4444444444444444, 'anger': 0.3333333333333333, 'sadness': 0.1111111111111111, 'joy': 0.1111111111111111}
+
+  --- Topic 353 (n=9) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Medical and personal care discussions
+      Emotion distribution: {'neutral': 0.3333333333333333, 'surprise': 0.3333333333333333, 'anger': 0.2222222222222222, 'joy': 0.1111111111111111}
+
+  --- Topic 354 (n=8) ---
+      Dominant emotion: anger (purity=0.5000)
+      Topic label: Hair transformations and descriptions
+      Emotion distribution: {'anger': 0.5, 'neutral': 0.25, 'surprise': 0.125, 'sadness': 0.125}
+
+  --- Topic 355 (n=8) ---
+      Dominant emotion: neutral (purity=0.6250)
+      Topic label: Unclear or uncertain statements
+      Emotion distribution: {'neutral': 0.625, 'surprise': 0.125, 'joy': 0.125, 'sadness': 0.125}
+
+  --- Topic 356 (n=8) ---
+      Dominant emotion: surprise (purity=0.3750)
+      Topic label: Mental instability and disbelief
+      Emotion distribution: {'surprise': 0.375, 'disgust': 0.25, 'joy': 0.25, 'anger': 0.125}
+
+  --- Topic 357 (n=8) ---
+      Dominant emotion: anger (purity=0.6250)
+      Topic label: Aggressive or dismissive communication
+      Emotion distribution: {'anger': 0.625, 'fear': 0.25, 'joy': 0.125}
+
+  --- Topic 358 (n=8) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Conflict and interpersonal drama
+      Emotion distribution: {'neutral': 0.5, 'sadness': 0.25, 'disgust': 0.125, 'joy': 0.125}
+
+  --- Topic 359 (n=8) ---
+      Dominant emotion: surprise (purity=0.2500)
+      Topic label: Frustration and misunderstanding
+      Emotion distribution: {'surprise': 0.25, 'sadness': 0.25, 'disgust': 0.125, 'neutral': 0.125, 'anger': 0.125, 'joy': 0.125}
+
+  --- Topic 360 (n=8) ---
+      Dominant emotion: anger (purity=0.2500)
+      Topic label: Disturbing customer experiences
+      Emotion distribution: {'anger': 0.25, 'neutral': 0.25, 'disgust': 0.125, 'joy': 0.125, 'surprise': 0.125, 'sadness': 0.125}
+
+  --- Topic 361 (n=8) ---
+      Dominant emotion: anger (purity=0.5000)
+      Topic label: Lack of information/agreement
+      Emotion distribution: {'anger': 0.5, 'neutral': 0.375, 'sadness': 0.125}
+
+  --- Topic 362 (n=8) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Italian Brothers Movie Analysis
+      Emotion distribution: {'neutral': 0.5, 'surprise': 0.25, 'joy': 0.25}
+
+  --- Topic 363 (n=8) ---
+      Dominant emotion: neutral (purity=0.3750)
+      Topic label: Student/Classroom Discomfort and Concerns
+      Emotion distribution: {'neutral': 0.375, 'anger': 0.25, 'disgust': 0.25, 'fear': 0.125}
+
+  --- Topic 364 (n=8) ---
+      Dominant emotion: neutral (purity=0.3750)
+      Topic label: Timeframes and scheduling
+      Emotion distribution: {'neutral': 0.375, 'joy': 0.25, 'fear': 0.125, 'surprise': 0.125, 'sadness': 0.125}
+
+  --- Topic 365 (n=8) ---
+      Dominant emotion: neutral (purity=0.6250)
+      Topic label: Stress and relaxation techniques
+      Emotion distribution: {'neutral': 0.625, 'sadness': 0.125, 'fear': 0.125, 'surprise': 0.125}
+
+  --- Topic 366 (n=8) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Product reviews and descriptions
+      Emotion distribution: {'neutral': 0.75, 'joy': 0.25}
+
+  --- Topic 367 (n=8) ---
+      Dominant emotion: surprise (purity=0.3750)
+      Topic label: Emotional outbursts
+      Emotion distribution: {'surprise': 0.375, 'disgust': 0.25, 'neutral': 0.125, 'fear': 0.125, 'sadness': 0.125}
+
+  --- Topic 368 (n=8) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Geographic references and character introductions
+      Emotion distribution: {'neutral': 0.75, 'surprise': 0.125, 'anger': 0.125}
+
+  --- Topic 369 (n=8) ---
+      Dominant emotion: anger (purity=0.6250)
+      Topic label: Intense family conflict and emotional distress
+      Emotion distribution: {'anger': 0.625, 'joy': 0.125, 'neutral': 0.125, 'surprise': 0.125}
+
+  --- Topic 370 (n=8) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Gambling and financial schemes
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.375, 'sadness': 0.125}
+
+  --- Topic 371 (n=8) ---
+      Dominant emotion: neutral (purity=0.6250)
+      Topic label: Struggling to articulate thoughts
+      Emotion distribution: {'neutral': 0.625, 'surprise': 0.125, 'joy': 0.125, 'anger': 0.125}
+
+  --- Topic 372 (n=8) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Celebrity and Entertainment Gossip
+      Emotion distribution: {'neutral': 0.75, 'surprise': 0.25}
+
+  --- Topic 373 (n=8) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Missing baby
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.25, 'fear': 0.25}
+
+  --- Topic 374 (n=8) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Unclear questions and requests
+      Emotion distribution: {'neutral': 0.5, 'surprise': 0.5}
+
+  --- Topic 375 (n=8) ---
+      Dominant emotion: neutral (purity=0.7500)
+      Topic label: Lack of response or acknowledgement
+      Emotion distribution: {'neutral': 0.75, 'joy': 0.25}
+
+  --- Topic 376 (n=8) ---
+      Dominant emotion: sadness (purity=0.3750)
+      Topic label: Family drama and shifting identities
+      Emotion distribution: {'sadness': 0.375, 'surprise': 0.25, 'anger': 0.125, 'neutral': 0.125, 'joy': 0.125}
+
+  --- Topic 377 (n=8) ---
+      Dominant emotion: surprise (purity=0.7500)
+      Topic label: Unclear or inappropriate inquiries
+      Emotion distribution: {'surprise': 0.75, 'neutral': 0.125, 'anger': 0.125}
+
+  --- Topic 378 (n=8) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Donald Trump's clothing preferences
+      Emotion distribution: {'neutral': 0.5, 'surprise': 0.125, 'joy': 0.125, 'anger': 0.125, 'sadness': 0.125}
+
+  --- Topic 379 (n=8) ---
+      Dominant emotion: neutral (purity=0.3750)
+      Topic label: Travel and relocation complications
+      Emotion distribution: {'neutral': 0.375, 'sadness': 0.375, 'disgust': 0.125, 'surprise': 0.125}
+
+  --- Topic 380 (n=8) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Complex interpersonal relationships and emotional distress
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.125, 'surprise': 0.125, 'sadness': 0.125, 'anger': 0.125}
+
+  --- Topic 381 (n=8) ---
+      Dominant emotion: neutral (purity=0.3750)
+      Topic label: Relationship drama and confusion
+      Emotion distribution: {'neutral': 0.375, 'anger': 0.25, 'disgust': 0.25, 'joy': 0.125}
+
+  --- Topic 382 (n=7) ---
+      Dominant emotion: surprise (purity=0.4286)
+      Topic label: Intense emotional reactions and disorientation
+      Emotion distribution: {'surprise': 0.42857142857142855, 'neutral': 0.2857142857142857, 'sadness': 0.14285714285714285, 'disgust': 0.14285714285714285}
+
+  --- Topic 383 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Urgency and anticipation
+      Emotion distribution: {'neutral': 0.7142857142857143, 'joy': 0.14285714285714285, 'anger': 0.14285714285714285}
+
+  --- Topic 384 (n=7) ---
+      Dominant emotion: surprise (purity=0.5714)
+      Topic label: Bunny funeral
+      Emotion distribution: {'surprise': 0.5714285714285714, 'anger': 0.2857142857142857, 'neutral': 0.14285714285714285}
+
+  --- Topic 385 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Romantic crushes and unrequited feelings
+      Emotion distribution: {'neutral': 0.5714285714285714, 'surprise': 0.14285714285714285, 'fear': 0.14285714285714285, 'disgust': 0.14285714285714285}
+
+  --- Topic 386 (n=7) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Emotional reactions to weather and travel
+      Emotion distribution: {'neutral': 0.42857142857142855, 'joy': 0.2857142857142857, 'anger': 0.14285714285714285, 'surprise': 0.14285714285714285}
+
+  --- Topic 387 (n=7) ---
+      Dominant emotion: anger (purity=0.4286)
+      Topic label: Table disputes and seating arrangements
+      Emotion distribution: {'anger': 0.42857142857142855, 'surprise': 0.2857142857142857, 'neutral': 0.14285714285714285, 'joy': 0.14285714285714285}
+
+  --- Topic 388 (n=7) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Social anxiety and self-consciousness
+      Emotion distribution: {'neutral': 0.42857142857142855, 'joy': 0.2857142857142857, 'anger': 0.2857142857142857}
+
+  --- Topic 389 (n=7) ---
+      Dominant emotion: joy (purity=0.7143)
+      Topic label: Customer frustration and dissatisfaction
+      Emotion distribution: {'joy': 0.7142857142857143, 'neutral': 0.2857142857142857}
+
+  --- Topic 390 (n=7) ---
+      Dominant emotion: joy (purity=0.7143)
+      Topic label: Excessive use of positive affirmations
+      Emotion distribution: {'joy': 0.7142857142857143, 'disgust': 0.14285714285714285, 'surprise': 0.14285714285714285}
+
+  --- Topic 391 (n=7) ---
+      Dominant emotion: anger (purity=0.4286)
+      Topic label: Difficult interpersonal communication
+      Emotion distribution: {'anger': 0.42857142857142855, 'neutral': 0.42857142857142855, 'fear': 0.14285714285714285}
+
+  --- Topic 392 (n=7) ---
+      Dominant emotion: surprise (purity=0.8571)
+      Topic label: Unintelligible expressions
+      Emotion distribution: {'surprise': 0.8571428571428571, 'joy': 0.14285714285714285}
+
+  --- Topic 393 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Confirmation and agreement
+      Emotion distribution: {'neutral': 0.7142857142857143, 'fear': 0.14285714285714285, 'joy': 0.14285714285714285}
+
+  --- Topic 394 (n=7) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Confusing narratives and unreliable accounts
+      Emotion distribution: {'neutral': 0.42857142857142855, 'sadness': 0.42857142857142855, 'joy': 0.14285714285714285}
+
+  --- Topic 395 (n=7) ---
+      Dominant emotion: joy (purity=0.5714)
+      Topic label: Sexual encounters and playful banter
+      Emotion distribution: {'joy': 0.5714285714285714, 'neutral': 0.42857142857142855}
+
+  --- Topic 396 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Danny's romantic entanglements
+      Emotion distribution: {'neutral': 0.5714285714285714, 'surprise': 0.2857142857142857, 'anger': 0.14285714285714285}
+
+  --- Topic 397 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Noodle soup descriptions
+      Emotion distribution: {'neutral': 0.7142857142857143, 'anger': 0.2857142857142857}
+
+  --- Topic 398 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Completion status updates
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.42857142857142855}
+
+  --- Topic 399 (n=7) ---
+      Dominant emotion: neutral (purity=0.2857)
+      Topic label: Secrecy and Trust Issues
+      Emotion distribution: {'neutral': 0.2857142857142857, 'joy': 0.2857142857142857, 'anger': 0.2857142857142857, 'fear': 0.14285714285714285}
+
+  --- Topic 400 (n=7) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Entertainment and Leisure
+      Emotion distribution: {'neutral': 0.42857142857142855, 'anger': 0.2857142857142857, 'surprise': 0.2857142857142857}
+
+  --- Topic 401 (n=7) ---
+      Dominant emotion: surprise (purity=0.7143)
+      Topic label: Doubt and questioning
+      Emotion distribution: {'surprise': 0.7142857142857143, 'joy': 0.14285714285714285, 'neutral': 0.14285714285714285}
+
+  --- Topic 402 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Emma's well-being and parental concern
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.14285714285714285, 'sadness': 0.14285714285714285, 'disgust': 0.14285714285714285}
+
+  --- Topic 403 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Emotional distress and helplessness
+      Emotion distribution: {'neutral': 0.5714285714285714, 'sadness': 0.14285714285714285, 'fear': 0.14285714285714285, 'anger': 0.14285714285714285}
+
+  --- Topic 404 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Disorganization and forgetfulness
+      Emotion distribution: {'neutral': 0.7142857142857143, 'sadness': 0.2857142857142857}
+
+  --- Topic 405 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Explicit content and unwanted attention
+      Emotion distribution: {'neutral': 0.7142857142857143, 'anger': 0.14285714285714285, 'joy': 0.14285714285714285}
+
+  --- Topic 406 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Conflict and negotiation
+      Emotion distribution: {'neutral': 0.5714285714285714, 'sadness': 0.14285714285714285, 'joy': 0.14285714285714285, 'anger': 0.14285714285714285}
+
+  --- Topic 407 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Social anxiety and avoidance
+      Emotion distribution: {'neutral': 0.7142857142857143, 'fear': 0.14285714285714285, 'sadness': 0.14285714285714285}
+
+  --- Topic 408 (n=7) ---
+      Dominant emotion: neutral (purity=0.8571)
+      Topic label: Astrological predictions and personality assessments
+      Emotion distribution: {'neutral': 0.8571428571428571, 'joy': 0.14285714285714285}
+
+  --- Topic 409 (n=7) ---
+      Dominant emotion: joy (purity=0.4286)
+      Topic label: Unintelligible communication
+      Emotion distribution: {'joy': 0.42857142857142855, 'neutral': 0.42857142857142855, 'anger': 0.14285714285714285}
+
+  --- Topic 410 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Romantic misunderstandings and uncertainty
+      Emotion distribution: {'neutral': 0.5714285714285714, 'sadness': 0.14285714285714285, 'surprise': 0.14285714285714285, 'disgust': 0.14285714285714285}
+
+  --- Topic 411 (n=7) ---
+      Dominant emotion: joy (purity=0.5714)
+      Topic label: Winning and Disputes
+      Emotion distribution: {'joy': 0.5714285714285714, 'surprise': 0.14285714285714285, 'anger': 0.14285714285714285, 'neutral': 0.14285714285714285}
+
+  --- Topic 412 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Emotional expression and interaction
+      Emotion distribution: {'neutral': 0.5714285714285714, 'fear': 0.2857142857142857, 'sadness': 0.14285714285714285}
+
+  --- Topic 413 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Polite acknowledgements and expressions of gratitude
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.42857142857142855}
+
+  --- Topic 414 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Unclear requests and fragmented language
+      Emotion distribution: {'neutral': 0.7142857142857143, 'joy': 0.2857142857142857}
+
+  --- Topic 415 (n=7) ---
+      Dominant emotion: surprise (purity=0.4286)
+      Topic label: Unclear communication and confusion
+      Emotion distribution: {'surprise': 0.42857142857142855, 'anger': 0.2857142857142857, 'neutral': 0.2857142857142857}
+
+  --- Topic 416 (n=7) ---
+      Dominant emotion: anger (purity=0.2857)
+      Topic label: Breakups and emotional distress
+      Emotion distribution: {'anger': 0.2857142857142857, 'sadness': 0.2857142857142857, 'neutral': 0.2857142857142857, 'surprise': 0.14285714285714285}
+
+  --- Topic 417 (n=7) ---
+      Dominant emotion: sadness (purity=0.4286)
+      Topic label: Unclear communication and personal availability
+      Emotion distribution: {'sadness': 0.42857142857142855, 'neutral': 0.42857142857142855, 'joy': 0.14285714285714285}
+
+  --- Topic 418 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Celebrity and pop culture references
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.42857142857142855}
+
+  --- Topic 419 (n=7) ---
+      Dominant emotion: neutral (purity=0.2857)
+      Topic label: Romantic relationships and desires
+      Emotion distribution: {'neutral': 0.2857142857142857, 'anger': 0.2857142857142857, 'joy': 0.2857142857142857, 'surprise': 0.14285714285714285}
+
+  --- Topic 420 (n=7) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Topic label: Disagreements and frustration
+      Emotion distribution: {'neutral': 0.5714285714285714, 'sadness': 0.14285714285714285, 'surprise': 0.14285714285714285, 'anger': 0.14285714285714285}
+
+  --- Topic 421 (n=7) ---
+      Dominant emotion: surprise (purity=0.7143)
+      Topic label: Identity confusion and denial
+      Emotion distribution: {'surprise': 0.7142857142857143, 'anger': 0.14285714285714285, 'neutral': 0.14285714285714285}
+
+  --- Topic 422 (n=7) ---
+      Dominant emotion: neutral (purity=0.7143)
+      Topic label: Emotional outburst and conflict
+      Emotion distribution: {'neutral': 0.7142857142857143, 'anger': 0.14285714285714285, 'sadness': 0.14285714285714285}
+
+  --- Topic 423 (n=7) ---
+      Dominant emotion: neutral (purity=0.4286)
+      Topic label: Abusive and emotionally distressed communication
+      Emotion distribution: {'neutral': 0.42857142857142855, 'anger': 0.2857142857142857, 'surprise': 0.14285714285714285, 'joy': 0.14285714285714285}
+
+  --- Topic 424 (n=6) ---
+      Dominant emotion: surprise (purity=0.3333)
+      Topic label: Abusive and disrespectful speech
+      Emotion distribution: {'surprise': 0.3333333333333333, 'joy': 0.3333333333333333, 'neutral': 0.3333333333333333}
+
+  --- Topic 425 (n=6) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Existential frustration and confusion
+      Emotion distribution: {'neutral': 0.3333333333333333, 'anger': 0.3333333333333333, 'sadness': 0.16666666666666666, 'fear': 0.16666666666666666}
+
+  --- Topic 426 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Surveillance and interpersonal relationships
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.3333333333333333, 'sadness': 0.16666666666666666}
+
+  --- Topic 427 (n=6) ---
+      Dominant emotion: joy (purity=0.5000)
+      Topic label: Vague or unclear feedback
+      Emotion distribution: {'joy': 0.5, 'neutral': 0.5}
+
+  --- Topic 428 (n=6) ---
+      Dominant emotion: neutral (purity=0.8333)
+      Topic label: Unintelligible speech/Communication difficulties
+      Emotion distribution: {'neutral': 0.8333333333333334, 'joy': 0.16666666666666666}
+
+  --- Topic 429 (n=6) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Vague and uncertain responses
+      Emotion distribution: {'neutral': 0.6666666666666666, 'surprise': 0.16666666666666666, 'joy': 0.16666666666666666}
+
+  --- Topic 430 (n=6) ---
+      Dominant emotion: neutral (purity=0.8333)
+      Topic label: Stage directions and terminology
+      Emotion distribution: {'neutral': 0.8333333333333334, 'sadness': 0.16666666666666666}
+
+  --- Topic 431 (n=6) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Unintelligible sounds/Vocalization
+      Emotion distribution: {'neutral': 0.6666666666666666, 'surprise': 0.16666666666666666, 'sadness': 0.16666666666666666}
+
+  --- Topic 432 (n=6) ---
+      Dominant emotion: joy (purity=0.5000)
+      Topic label: Dangerous encounters and social anxieties
+      Emotion distribution: {'joy': 0.5, 'anger': 0.16666666666666666, 'sadness': 0.16666666666666666, 'neutral': 0.16666666666666666}
+
+  --- Topic 433 (n=6) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Greetings and farewells
+      Emotion distribution: {'neutral': 0.6666666666666666, 'joy': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 434 (n=6) ---
+      Dominant emotion: neutral (purity=0.8333)
+      Topic label: Numerical errors and counting discrepancies
+      Emotion distribution: {'neutral': 0.8333333333333334, 'joy': 0.16666666666666666}
+
+  --- Topic 435 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Customer service complaints and rudeness
+      Emotion distribution: {'neutral': 0.5, 'anger': 0.3333333333333333, 'sadness': 0.16666666666666666}
+
+  --- Topic 436 (n=6) ---
+      Dominant emotion: neutral (purity=0.8333)
+      Topic label: Sports competition
+      Emotion distribution: {'neutral': 0.8333333333333334, 'surprise': 0.16666666666666666}
+
+  --- Topic 437 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Difficult interpersonal communication and conflict
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.16666666666666666, 'sadness': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 438 (n=6) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Social isolation and food experiences
+      Emotion distribution: {'neutral': 0.3333333333333333, 'anger': 0.3333333333333333, 'sadness': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 439 (n=6) ---
+      Dominant emotion: sadness (purity=0.3333)
+      Topic label: Aggressive and dismissive communication
+      Emotion distribution: {'sadness': 0.3333333333333333, 'anger': 0.16666666666666666, 'neutral': 0.16666666666666666, 'surprise': 0.16666666666666666, 'joy': 0.16666666666666666}
+
+  --- Topic 440 (n=6) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Uninformative responses
+      Emotion distribution: {'neutral': 0.6666666666666666, 'joy': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 441 (n=6) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Basketball team rivalry and opinions
+      Emotion distribution: {'neutral': 0.3333333333333333, 'joy': 0.3333333333333333, 'disgust': 0.16666666666666666, 'anger': 0.16666666666666666}
+
+  --- Topic 442 (n=6) ---
+      Dominant emotion: neutral (purity=0.8333)
+      Topic label: Mail and postal services
+      Emotion distribution: {'neutral': 0.8333333333333334, 'joy': 0.16666666666666666}
+
+  --- Topic 443 (n=6) ---
+      Dominant emotion: sadness (purity=0.5000)
+      Topic label: Emotional conflict and apologies
+      Emotion distribution: {'sadness': 0.5, 'joy': 0.16666666666666666, 'neutral': 0.16666666666666666, 'fear': 0.16666666666666666}
+
+  --- Topic 444 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Emotional reassurance and well-being
+      Emotion distribution: {'neutral': 0.5, 'anger': 0.16666666666666666, 'joy': 0.16666666666666666, 'fear': 0.16666666666666666}
+
+  --- Topic 445 (n=6) ---
+      Dominant emotion: anger (purity=0.3333)
+      Topic label: Frustration and disagreement
+      Emotion distribution: {'anger': 0.3333333333333333, 'neutral': 0.3333333333333333, 'sadness': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 446 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: People names and introductions
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.16666666666666666, 'surprise': 0.16666666666666666, 'anger': 0.16666666666666666}
+
+  --- Topic 447 (n=6) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Unintelligible communication
+      Emotion distribution: {'neutral': 0.6666666666666666, 'surprise': 0.16666666666666666, 'anger': 0.16666666666666666}
+
+  --- Topic 448 (n=6) ---
+      Dominant emotion: joy (purity=0.3333)
+      Topic label: Mysterious sightings and memories
+      Emotion distribution: {'joy': 0.3333333333333333, 'disgust': 0.16666666666666666, 'anger': 0.16666666666666666, 'neutral': 0.16666666666666666, 'fear': 0.16666666666666666}
+
+  --- Topic 449 (n=6) ---
+      Dominant emotion: joy (purity=0.5000)
+      Topic label: Absurd and nonsensical dialogue
+      Emotion distribution: {'joy': 0.5, 'sadness': 0.16666666666666666, 'neutral': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 450 (n=6) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Frustration and dissatisfaction
+      Emotion distribution: {'neutral': 0.3333333333333333, 'sadness': 0.3333333333333333, 'anger': 0.3333333333333333}
+
+  --- Topic 451 (n=6) ---
+      Dominant emotion: neutral (purity=0.3333)
+      Topic label: Relationship dynamics and personal feelings
+      Emotion distribution: {'neutral': 0.3333333333333333, 'anger': 0.3333333333333333, 'surprise': 0.16666666666666666, 'joy': 0.16666666666666666}
+
+  --- Topic 452 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Conflict resolution
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.3333333333333333, 'anger': 0.16666666666666666}
+
+  --- Topic 453 (n=6) ---
+      Dominant emotion: neutral (purity=0.8333)
+      Topic label: Military and captivity concerns
+      Emotion distribution: {'neutral': 0.8333333333333334, 'surprise': 0.16666666666666666}
+
+  --- Topic 454 (n=6) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Topic label: Social interactions and relationships
+      Emotion distribution: {'neutral': 0.6666666666666666, 'anger': 0.16666666666666666, 'joy': 0.16666666666666666}
+
+  --- Topic 455 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Unpredictable and chaotic dialogue
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.16666666666666666, 'surprise': 0.16666666666666666, 'anger': 0.16666666666666666}
+
+  --- Topic 456 (n=6) ---
+      Dominant emotion: joy (purity=0.3333)
+      Topic label: Romantic desires and intimacy
+      Emotion distribution: {'joy': 0.3333333333333333, 'neutral': 0.16666666666666666, 'surprise': 0.16666666666666666, 'anger': 0.16666666666666666, 'sadness': 0.16666666666666666}
+
+  --- Topic 457 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Sexual Inappropriateness and Discomfort
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.16666666666666666, 'sadness': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 458 (n=6) ---
+      Dominant emotion: neutral (purity=0.8333)
+      Topic label: Unclear or hesitant communication
+      Emotion distribution: {'neutral': 0.8333333333333334, 'joy': 0.16666666666666666}
+
+  --- Topic 459 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Dispute resolution
+      Emotion distribution: {'neutral': 0.5, 'sadness': 0.3333333333333333, 'anger': 0.16666666666666666}
+
+  --- Topic 460 (n=6) ---
+      Dominant emotion: sadness (purity=0.5000)
+      Topic label: Toxic interpersonal relationships
+      Emotion distribution: {'sadness': 0.5, 'disgust': 0.16666666666666666, 'neutral': 0.16666666666666666, 'anger': 0.16666666666666666}
+
+  --- Topic 461 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Relationship anxieties and workplace dynamics
+      Emotion distribution: {'neutral': 0.5, 'sadness': 0.16666666666666666, 'joy': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 462 (n=6) ---
+      Dominant emotion: neutral (purity=0.5000)
+      Topic label: Relationship reconciliation and social interaction
+      Emotion distribution: {'neutral': 0.5, 'joy': 0.3333333333333333, 'sadness': 0.16666666666666666}
+
+  --- Topic 463 (n=6) ---
+      Dominant emotion: sadness (purity=0.3333)
+      Topic label: Lack of engagement/disinterest
+      Emotion distribution: {'sadness': 0.3333333333333333, 'neutral': 0.16666666666666666, 'disgust': 0.16666666666666666, 'joy': 0.16666666666666666, 'surprise': 0.16666666666666666}
+
+  --- Topic 464 (n=5) ---
+      Dominant emotion: surprise (purity=0.2000)
+      Topic label: Lack of substance and irrelevant responses
+      Emotion distribution: {'surprise': 0.2, 'neutral': 0.2, 'anger': 0.2, 'disgust': 0.2, 'sadness': 0.2}
+
+  --- Topic 465 (n=5) ---
+      Dominant emotion: joy (purity=0.6000)
+      Topic label: Emotional and conversational exchanges
+      Emotion distribution: {'joy': 0.6, 'fear': 0.2, 'neutral': 0.2}
+
+  --- Topic 466 (n=5) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Random, nonsensical conversation
+      Emotion distribution: {'neutral': 0.6, 'anger': 0.2, 'joy': 0.2}
+
+  --- Topic 467 (n=5) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Exploitation and abuse in relationships
+      Emotion distribution: {'neutral': 0.6, 'sadness': 0.4}
+
+  --- Topic 468 (n=5) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Bachelor party rituals and relationship breakups
+      Emotion distribution: {'neutral': 0.4, 'joy': 0.4, 'sadness': 0.2}
+
+  --- Topic 469 (n=5) ---
+      Dominant emotion: anger (purity=0.6000)
+      Topic label: Restaurant complaints and food issues
+      Emotion distribution: {'anger': 0.6, 'neutral': 0.4}
+
+  --- Topic 470 (n=5) ---
+      Dominant emotion: surprise (purity=0.4000)
+      Topic label: Online harassment and inappropriate content
+      Emotion distribution: {'surprise': 0.4, 'disgust': 0.2, 'sadness': 0.2, 'joy': 0.2}
+
+  --- Topic 471 (n=5) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Personal communication and requests for assistance
+      Emotion distribution: {'neutral': 0.6, 'sadness': 0.2, 'joy': 0.2}
+
+  --- Topic 472 (n=5) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Unusual bodily features
+      Emotion distribution: {'neutral': 0.6, 'fear': 0.2, 'anger': 0.2}
+
+  --- Topic 473 (n=5) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Dealing with difficult relationships
+      Emotion distribution: {'neutral': 0.4, 'disgust': 0.2, 'joy': 0.2, 'anger': 0.2}
+
+  --- Topic 474 (n=5) ---
+      Dominant emotion: neutral (purity=0.8000)
+      Topic label: Confusion about a person named Chip
+      Emotion distribution: {'neutral': 0.8, 'surprise': 0.2}
+
+  --- Topic 475 (n=5) ---
+      Dominant emotion: anger (purity=0.4000)
+      Topic label: Food mishaps and spills
+      Emotion distribution: {'anger': 0.4, 'surprise': 0.4, 'neutral': 0.2}
+
+  --- Topic 476 (n=5) ---
+      Dominant emotion: joy (purity=0.8000)
+      Topic label: Excessive self-praise and empty pleasantries
+      Emotion distribution: {'joy': 0.8, 'neutral': 0.2}
+
+  --- Topic 477 (n=5) ---
+      Dominant emotion: surprise (purity=0.4000)
+      Topic label: Emotional reactions and experiences
+      Emotion distribution: {'surprise': 0.4, 'sadness': 0.2, 'fear': 0.2, 'neutral': 0.2}
+
+  --- Topic 478 (n=5) ---
+      Dominant emotion: anger (purity=0.6000)
+      Topic label: Sensory descriptions of an environment
+      Emotion distribution: {'anger': 0.6, 'neutral': 0.2, 'joy': 0.2}
+
+  --- Topic 479 (n=5) ---
+      Dominant emotion: disgust (purity=0.4000)
+      Topic label: Disturbing and potentially abusive interactions
+      Emotion distribution: {'disgust': 0.4, 'surprise': 0.4, 'neutral': 0.2}
+
+  --- Topic 480 (n=5) ---
+      Dominant emotion: neutral (purity=0.8000)
+      Topic label: Fertility and reproductive health
+      Emotion distribution: {'neutral': 0.8, 'sadness': 0.2}
+
+  --- Topic 481 (n=5) ---
+      Dominant emotion: sadness (purity=0.4000)
+      Topic label: Customer frustration and dissatisfaction
+      Emotion distribution: {'sadness': 0.4, 'neutral': 0.4, 'anger': 0.2}
+
+  --- Topic 482 (n=5) ---
+      Dominant emotion: neutral (purity=0.8000)
+      Topic label: Abuse and suffering
+      Emotion distribution: {'neutral': 0.8, 'sadness': 0.2}
+
+  --- Topic 483 (n=5) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Negative interpersonal experiences
+      Emotion distribution: {'neutral': 0.4, 'sadness': 0.4, 'anger': 0.2}
+
+  --- Topic 484 (n=5) ---
+      Dominant emotion: joy (purity=0.6000)
+      Topic label: Positive feedback and praise
+      Emotion distribution: {'joy': 0.6, 'neutral': 0.4}
+
+  --- Topic 485 (n=5) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Complex interpersonal dynamics and social observations
+      Emotion distribution: {'neutral': 0.6, 'joy': 0.2, 'surprise': 0.2}
+
+  --- Topic 486 (n=5) ---
+      Dominant emotion: neutral (purity=1.0000)
+      Topic label: Illegal activities and distress
+      Emotion distribution: {'neutral': 1.0}
+
+  --- Topic 487 (n=5) ---
+      Dominant emotion: sadness (purity=0.2000)
+      Topic label: Teenage angst and social conflict
+      Emotion distribution: {'sadness': 0.2, 'anger': 0.2, 'fear': 0.2, 'neutral': 0.2, 'joy': 0.2}
+
+  --- Topic 488 (n=5) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Topic label: Miscommunication and disagreement
+      Emotion distribution: {'neutral': 0.6, 'sadness': 0.2, 'fear': 0.2}
+
+  --- Topic 489 (n=5) ---
+      Dominant emotion: neutral (purity=0.4000)
+      Topic label: Personal reflection and experience
+      Emotion distribution: {'neutral': 0.4, 'sadness': 0.4, 'joy': 0.2}
+
+  --- Topic 490 (n=5) ---
+      Dominant emotion: joy (purity=0.4000)
+      Topic label: Emotional expression and personal experiences
+      Emotion distribution: {'joy': 0.4, 'sadness': 0.2, 'fear': 0.2, 'neutral': 0.2}
+
+  --- Topic 491 (n=5) ---
+      Dominant emotion: disgust (purity=0.4000)
+      Topic label: Uncomfortable and disturbing experiences
+      Emotion distribution: {'disgust': 0.4, 'joy': 0.4, 'neutral': 0.2}
 
 

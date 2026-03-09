@@ -1,0 +1,5 @@
+.idea/
+.venv/
+llm_models/
+saved_data/
+saved_clusters/

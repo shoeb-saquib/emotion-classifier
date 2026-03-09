@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 
-from src.utils.configuration import EMOTIONS
+from src.configuration import EMOTIONS
 
 
 def _default_saved_clusters_dir() -> Path:

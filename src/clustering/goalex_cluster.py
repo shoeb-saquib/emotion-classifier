@@ -19,6 +19,6 @@ body = {
 response = requests.post(url, headers=headers, json=body)
 if response.status_code == 200:
     data = json.loads(response.text)
-    print(data['choices'][0]['message']['content'])
+    print(data)
 else:
     raise Exception(f"Error: {response.status_code}, {response.text}")

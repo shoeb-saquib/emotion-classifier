@@ -14,7 +14,7 @@ if (_project_root / "src").is_dir() and str(_project_root) not in sys.path:
 from src.data.ecfdataset import ECFDataset
 from src.models.emotion_model import EmotionModel
 from src.evaluation.evaluate import get_evaluation_report_content, generate_evaluation_report
-from src.utils.configuration import *
+from src.configuration import *
 
 # Paths relative to project root so they work regardless of cwd
 TEST_EMBEDDINGS_FILENAME = _project_root / "saved_data" / "test_embeddings.pkl"

@@ -4,7 +4,7 @@ from collections import Counter
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score, f1_score
 import pandas as pd
 from pathlib import Path
-from src.utils.configuration import EMOTIONS
+from src.configuration import EMOTIONS
 
 def format_confusion_matrix(true_labels, predicted_labels):
     cm = confusion_matrix(true_labels, predicted_labels, labels=EMOTIONS)

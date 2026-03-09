@@ -1,6 +1,6 @@
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from src.utils.configuration import *
+from src.configuration import *
 from src.clustering.cluster_knn_classifier import ClusterKNNClassifier
 
 

@@ -1,0 +1,140 @@
+================================================================================
+EMOTION CLASSIFICATION EVALUATION REPORT
+================================================================================
+
+Timestamp              : 2026-03-05 19:41:04
+Emotion Representation : averaged emotion utterance embeddings
+Context Window         : 1
+Cluster Variations     : 
+KNN Neighbors          : 5
+Context Method         : average with previous utterance embeddings
+
+Accuracy               : 35.96%
+Macro F1               : 28.63%
+
+--------------------------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------------------------
+
+Predicted  anger  disgust  fear  joy  neutral  sadness  surprise
+True                                                            
+anger        125      102    47   65       82       75        72
+disgust       12       67    21    9       40       28        25
+fear          15       22    40   18       56       35        21
+joy           58      113    50  417      294      101        96
+neutral      100      271   186  260     1001      372       211
+sadness       50       55    45   28      108      161        43
+surprise      73       64    49   65      118       74       227
+
+--------------------------------------------------------------------------------
+CLASSIFICATION SUMMARY
+--------------------------------------------------------------------------------
+
+precision    recall  f1-score   support
+
+       anger      0.289     0.220     0.250       568
+     disgust      0.097     0.332     0.150       202
+        fear      0.091     0.193     0.124       207
+         joy      0.484     0.369     0.419      1129
+     neutral      0.589     0.417     0.488      2401
+     sadness      0.190     0.329     0.241       490
+    surprise      0.327     0.339     0.333       670
+
+    accuracy                          0.360      5667
+   macro avg      0.295     0.314     0.286      5667
+weighted avg      0.437     0.360     0.385      5667
+================================================================================
+
+================================================================================
+EMOTION CLASSIFICATION EVALUATION REPORT
+================================================================================
+
+Timestamp              : 2026-03-05 19:41:06
+Emotion Representation : averaged emotion utterance embeddings
+Context Window         : 2
+Cluster Variations     : 
+KNN Neighbors          : 5
+Context Method         : average with previous utterance embeddings
+
+Accuracy               : 35.54%
+Macro F1               : 27.72%
+
+--------------------------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------------------------
+
+Predicted  anger  disgust  fear  joy  neutral  sadness  surprise
+True                                                            
+anger        126      103    34   57       97       80        71
+disgust       10       60    19   13       48       25        27
+fear          15       29    38   17       58       19        31
+joy           48      101    38  388      336      120        98
+neutral      120      245   174  263     1045      350       204
+sadness       52       51    49   27      113      155        43
+surprise      64       69    39   73      138       85       202
+
+--------------------------------------------------------------------------------
+CLASSIFICATION SUMMARY
+--------------------------------------------------------------------------------
+
+precision    recall  f1-score   support
+
+       anger      0.290     0.222     0.251       568
+     disgust      0.091     0.297     0.140       202
+        fear      0.097     0.184     0.127       207
+         joy      0.463     0.344     0.395      1129
+     neutral      0.569     0.435     0.493      2401
+     sadness      0.186     0.316     0.234       490
+    surprise      0.299     0.301     0.300       670
+
+    accuracy                          0.355      5667
+   macro avg      0.285     0.300     0.277      5667
+weighted avg      0.421     0.355     0.378      5667
+================================================================================
+
+================================================================================
+EMOTION CLASSIFICATION EVALUATION REPORT
+================================================================================
+
+Timestamp              : 2026-03-05 19:41:07
+Emotion Representation : averaged emotion utterance embeddings
+Context Window         : 3
+Cluster Variations     : 
+KNN Neighbors          : 5
+Context Method         : average with previous utterance embeddings
+
+Accuracy               : 35.34%
+Macro F1               : 26.8%
+
+--------------------------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------------------------
+
+Predicted  anger  disgust  fear  joy  neutral  sadness  surprise
+True                                                            
+anger        131       97    31   53       98       85        73
+disgust       12       57    16   14       53       26        24
+fear          13       23    27   17       73       18        36
+joy           49       98    39  385      343      116        99
+neutral      114      237   152  282     1076      344       196
+sadness       56       52    38   28      122      142        52
+surprise      60       60    48   82      146       89       185
+
+--------------------------------------------------------------------------------
+CLASSIFICATION SUMMARY
+--------------------------------------------------------------------------------
+
+precision    recall  f1-score   support
+
+       anger      0.301     0.231     0.261       568
+     disgust      0.091     0.282     0.138       202
+        fear      0.077     0.130     0.097       207
+         joy      0.447     0.341     0.387      1129
+     neutral      0.563     0.448     0.499      2401
+     sadness      0.173     0.290     0.217       490
+    surprise      0.278     0.276     0.277       670
+
+    accuracy                          0.353      5667
+   macro avg      0.276     0.285     0.268      5667
+weighted avg      0.412     0.353     0.375      5667
+================================================================================

@@ -54,19 +54,19 @@ class BERTopicConfig:
     n_gram_range: Optional[Tuple[int, int]] = None
     min_topic_size: Optional[int] = None
 
-    def build(self) -> BERTopic:
+    def build(self, use_llm: bool = True) -> BERTopic:
         """Build BERTopic instance from this config."""
         umap_model = self._build_umap()
         hdbscan_model = self._build_clusterer()
         ctfidf_model = self._build_ctfidf()
-        llm_repr = self._build_llm()
         kwargs = dict(
             embedding_model=self.embedding_model,
             umap_model=umap_model,
             hdbscan_model=hdbscan_model,
-            representation_model=llm_repr,
             verbose=True,
         )
+        if use_llm:
+            kwargs["representation_model"] = self._build_llm()
         if ctfidf_model is not None:
             kwargs["ctfidf_model"] = ctfidf_model
         if self.n_gram_range is not None:
@@ -236,8 +236,9 @@ class BERTopicConfig:
 # Variations to run when executing the BERTopic comparison pipeline.
 # Add or remove configs here to change which variations are evaluated.
 BERTOPIC_VARIATIONS: Tuple[BERTopicConfig, ...] = (
-    # BERTopicConfig(clusterer="hdbscan", n_clusters=None),
+    BERTopicConfig(clusterer="hdbscan"),
     BERTopicConfig(clusterer="kmeans", n_clusters=7),
+    BERTopicConfig(clusterer="hdbscan", hdbscan_min_cluster_size=20),
     # BERTopicConfig(
     #     clusterer="kmeans",
     #     n_clusters=20,

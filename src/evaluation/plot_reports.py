@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.utils.configuration import (
+from src.configuration import (
     EMOTION_REPRESENTATIONS,
     KNN_NEIGHBORS,
     SELECTED_CLUSTER_VARIATIONS,

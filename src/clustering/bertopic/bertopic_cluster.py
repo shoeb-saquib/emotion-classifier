@@ -22,7 +22,7 @@ from bertopic import BERTopic
 
 from src.clustering.bertopic.bertopic_config import BERTopicConfig, BERTOPIC_VARIATIONS
 from src.data.ecfdataset import ECFDataset
-from src.utils.configuration import EMOTIONS
+from src.configuration import EMOTIONS
 
 # saved_clusters at project root (same root we use for sys.path)
 SAVED_CLUSTERS_DIR = _project_root / "saved_clusters"
