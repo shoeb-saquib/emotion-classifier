@@ -1,0 +1,45 @@
+================================================================================
+EMOTION CLASSIFICATION EVALUATION REPORT
+================================================================================
+
+Timestamp              : 2026-03-10 02:30:02
+Emotion Representation : averaged emotion utterance embeddings
+Context Window         : 0
+Cluster Variations     : goalex_org
+KNN Neighbors          : 5
+
+Accuracy               : 42.19%
+Macro F1               : 9.43%
+
+--------------------------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------------------------
+
+Predicted  anger  disgust  fear  joy  neutral  sadness  surprise
+True                                                            
+anger          0        0     0    1      563        0         4
+disgust        0        0     0    0      202        0         0
+fear           0        0     0    2      202        0         3
+joy            0        0     0   11     1113        0         5
+neutral        0        0     0    7     2362        0        32
+sadness        0        0     0    0      484        0         6
+surprise       0        0     0    3      649        0        18
+
+--------------------------------------------------------------------------------
+CLASSIFICATION SUMMARY
+--------------------------------------------------------------------------------
+
+precision    recall  f1-score   support
+
+       anger      0.000     0.000     0.000       568
+     disgust      0.000     0.000     0.000       202
+        fear      0.000     0.000     0.000       207
+         joy      0.458     0.010     0.019      1129
+     neutral      0.424     0.984     0.592      2401
+     sadness      0.000     0.000     0.000       490
+    surprise      0.265     0.027     0.049       670
+
+    accuracy                          0.422      5667
+   macro avg      0.164     0.146     0.094      5667
+weighted avg      0.302     0.422     0.261      5667
+================================================================================

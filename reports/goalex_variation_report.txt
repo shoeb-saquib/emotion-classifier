@@ -1,0 +1,102 @@
+GoalEX Variation Comparisons
+================================================================================
+Generated: 2026-03-10T02:23:32.972614
+
+
+METRIC DEFINITIONS
+-------------------------------------------------
+
+1. PURITY (per-cluster and weighted)
+   - Per-cluster purity: For each cluster, the fraction of documents that have the
+     *dominant* emotion (the most frequent emotion in that cluster).
+     Formula: purity(cluster k) = max_emotion count_in_cluster_k(emotion) / size(cluster k).
+   - Mean purity: Average of per-cluster purities over all clusters (each cluster weighted equally).
+   - Weighted purity: Purity weighted by cluster size.
+     Formula: sum over clusters of [ purity(cluster k) * (size(cluster k) / total docs) ].
+
+2. NMI (Normalized Mutual Information)
+   - Measures how much knowing the cluster ID reduces uncertainty about the emotion label.
+   - Formula: NMI(emotion; cluster) = MI(emotion, cluster) / average(H(emotion), H(cluster)).
+     MI = mutual information, H = entropy. We use sklearn's normalized_mutual_info_score
+     with average_method="arithmetic".
+   - Range: 0 (cluster and emotion independent) to 1 (cluster perfectly predicts emotion).
+
+3. HOMOGENEITY
+   - Each cluster contains only one class (emotion)?
+   - Formula: 1 - H(emotion | cluster) / H(emotion). Homogeneity is 1 when every cluster
+     has documents of only one emotion.
+
+4. COMPLETENESS
+   - Each emotion is assigned to only one cluster?
+   - Formula: 1 - H(cluster | emotion) / H(cluster). Completeness is 1 when all documents
+     of a given emotion fall in a single cluster.
+
+5. CLUSTERS AND OUTLIERS
+   - Clusters: Number of distinct cluster IDs excluding -1.
+   - Outliers: Number of documents assigned cluster -1 (texts not covered by any GoalEX description).
+
+------------------------------------------------------------------------
+Variation        Topics  Outliers      Purity      NMI    Homog    Compl
+------------------------------------------------------------------------
+goalex_92050a0f       1         1     0.4353   0.0001   0.0000   0.0791*
+goalex_org            7     13019     0.4355*  0.0113*  0.0065*  0.0469 
+(* = best in column)
+
+
+================================================================================
+VARIATION: goalex_92050a0f
+================================================================================
+Clusters: 1  |  Outliers: 1  |  Purity: 0.4353  |  NMI: 0.0001
+  Homogeneity: 0.0000  |  Completeness: 0.0791
+
+  --- Cluster 1 (n=13618) ---
+      Dominant emotion: neutral (purity=0.4353)
+      Cluster description: expresses sadness
+      Emotion distribution: {'neutral': 0.4353062123659862, 'joy': 0.1689675429578499, 'surprise': 0.1351152885886327, 'anger': 0.1185930386253488, 'sadness': 0.08422675870171831, 'disgust': 0.030400939932442354, 'fear': 0.027390218828021735}
+
+
+================================================================================
+VARIATION: goalex_org
+================================================================================
+Clusters: 7  |  Outliers: 13019  |  Purity: 0.4355  |  NMI: 0.0113
+  Homogeneity: 0.0065  |  Completeness: 0.0469
+
+  --- Cluster 0 (n=443) ---
+      Dominant emotion: neutral (purity=0.6095)
+      Cluster description: "- expresses amusement"
+"- expresses concern"
+"- expresses gratitude"
+"- expresses guilt"
+"- expresses shock
+      Emotion distribution: {'neutral': 0.6094808126410836, 'surprise': 0.2595936794582393, 'joy': 0.05191873589164785, 'sadness': 0.045146726862302484, 'anger': 0.01580135440180587, 'disgust': 0.013544018058690745, 'fear': 0.004514672686230248}
+
+  --- Cluster 1 (n=65) ---
+      Dominant emotion: neutral (purity=0.6769)
+      Cluster description: expresses sadness
+      Emotion distribution: {'neutral': 0.676923076923077, 'sadness': 0.1076923076923077, 'joy': 0.1076923076923077, 'anger': 0.046153846153846156, 'surprise': 0.03076923076923077, 'disgust': 0.03076923076923077}
+
+  --- Cluster 2 (n=67) ---
+      Dominant emotion: neutral (purity=0.5224)
+      Cluster description: expresses amusement
+      Emotion distribution: {'neutral': 0.5223880597014925, 'joy': 0.26865671641791045, 'sadness': 0.07462686567164178, 'anger': 0.05970149253731343, 'surprise': 0.05970149253731343, 'disgust': 0.014925373134328358}
+
+  --- Cluster 3 (n=8) ---
+      Dominant emotion: joy (purity=0.3750)
+      Cluster description: expresses admiration
+      Emotion distribution: {'joy': 0.375, 'neutral': 0.25, 'surprise': 0.25, 'sadness': 0.125}
+
+  --- Cluster 4 (n=3) ---
+      Dominant emotion: neutral (purity=0.6667)
+      Cluster description: expresses anxiet
+      Emotion distribution: {'neutral': 0.6666666666666666, 'disgust': 0.3333333333333333}
+
+  --- Cluster 5 (n=8) ---
+      Dominant emotion: neutral (purity=0.6250)
+      Cluster description: expresses disappointmen
+      Emotion distribution: {'neutral': 0.625, 'sadness': 0.25, 'joy': 0.125}
+
+  --- Cluster 6 (n=6) ---
+      Dominant emotion: joy (purity=0.3333)
+      Cluster description: expresses skepticis
+      Emotion distribution: {'joy': 0.3333333333333333, 'surprise': 0.3333333333333333, 'disgust': 0.16666666666666666, 'neutral': 0.16666666666666666}
+
