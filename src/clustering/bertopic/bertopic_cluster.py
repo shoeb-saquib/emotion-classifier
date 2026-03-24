@@ -1,4 +1,4 @@
-"""Fit one BERTopic clustering run from a config and save cluster labels to disk."""
+"""Fit one BERTopic clustering run from a config and save embeddings + cluster labels to disk."""
 
 import sys
 from pathlib import Path
@@ -35,14 +35,15 @@ def fit_cluster(
     training_set: Optional[pd.DataFrame] = None,
 ) -> Tuple[list, BERTopic]:
     """
-    Build model from config, fit on documents, save cluster labels to disk, return topics and model.
+    Build model from config, fit on documents, save training embeddings + cluster labels to disk.
 
     Args:
         config: BERTopicConfig to build and fit.
         docs: List of document strings.
-        saved_clusters_dir: Directory to save label array; default is project_root / saved_clusters.
-        training_set: Optional DataFrame with "emotion" column (same row order as docs).
-            If provided, saves per-cluster emotion proportions to {code_name}_emotion_proportions.csv.
+        saved_clusters_dir: Directory to save outputs; default is project_root / saved_clusters.
+        training_set: Optional DataFrame with same row order as docs. If it has "emotion",
+            saves per-cluster emotion proportions. If it has "embedding", saves a CSV with
+            columns label, emb_0, emb_1, ... for use by ClusterKNNClassifier.
 
     Returns:
         (topics, fitted_model): topics is a list of topic IDs (int) per document;
@@ -51,12 +52,26 @@ def fit_cluster(
     out_dir = saved_clusters_dir if saved_clusters_dir is not None else SAVED_CLUSTERS_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    topic_model = config.build()
+    topic_model = config.build(use_llm=False)
     topics, _ = topic_model.fit_transform(docs)
 
-    path = out_dir / f"{config.code_name()}.npy"
-    np.save(path, np.asarray(topics, dtype=np.int64))
-    print(f"Saved cluster labels to {path}")
+    # Save training embeddings + cluster labels as one CSV (label, emb_0, emb_1, ...)
+    if training_set is not None:
+        if "embedding" not in training_set.columns:
+            embedder = topic_model.embedding_model
+            embed_fn = getattr(embedder, "embed_documents", None) or getattr(embedder, "embed", None)
+            if embed_fn is None:
+                raise RuntimeError("BERTopic embedding_model has no embed_documents or embed method")
+            emb = np.asarray(embed_fn(docs), dtype=np.float64)
+            training_set = training_set.copy()
+            training_set["embedding"] = [emb[i] for i in range(emb.shape[0])]
+        embeddings = np.asarray(training_set["embedding"].tolist(), dtype=np.float64)
+        n, dim = embeddings.shape
+        data = {"label": np.asarray(topics, dtype=np.int64)[:n]}
+        for j in range(dim):
+            data[f"emb_{j}"] = embeddings[:, j]
+        pd.DataFrame(data).to_csv(out_dir / f"{config.code_name()}.csv", index=False)
+        print(f"Saved embeddings and cluster labels to {out_dir / config.code_name()}.csv")
 
     if training_set is not None and "emotion" in training_set.columns:
         df = training_set.copy()
@@ -74,7 +89,7 @@ def fit_cluster(
 def main() -> None:
     """
     Load training set, fit all variations in BERTOPIC_VARIATIONS, and save
-    cluster labels to saved_clusters/{code_name}.npy for later use by the emotion model.
+    embeddings + cluster labels to saved_clusters/{code_name}.csv for later use by ClusterKNNClassifier.
     """
     dataset = ECFDataset()
     training_set = dataset.load_split("train")

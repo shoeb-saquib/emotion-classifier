@@ -1,4 +1,6 @@
 from pathlib import Path
+import pickle
+
 from datasets import load_dataset
 import pandas as pd
 
@@ -9,6 +11,11 @@ DATA_FILENAMES = {
     "train": str(_SAVED_DATA_DIR / "training_data.csv"),
     "validation": str(_SAVED_DATA_DIR / "validation_data.csv"),
     "test": str(_SAVED_DATA_DIR / "test_data.csv"),
+}
+EMBEDDING_FILENAMES = {
+    "train": _SAVED_DATA_DIR / "train_embeddings.pkl",
+    "validation": _SAVED_DATA_DIR / "validation_embeddings.pkl",
+    "test": _SAVED_DATA_DIR / "test_embeddings.pkl",
 }
 
 class ECFDataset:
@@ -38,7 +45,15 @@ class ECFDataset:
             data.to_csv(filename, index=False)
 
     @staticmethod
-    def load_split(split, num_utterances = None):
-        if num_utterances is None:
-            return pd.read_csv(DATA_FILENAMES[split])
-        return pd.read_csv(DATA_FILENAMES[split]).head(num_utterances)
+    def load_split(split, num_utterances=None):
+        df = pd.read_csv(DATA_FILENAMES[split])
+        if num_utterances is not None:
+            df = df.head(num_utterances)
+        emb_path = EMBEDDING_FILENAMES.get(split)
+        if emb_path is not None and emb_path.is_file():
+            with open(emb_path, "rb") as f:
+                embeddings = pickle.load(f)
+            # Match length in case pickle was saved for full split and we requested num_utterances
+            n = len(df)
+            df["embedding"] = list(embeddings[:n])
+        return df

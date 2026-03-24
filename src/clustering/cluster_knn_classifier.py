@@ -1,9 +1,9 @@
 """
 KNN classifier that maps embeddings to clusters, then returns per-cluster emotion probabilities.
 
-Given a BERTopic variation (code_name), loads cluster labels and emotion proportions from
-saved_clusters, fits a KNeighborsClassifier on (training_embeddings, cluster_labels),
-and for a test embedding returns the emotion probability vector of the predicted cluster.
+Given a BERTopic variation (code_name), loads embeddings + cluster labels and emotion proportions
+from saved_clusters, fits a KNeighborsClassifier on that data, and for a test embedding returns
+the emotion probability vector of the predicted cluster.
 """
 
 from pathlib import Path
@@ -27,11 +27,17 @@ def _default_saved_clusters_dir() -> Path:
     return _this_dir.parent.parent.parent / "saved_clusters"
 
 
+def _embedding_columns(df: pd.DataFrame) -> list:
+    """Return emb_* column names in numeric order (emb_0, emb_1, ...)."""
+    emb_cols = [c for c in df.columns if c.startswith("emb_") and c[4:].isdigit()]
+    return sorted(emb_cols, key=lambda c: int(c.split("_", 1)[1]))
+
+
 class ClusterKNNClassifier:
     """
-    Given a clustering variation, loads its saved cluster labels and emotion proportions,
-    fits a KNN on (training_embeddings, cluster_labels), and predicts emotion probabilities
-    for test embeddings via the assigned cluster's emotion distribution.
+    Given a clustering variation, loads saved embeddings + cluster labels and emotion proportions,
+    fits a KNN on the loaded data, and predicts emotion probabilities for test embeddings
+    via the assigned cluster's emotion distribution.
     """
 
     def __init__(
@@ -43,8 +49,8 @@ class ClusterKNNClassifier:
         """
         Args:
             variation: Code name of the BERTopic variation (e.g. from BERTopicConfig.code_name()).
-                Used to load {variation}.npy and {variation}_emotion_proportions.csv.
-            saved_clusters_dir: Directory containing the .npy and _emotion_proportions.csv files.
+                Used to load {variation}.csv and {variation}_emotion_proportions.csv.
+            saved_clusters_dir: Directory containing the .csv and _emotion_proportions.csv files.
                 Defaults to project root / saved_clusters.
             n_neighbors: Number of neighbors for KNeighborsClassifier.
         """
@@ -53,51 +59,46 @@ class ClusterKNNClassifier:
         self.n_neighbors = n_neighbors
 
         self._cluster_labels: np.ndarray = None  # shape (n_train,)
+        self._embeddings: np.ndarray = None  # shape (n_train, n_features)
         self._emotion_proportions: pd.DataFrame = None  # index = topic_id, columns = EMOTIONS
         self._knn: KNeighborsClassifier = None
 
         self._load_saved_data()
 
     def _load_saved_data(self) -> None:
-        """Load cluster labels and emotion proportions from saved_clusters."""
-        labels_path = self.saved_clusters_dir / f"{self.variation}.npy"
+        """Load embeddings + cluster labels and emotion proportions from saved_clusters."""
+        csv_path = self.saved_clusters_dir / f"{self.variation}.csv"
         prop_path = self.saved_clusters_dir / f"{self.variation}_emotion_proportions.csv"
 
-        if not labels_path.exists():
-            raise FileNotFoundError(f"Cluster labels not found: {labels_path}")
+        if not csv_path.exists():
+            raise FileNotFoundError(f"Embeddings and labels not found: {csv_path}")
         if not prop_path.exists():
             raise FileNotFoundError(f"Emotion proportions not found: {prop_path}")
 
-        self._cluster_labels = np.load(labels_path)
+        df = pd.read_csv(csv_path)
+        if "label" not in df.columns:
+            raise ValueError(f"CSV must have a 'label' column: {csv_path}")
+        emb_cols = _embedding_columns(df)
+        if not emb_cols:
+            raise ValueError(f"CSV must have emb_0, emb_1, ... columns: {csv_path}")
+
+        self._cluster_labels = df["label"].values.astype(np.int64)
+        self._embeddings = df[emb_cols].values.astype(np.float64)
+
         self._emotion_proportions = pd.read_csv(prop_path, index_col=0)
-        # Ensure columns match EMOTIONS order
         self._emotion_proportions = self._emotion_proportions.reindex(columns=EMOTIONS, fill_value=0.0)
 
-    def fit(self, training_set: pd.DataFrame) -> "ClusterKNNClassifier":
+    def fit(self, training_set: pd.DataFrame = None) -> "ClusterKNNClassifier":
         """
-        Fit KNN: X = training embeddings, y = cluster labels from saved_clusters.
+        Fit KNN on the loaded embeddings and cluster labels from saved_clusters.
 
-        training_set must have an "embedding" column and the same length and row order
-        as the data that was used to produce the saved cluster labels.
-
-        Args:
-            training_set: DataFrame with "embedding" column (same length as saved labels).
+        training_set is ignored; embeddings and labels are read from the variation's CSV.
 
         Returns:
             self (for chaining).
         """
-        if "embedding" not in training_set.columns:
-            raise ValueError("training_set must have an 'embedding' column")
-        if len(training_set) != len(self._cluster_labels):
-            raise ValueError(
-                f"training_set length ({len(training_set)}) must match saved cluster labels ({len(self._cluster_labels)})"
-            )
-
-        X = np.vstack(np.asarray(training_set["embedding"].tolist(), dtype=np.float64))
-        y = self._cluster_labels
-
         self._knn = KNeighborsClassifier(n_neighbors=self.n_neighbors)
-        self._knn.fit(X, y)
+        self._knn.fit(self._embeddings, self._cluster_labels)
         return self
 
     def predict_cluster(self, embedding: np.ndarray) -> np.ndarray:

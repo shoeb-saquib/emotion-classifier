@@ -1,11 +1,11 @@
 # Configure below before running generate_reports.py or delete_reports.py
-SELECTED_EMOTION_REPRESENTATIONS = [0, 1]
+SELECTED_EMOTION_REPRESENTATIONS = [1]
 
-SELECTED_CONTEXT_METHODS = [0, 1]
+SELECTED_CONTEXT_METHODS = []
 
-CONTEXT_WINDOWS = [1, 2, 3]
+CONTEXT_WINDOWS = [0]
 
-SELECTED_CLUSTER_VARIATIONS = []
+SELECTED_CLUSTER_VARIATIONS = ["goalex_org"]
 KNN_NEIGHBORS = 5
 
 # Add new emotion representations here

@@ -63,15 +63,18 @@ def _write_combined_reports(path: Path, reports_by_cw: dict[int, str]) -> None:
     # Join with "\n\n" only; strip each block so trailing newlines don't create extra gaps
     path.write_text("\n\n".join(s.rstrip() for s in ordered))
 
-def _load_embeddings(filename: Path, data):
+def _load_embeddings(filename: Path, data, model):
+    """Ensure data has an 'embedding' column: use existing, load from file, or create and save."""
+    if "embedding" in data.columns:
+        return
     if filename.is_file():
         with open(filename, "rb") as f:
             data["embedding"] = pickle.load(f)
     else:
-        data["embedding"] = model.encode(list(data.text)).tolist()
-    filename.parent.mkdir(parents=True, exist_ok=True)
-    with open(filename, "wb") as f:
-        pickle.dump(data.embedding.tolist(), f)
+        data["embedding"] = model.encode(list(data["text"])).tolist()
+        filename.parent.mkdir(parents=True, exist_ok=True)
+        with open(filename, "wb") as f:
+            pickle.dump(data["embedding"], f)
 
 def main():
     dataset = ECFDataset()
@@ -82,8 +85,8 @@ def main():
     for variation in SELECTED_CLUSTER_VARIATIONS:
         model.add_cluster_classifier(variation, KNN_NEIGHBORS)
 
-    _load_embeddings(TRAIN_EMBEDDINGS_FILENAME, training_set)
-    _load_embeddings(TEST_EMBEDDINGS_FILENAME, test_set)
+    _load_embeddings(TRAIN_EMBEDDINGS_FILENAME, training_set, model)
+    _load_embeddings(TEST_EMBEDDINGS_FILENAME, test_set, model)
 
     test_conversations = list(test_set.groupby(by="conversation_ID"))
     total_conversations = len(test_conversations)
@@ -96,8 +99,11 @@ def main():
         one_context_method_has_finished = False
         er_dir = REPORTS_DIR / f"er{emotion_method_id}"
 
-        for context_method_id in SELECTED_CONTEXT_METHODS:
-            model.set_context_method(context_method_id)
+        # Context-window 0 doesn't use any context method, so allow running with no context methods selected.
+        context_method_ids = SELECTED_CONTEXT_METHODS or [None]
+        for context_method_id in context_method_ids:
+            if context_method_id is not None:
+                model.set_context_method(context_method_id)
             for context_window in CONTEXT_WINDOWS:
                 if context_window == 0 and one_context_method_has_finished:
                     continue
@@ -131,6 +137,10 @@ def main():
                         test_set.emotion, predictions, descriptors, path
                     )
                 else:
+                    if context_method_id is None:
+                        raise ValueError(
+                            "Non-zero context windows require at least one selected context method."
+                        )
                     descriptors[DESCRIPTORS[3]] = CONTEXT_METHODS[context_method_id]
                     path = er_dir / f"er{emotion_method_id}_cm{context_method_id}_reports.txt"
                     content = get_evaluation_report_content(
