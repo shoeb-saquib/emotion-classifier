@@ -23,9 +23,9 @@ REPORTS_ROOT = _project_root / "reports"
 SEP = "=" * 80
 
 # One folder per cluster config: reports/<cluster_subdir>/er0/, er1/, er2/
-# e.g. reports/cv_k_7_knn5/er0/... or reports/no_cluster/er0/... when no variations
+# e.g. reports/cv_k_7/er0/... or reports/no_cluster/er0/... when no variations
 _cluster_subdir = (
-    f"cv_{'_'.join(SELECTED_CLUSTER_VARIATIONS)}_knn{KNN_NEIGHBORS}"
+    f"cv_{'_'.join(SELECTED_CLUSTER_VARIATIONS)}"
     if SELECTED_CLUSTER_VARIATIONS
     else "no_cluster"
 )
@@ -131,6 +131,10 @@ def main():
                     "Cluster Variations": ", ".join(SELECTED_CLUSTER_VARIATIONS),
                     "KNN Neighbors": KNN_NEIGHBORS,
                 }
+                if any(v.startswith("goalex") for v in SELECTED_CLUSTER_VARIATIONS):
+                    descriptors["GoalEX Hybrid Alpha"] = GOALEX_HYBRID_ALPHA
+                if any(v.startswith("goalex_per_emotion") for v in SELECTED_CLUSTER_VARIATIONS):
+                    descriptors["GoalEX Per-Emotion Fusion TopK"] = GOALEX_PER_EMOTION_FUSION_TOPK
                 if context_window == 0:
                     path = er_dir / f"er{emotion_method_id}_cw0_reports.txt"
                     generate_evaluation_report(

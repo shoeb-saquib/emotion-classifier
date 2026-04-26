@@ -12,7 +12,6 @@ import pandas as pd
 
 from src.configuration import (
     EMOTION_REPRESENTATIONS,
-    KNN_NEIGHBORS,
     SELECTED_CLUSTER_VARIATIONS,
 )
 from plotnine import (
@@ -38,7 +37,7 @@ while _project_root != _project_root.parent and (_project_root / "src").is_dir()
     _project_root = _project_root.parent
 REPORTS_ROOT = _project_root / "reports"
 _cluster_subdir = (
-    f"cv_{'_'.join(SELECTED_CLUSTER_VARIATIONS)}_knn{KNN_NEIGHBORS}"
+    f"cv_{'_'.join(SELECTED_CLUSTER_VARIATIONS)}"
     if SELECTED_CLUSTER_VARIATIONS
     else "no_cluster"
 )

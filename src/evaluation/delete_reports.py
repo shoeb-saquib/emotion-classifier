@@ -9,7 +9,6 @@ from pathlib import Path
 
 from src.configuration import (
     CONTEXT_WINDOWS,
-    KNN_NEIGHBORS,
     SELECTED_CLUSTER_VARIATIONS,
     SELECTED_CONTEXT_METHODS,
     SELECTED_EMOTION_REPRESENTATIONS,
@@ -21,7 +20,7 @@ while _project_root != _project_root.parent and (_project_root / "src").is_dir()
     _project_root = _project_root.parent
 REPORTS_ROOT = _project_root / "reports"
 _cluster_subdir = (
-    f"cv_{'_'.join(SELECTED_CLUSTER_VARIATIONS)}_knn{KNN_NEIGHBORS}"
+    f"cv_{'_'.join(SELECTED_CLUSTER_VARIATIONS)}"
     if SELECTED_CLUSTER_VARIATIONS
     else "no_cluster"
 )

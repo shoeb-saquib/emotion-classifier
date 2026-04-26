@@ -1,6 +1,6 @@
 GoalEX Variation Comparisons
 ================================================================================
-Generated: 2026-03-10T02:23:32.972614
+Generated: 2026-04-05T23:06:48.127934
 
 
 METRIC DEFINITIONS
@@ -35,11 +35,15 @@ METRIC DEFINITIONS
    - Clusters: Number of distinct cluster IDs excluding -1.
    - Outliers: Number of documents assigned cluster -1 (texts not covered by any GoalEX description).
 
-------------------------------------------------------------------------
-Variation        Topics  Outliers      Purity      NMI    Homog    Compl
-------------------------------------------------------------------------
-goalex_92050a0f       1         1     0.4353   0.0001   0.0000   0.0791*
-goalex_org            7     13019     0.4355*  0.0113*  0.0065*  0.0469 
+------------------------------------------------------------------------------
+Variation              Topics  Outliers      Purity      NMI    Homog    Compl
+------------------------------------------------------------------------------
+goalex_92050a0f             1         1     0.4353   0.0001   0.0000   0.0791*
+goalex_a8f81420             3     12903     0.4370*  0.0116*  0.0067*  0.0418 
+goalex_a8f81420_c5          7     12538     0.4358   0.0087   0.0052   0.0274 
+goalex_org                  7     13019     0.4355   0.0113   0.0065   0.0469 
+goalex_per_emotion_c5       0         0     0.0000   0.0000   0.0000   0.0000 
+goalex_test                 3     13339     0.4353   0.0095   0.0051   0.0725 
 (* = best in column)
 
 
@@ -53,6 +57,70 @@ Clusters: 1  |  Outliers: 1  |  Purity: 0.4353  |  NMI: 0.0001
       Dominant emotion: neutral (purity=0.4353)
       Cluster description: expresses sadness
       Emotion distribution: {'neutral': 0.4353062123659862, 'joy': 0.1689675429578499, 'surprise': 0.1351152885886327, 'anger': 0.1185930386253488, 'sadness': 0.08422675870171831, 'disgust': 0.030400939932442354, 'fear': 0.027390218828021735}
+
+
+================================================================================
+VARIATION: goalex_a8f81420
+================================================================================
+Clusters: 3  |  Outliers: 12903  |  Purity: 0.4370  |  NMI: 0.0116
+  Homogeneity: 0.0067  |  Completeness: 0.0418
+
+  --- Cluster 0 (n=384) ---
+      Dominant emotion: surprise (purity=0.4141)
+      Cluster description: shares a personal experience or story
+      Emotion distribution: {'surprise': 0.4140625, 'neutral': 0.3567708333333333, 'joy': 0.07552083333333333, 'sadness': 0.057291666666666664, 'anger': 0.041666666666666664, 'disgust': 0.0390625, 'fear': 0.015625}
+
+  --- Cluster 1 (n=231) ---
+      Dominant emotion: neutral (purity=0.5887)
+      Cluster description: is a greeting or expression of familiarity
+      Emotion distribution: {'neutral': 0.5887445887445888, 'surprise': 0.16017316017316016, 'joy': 0.11688311688311688, 'sadness': 0.06926406926406926, 'anger': 0.03463203463203463, 'fear': 0.017316017316017316, 'disgust': 0.012987012987012988}
+
+  --- Cluster 2 (n=101) ---
+      Dominant emotion: neutral (purity=0.4752)
+      Cluster description: sets a boundary or declines a request
+      Emotion distribution: {'neutral': 0.4752475247524752, 'anger': 0.21782178217821782, 'sadness': 0.1188118811881188, 'disgust': 0.07920792079207921, 'joy': 0.0594059405940594, 'fear': 0.0297029702970297, 'surprise': 0.019801980198019802}
+
+
+================================================================================
+VARIATION: goalex_a8f81420_c5
+================================================================================
+Clusters: 7  |  Outliers: 12538  |  Purity: 0.4358  |  NMI: 0.0087
+  Homogeneity: 0.0052  |  Completeness: 0.0274
+
+  --- Cluster 0 (n=1016) ---
+      Dominant emotion: neutral (purity=0.5236)
+      Cluster description: expresses affection
+      Emotion distribution: {'neutral': 0.5236220472440944, 'surprise': 0.22145669291338582, 'joy': 0.09547244094488189, 'anger': 0.058070866141732284, 'sadness': 0.058070866141732284, 'disgust': 0.027559055118110236, 'fear': 0.015748031496062992}
+
+  --- Cluster 1 (n=26) ---
+      Dominant emotion: neutral (purity=0.7308)
+      Cluster description: expresses excitement
+      Emotion distribution: {'neutral': 0.7307692307692307, 'surprise': 0.11538461538461539, 'joy': 0.11538461538461539, 'sadness': 0.038461538461538464}
+
+  --- Cluster 2 (n=5) ---
+      Dominant emotion: neutral (purity=0.6000)
+      Cluster description: expresses nostalgia
+      Emotion distribution: {'neutral': 0.6, 'surprise': 0.4}
+
+  --- Cluster 3 (n=1) ---
+      Dominant emotion: neutral (purity=1.0000)
+      Cluster description: expresses joy
+      Emotion distribution: {'neutral': 1.0}
+
+  --- Cluster 4 (n=6) ---
+      Dominant emotion: surprise (purity=0.5000)
+      Cluster description: expresses skepticism
+      Emotion distribution: {'surprise': 0.5, 'neutral': 0.3333333333333333, 'joy': 0.16666666666666666}
+
+  --- Cluster 5 (n=7) ---
+      Dominant emotion: joy (purity=0.7143)
+      Cluster description: expresses admiration
+      Emotion distribution: {'joy': 0.7142857142857143, 'neutral': 0.2857142857142857}
+
+  --- Cluster 6 (n=20) ---
+      Dominant emotion: sadness (purity=0.3000)
+      Cluster description: expresses sadness
+      Emotion distribution: {'sadness': 0.3, 'neutral': 0.2, 'anger': 0.15, 'joy': 0.15, 'surprise': 0.1, 'disgust': 0.1}
 
 
 ================================================================================
@@ -99,4 +167,32 @@ Clusters: 7  |  Outliers: 13019  |  Purity: 0.4355  |  NMI: 0.0113
       Dominant emotion: joy (purity=0.3333)
       Cluster description: expresses skepticis
       Emotion distribution: {'joy': 0.3333333333333333, 'surprise': 0.3333333333333333, 'disgust': 0.16666666666666666, 'neutral': 0.16666666666666666}
+
+
+================================================================================
+VARIATION: goalex_per_emotion_c5
+================================================================================
+ERROR: cluster_result.json not found under /Users/shoeb/Documents/code/PythonProjects/emotion-classifier/goalex/output/goalex_per_emotion_c5
+
+
+================================================================================
+VARIATION: goalex_test
+================================================================================
+Clusters: 3  |  Outliers: 13339  |  Purity: 0.4353  |  NMI: 0.0095
+  Homogeneity: 0.0051  |  Completeness: 0.0725
+
+  --- Cluster 0 (n=230) ---
+      Dominant emotion: neutral (purity=0.4565)
+      Cluster description: expresses concern
+      Emotion distribution: {'neutral': 0.45652173913043476, 'surprise': 0.41739130434782606, 'sadness': 0.07391304347826087, 'joy': 0.021739130434782608, 'disgust': 0.013043478260869565, 'anger': 0.008695652173913044, 'fear': 0.008695652173913044}
+
+  --- Cluster 1 (n=21) ---
+      Dominant emotion: neutral (purity=0.5714)
+      Cluster description: expresses amusement
+      Emotion distribution: {'neutral': 0.5714285714285714, 'joy': 0.2857142857142857, 'surprise': 0.14285714285714285}
+
+  --- Cluster 2 (n=29) ---
+      Dominant emotion: neutral (purity=0.6897)
+      Cluster description: expresses agreement
+      Emotion distribution: {'neutral': 0.6896551724137931, 'sadness': 0.1724137931034483, 'joy': 0.13793103448275862}
 

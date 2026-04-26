@@ -70,7 +70,11 @@ def save_embeddings_labels_csv(
     training_set: pd.DataFrame,
     text_to_cluster: dict,
 ) -> None:
-    """Write CSV with columns label, emb_0, emb_1, ... for each row whose text is in a cluster."""
+    """Write CSV with label, conversation_ID, utterance_ID, source_emotion, emb_0, ... for clustered rows."""
+    if "conversation_ID" not in training_set.columns or "utterance_ID" not in training_set.columns:
+        raise ValueError(
+            "training_set must have conversation_ID and utterance_ID columns for cluster export."
+        )
     rows = []
     for _, row in training_set.iterrows():
         key = _normalize_text(str(row["text"]))
@@ -78,13 +82,24 @@ def save_embeddings_labels_csv(
             continue
         label = text_to_cluster[key]
         emb = np.asarray(row["embedding"], dtype=np.float64)
-        rows.append((label, emb))
+        cid = int(row["conversation_ID"])
+        uid = int(row["utterance_ID"])
+        src_emotion = str(row.get("emotion", ""))
+        rows.append((label, emb, cid, uid, src_emotion))
     if not rows:
         raise ValueError("No training texts matched any cluster; check that cluster_result used the same data.")
     labels = np.array([r[0] for r in rows], dtype=np.int64)
     embeddings = np.array([r[1] for r in rows], dtype=np.float64)
+    conv_ids = np.array([r[2] for r in rows], dtype=np.int64)
+    utt_ids = np.array([r[3] for r in rows], dtype=np.int64)
+    source_emotions = [str(r[4]) for r in rows]
     n, dim = embeddings.shape
-    data = {"label": labels}
+    data = {
+        "label": labels,
+        "conversation_ID": conv_ids,
+        "utterance_ID": utt_ids,
+        "source_emotion": source_emotions,
+    }
     for j in range(dim):
         data[f"emb_{j}"] = embeddings[:, j]
     out_path.parent.mkdir(parents=True, exist_ok=True)

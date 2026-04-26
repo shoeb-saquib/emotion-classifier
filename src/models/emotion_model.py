@@ -2,6 +2,15 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from src.configuration import *
 from src.clustering.cluster_knn_classifier import ClusterKNNClassifier
+from src.models.context_embedding import pool_utterance_embeddings
+
+
+def _softmax_vec(x: np.ndarray) -> np.ndarray:
+    x = np.asarray(x, dtype=np.float64)
+    x = x - np.max(x)
+    ex = np.exp(x)
+    denom = np.sum(ex)
+    return ex / denom if denom > 0 else np.full_like(x, 1.0 / len(x))
 
 
 class EmotionModel:
@@ -40,7 +49,14 @@ class EmotionModel:
         self.context_window = context_window
 
     def add_cluster_classifier(self, variation, n_neighbors):
-        self.cluster_classifiers.append(ClusterKNNClassifier(variation, n_neighbors=n_neighbors))
+        self.cluster_classifiers.append(
+            ClusterKNNClassifier(
+                variation,
+                n_neighbors=n_neighbors,
+                goalex_hybrid_alpha=GOALEX_HYBRID_ALPHA,
+                goalex_per_emotion_fusion_topk=GOALEX_PER_EMOTION_FUSION_TOPK,
+            )
+        )
 
     def fit(self, training_set):
         if "embedding" not in training_set.columns:
@@ -60,18 +76,10 @@ class EmotionModel:
                 conversation = conversation.sort_values("utterance_ID")
                 for idx, row in conversation.iterrows():
                     utterances = conversation.loc[conversation.utterance_ID <= row.utterance_ID]
-                    embeddings = list(utterances.embedding)
-                    if self.context_window < len(embeddings) - 1:
-                        embeddings = embeddings[-(self.context_window + 1):]
-                    embeddings = np.asarray(embeddings)
-                    if self.context_method_id == 0:
-                        weighted_embedding = np.mean(embeddings, axis=0)
-                    elif self.context_method_id == 1:
-                        weights = np.array([2**i for i in range(len(embeddings))], dtype=float)
-                        weighted_embedding = np.average(embeddings, axis=0, weights=weights)
-                        weighted_embedding = weighted_embedding / np.linalg.norm(weighted_embedding)
-                    else:
-                        raise ValueError("Context method not recognized")
+                    emb_seq = np.asarray(list(utterances.embedding), dtype=np.float64)
+                    weighted_embedding = pool_utterance_embeddings(
+                        emb_seq, self.context_window, self.context_method_id
+                    )
                     emotion_vectors.setdefault(row.emotion, []).append(weighted_embedding)
             for emotion in emotion_vectors:
                 emotion_vectors[emotion] = np.mean(emotion_vectors[emotion], axis=0)
@@ -100,34 +108,59 @@ class EmotionModel:
                 raise ValueError("No utterances provided")
             embeddings = self.model.encode(utterances)
         embeddings = np.asarray(embeddings)
-        if self.context_window < len(embeddings) - 1:
-            embeddings = embeddings[-(self.context_window + 1) :]
+        context_embedding = pool_utterance_embeddings(
+            embeddings, self.context_window, self.context_method_id
+        )
 
+        # Base emotion-representation similarities (always available)
+        sim_vec = np.array(
+            [self.cosine_similarity(context_embedding, self.emotion_vectors[e]) for e in EMOTIONS],
+            dtype=np.float64,
+        )
+        if not self.cluster_classifiers:
+            return EMOTIONS[int(np.argmax(_softmax_vec(sim_vec)))]
 
-        if self.context_method_id == 0:
-            context_embedding = np.mean(embeddings, axis=0)
+        n_emotions = len(EMOTIONS)
+        prop_product = np.ones(n_emotions, dtype=np.float64)
+        centroid_product = np.ones(n_emotions, dtype=np.float64)
+        n_prop = 0
+        n_centroid = 0
 
-        elif self.context_method_id == 1:
-            weights = np.array([2**i for i in range(len(embeddings))], dtype=float)
-            context_embedding = np.average(embeddings, axis=0, weights=weights)
-            context_embedding = context_embedding / np.linalg.norm(context_embedding)
+        for clf in self.cluster_classifiers:
+            centroid_scores = clf.predict_emotion_scores_from_centroids(context_embedding)
+            if centroid_scores is not None:
+                n_centroid += 1
+                centroid_product *= np.array(
+                    [centroid_scores[e] for e in EMOTIONS], dtype=np.float64
+                )
+            else:
+                n_prop += 1
+                probas = clf.predict_emotion_probas(context_embedding)
+                prop_product *= np.array([probas[e] for e in EMOTIONS], dtype=np.float64)
 
+        if n_centroid == 0:
+            # Proportion-based cluster evidence only (legacy).
+
+            def modified_similarity(emotion):
+                sim = self.cosine_similarity(context_embedding, self.emotion_vectors[emotion])
+                idx = EMOTIONS.index(emotion)
+                return sim * prop_product[idx]
+
+            return max(self.emotion_vectors, key=modified_similarity)
+
+        c_sum = float(np.sum(centroid_product))
+        if c_sum > 0:
+            c_norm = centroid_product / c_sum
         else:
-            raise ValueError("Context method not recognized")
+            c_norm = np.full(n_emotions, 1.0 / n_emotions, dtype=np.float64)
 
-        # Call each cluster classifier once; probas[i] is (n_emotions,) in EMOTIONS order
-        cluster_probas = [clf.predict_emotion_probas(context_embedding) for clf in self.cluster_classifiers]
+        # Mirror proportion path: raw cosine × cluster evidence (per emotion).
+        centroid_scores_vec = sim_vec * c_norm
 
-        def modified_similarity(emotion):
-            sim = self.cosine_similarity(context_embedding, self.emotion_vectors[emotion])
-            if not cluster_probas:
-                return sim
-            # Multiply by the probability for this emotion from each cluster classifier
-            proba_product = 1.0
-            for probas in cluster_probas:
-                proba_product *= probas[emotion]
-            return sim * proba_product
+        if n_prop == 0:
+            return EMOTIONS[int(np.argmax(centroid_scores_vec))]
 
-        return max(self.emotion_vectors, key=modified_similarity)
+        final_vec = centroid_scores_vec * prop_product
+        return EMOTIONS[int(np.argmax(final_vec))]
 
 

@@ -1,0 +1,48 @@
+================================================================================
+EMOTION CLASSIFICATION EVALUATION REPORT
+================================================================================
+
+Timestamp                      : 2026-04-15 18:25:34
+Emotion Representation         : averaged emotion utterance embeddings with context
+Context Window                 : 2
+Cluster Variations             : goalex_per_emotion_c5_cw2_cm1
+KNN Neighbors                  : 25
+GoalEX Hybrid Alpha            : 1.0
+GoalEX Per-Emotion Fusion TopK : 1
+Context Method                 : exponentially weight previous utterance embeddings
+
+Accuracy                       : 35.77%
+Macro F1                       : 28.97%
+
+--------------------------------------------------------------------------------
+CONFUSION MATRIX
+--------------------------------------------------------------------------------
+
+Predicted  anger  disgust  fear  joy  neutral  sadness  surprise
+True                                                            
+anger        101       97    35   56       62      115       102
+disgust        9       61    18   13       28       43        30
+fear          13       30    34   18       45       42        25
+joy           44      108    28  456      250      140       103
+neutral       50      262   124  305      895      527       238
+sadness       25       47    27   27       97      210        57
+surprise      44       64    27   67      102       96       270
+
+--------------------------------------------------------------------------------
+CLASSIFICATION SUMMARY
+--------------------------------------------------------------------------------
+
+precision    recall  f1-score   support
+
+       anger      0.353     0.178     0.237       568
+     disgust      0.091     0.302     0.140       202
+        fear      0.116     0.164     0.136       207
+         joy      0.484     0.404     0.440      1129
+     neutral      0.605     0.373     0.461      2401
+     sadness      0.179     0.429     0.253       490
+    surprise      0.327     0.403     0.361       670
+
+    accuracy                          0.358      5667
+   macro avg      0.308     0.322     0.290      5667
+weighted avg      0.450     0.358     0.381      5667
+================================================================================
